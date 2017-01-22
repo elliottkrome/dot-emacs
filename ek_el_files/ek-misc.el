@@ -4,7 +4,6 @@
   :init
   (progn
     (ido-mode 1)
-
     (use-package ido-ubiquitous
       :ensure t
       :config
@@ -12,6 +11,8 @@
     (use-package ido-vertical-mode
       :ensure t
       :init (ido-vertical-mode 1))
+    (use-package ido-occur
+      :ensure t) 
     (use-package smex
       :ensure t
       :init (smex-initialize)

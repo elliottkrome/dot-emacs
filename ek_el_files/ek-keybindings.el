@@ -2,8 +2,11 @@
 ;;; Commentary:
 
 ;;; Code:
+; https://www.masteringemacs.org/article/mastering-key-bindings-emacs
 
-;  https://www.masteringemacs.org/article/mastering-key-bindings-emacs
+;; TODO: put somewhere reasonable
+(define-key isearch-mode-map (kbd "C-o") 'ido-occur-from-isearch)
+
 (global-unset-key [f1])
 (global-unset-key [f2])
 (global-unset-key [f11])
@@ -108,7 +111,9 @@
 (define-key ctl-l-map "R"  'replace-regexp)
 (define-key ctl-l-map "q"  'query-replace)
 (define-key ctl-l-map "Q"  'query-replace-regexp)
-(define-key ctl-l-map "o"  'ek-show-python-tags)
+(define-key ctl-l-map "o" 'ido-occur)
+(define-key ctl-l-map "O" 'ido-occur-at-point)
+(define-key ctl-l-map "C-o"  'ek-show-python-tags)
 (define-key ctl-l-map "\C-w"  'kill-rectangle)
 (define-key ctl-l-map "\C-y"  'yank-rectangle)
 (define-key ctl-l-map "h"  'command-history)
