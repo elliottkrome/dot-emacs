@@ -2,7 +2,9 @@
 
 (use-package magit
   :bind (("C-x g" . magit-status))
-  :ensure t)
+  :ensure t
+  :config
+  (setq magit-completing-read-function 'magit-ido-completing-read))
 
 (use-package company
   :ensure t
@@ -15,10 +17,13 @@
 	company-echo-delay             0
 	company-tooltip-limit         20))
 
+
+
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")
+(load "~/.emacs.d/ek_el_files/ek-private.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
