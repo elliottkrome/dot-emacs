@@ -8,6 +8,14 @@
   :bind (("C-x g" . magit-status))
   :ensure t)
 
+(use-package company
+  :ensure t
+  :defer t)
+
+(load "~/.emacs.d/ek_el_files/ek-keybindings.el")
+
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
