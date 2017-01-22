@@ -45,6 +45,12 @@
                     (funcall ,ido-cannot-complete-command)))))
           ad-do-it))
 
+(eval-after-load "grep"
+  '(progn
+    ; (add-to-list 'grep-find-ignored-files "*.tmp")
+     (add-to-list 'grep-find-ignored-directories "elpa/archives")
+     (add-to-list 'grep-find-ignored-directories "elpa/pkg-info*")))
+
 
 (defun smarter-move-beginning-of-line (arg)
     "Move point back to indentation of beginning of line.
