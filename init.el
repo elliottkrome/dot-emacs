@@ -29,11 +29,16 @@
     (global-company-mode))
   :config
   (setq company-idle-delay             0
-	company-minimum-prefix-length  2
+	company-minimum-prefix-length  1
 	company-echo-delay             0
-	company-tooltip-limit         20))
-
-
+	company-tooltip-limit         20)
+  (define-key company-active-map (kbd "C-n") 'company-select-next)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous)
+  (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "<tab>")
+    'company-complete-common-or-cycle)
+  (define-key company-active-map (kbd "S-TAB") 'company-select-previous)
+  (define-key company-active-map (kbd "<backtab>") 'company-select-previous))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "~/.emacs.d/ek_el_files/ek-python.el")
