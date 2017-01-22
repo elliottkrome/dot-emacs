@@ -18,6 +18,7 @@ then go into `~/.emacs.d/init.el` and delete the following lines:
 `(load "~/.emacs.d/ek_el_files/ek-private.el")`
 
 `(load "~/.emacs.d/ek_el_files/ek-registers.el")`
+`(load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")`
 
 and voilà, launch emacs.
 
