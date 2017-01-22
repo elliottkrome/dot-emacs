@@ -9,6 +9,7 @@
 (use-package company
   :ensure t
   :defer t
+  :diminish company-mode
   :init
   (global-company-mode)
   :config

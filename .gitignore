@@ -3,5 +3,7 @@ bookmarks
 /anaconda-mode/
 /auto-save-list/
 /elpa/
+smex-items
+projectile-bookmarks.eld
 scratch.el
 /ek_el_files/ek-private.el
