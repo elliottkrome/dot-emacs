@@ -1,8 +1,4 @@
 (load "~/.emacs.d/ek_el_files/ek-init-gnrl-package-stuff.el")
-(load "~/.emacs.d/ek_el_files/ek-scratch.el")
-(load "~/.emacs.d/ek_el_files/misc.el")
-
-
 
 (use-package magit
   :bind (("C-x g" . magit-status))
@@ -10,11 +6,19 @@
 
 (use-package company
   :ensure t
-  :defer t)
+  :defer t
+  :init
+  (global-company-mode)
+  :config
+  (setq company-idle-delay             0
+	company-minimum-prefix-length  2
+	company-echo-delay             0
+	company-tooltip-limit         20))
 
+(load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
-(load "~/.em
-
+(load "~/.emacs.d/ek_el_files/ek-scratch.el")
+(load "~/.emacs.d/ek_el_files/ek-misc.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

@@ -1,3 +1,5 @@
-
+*.dat
+bookmarks
+/anaconda-mode/
 /auto-save-list/
 /elpa/
