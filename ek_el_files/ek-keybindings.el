@@ -95,7 +95,6 @@
 (define-key global-map "\C-l" 'Control-L-prefix)
 (fset 'Control-L-prefix ctl-l-map)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (define-key ctl-l-map "s"  'sr-speedbar-toggle)
 (define-key ctl-l-map "c" 'comment-or-uncomment-region)
 (define-key ctl-l-map "j"  'bookmark-jump)
 (define-key ctl-l-map "p"  'windmove-up)
@@ -132,7 +131,9 @@
 (define-key ctl-l-map "U" 'browse-url)
 (define-key ctl-l-map "F" 'browse-url-of-file)
 (define-key ctl-l-map "\C-u" 'undo-only)
-(define-key ctl-l-map "s" (switch-to-buffer (get-buffer-create "*scratch*")))
+(define-key ctl-l-map "t" 'term)
+(define-key ctl-l-map "s" 'shell)
+(define-key ctl-l-map "S" (switch-to-buffer (get-buffer-create "*scratch*")))
 ;; (define-kwy ctl-l-map "w" 'workspace-goto)
 (provide 'ek-keybindings)
 ;;; ek-keybindings ends here
