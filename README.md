@@ -1,4 +1,4 @@
-# my useful and mostly portable dot emacs
+# my useful and portable dot-emacs
 I declared dot emacs bankruptcy (for the first time) recently.
 
 I don't want to do that again, so I am starting over with the goals:
