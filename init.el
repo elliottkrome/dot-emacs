@@ -18,6 +18,7 @@
 (load "~/.emacs.d/ek_el_files/ek-magit.el")
 (load "~/.emacs.d/ek_el_files/ek-company.el")
 (load "~/.emacs.d/ek_el_files/ek-python.el")
+(load "~/.emacs.d/ek_el_files/ek-markdown.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")    ;; organize this !
 (load "~/.emacs.d/ek_el_files/ek-misc-2.el")  ;;  ||
@@ -51,7 +52,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
+    (markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
