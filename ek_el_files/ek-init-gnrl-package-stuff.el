@@ -1,4 +1,3 @@
-(package-initialize)
 
 (when (>= emacs-major-version 24)
   (require 'package)
