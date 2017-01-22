@@ -1,45 +1,12 @@
-(package-initialize)
 
+;; basic package stuff - allows all of the other package configuration to work
+;;
+(package-initialize)
 (load "~/.emacs.d/ek_el_files/ek-init-gnrl-package-stuff.el")
 
-(use-package magit
-  :bind (("C-x g" . magit-status))
-  :ensure t
-  :config
-  (setq magit-completing-read-function 'magit-ido-completing-read))
-
-(use-package company
-  :ensure t
-  :defer t
-  :diminish company-mode
-  :init
-  (progn
-    (use-package company-flx
-      :ensure t
-      :defer t)
-    (use-package company-quickhelp
-      :ensure t
-      :init
-      (company-quickhelp-mode 1)
-      (setq company-quickhelp-delay 1.5))
-    (global-company-mode))
-  :config
-  (setq company-idle-delay             1.5
-	company-minimum-prefix-length  1
-	company-echo-delay             0
-	company-tooltip-limit         20)
-  (define-key company-active-map (kbd "C-n") 'company-select-next)
-  (define-key company-active-map (kbd "C-p") 'company-select-previous)
-  (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
-  (define-key company-active-map (kbd "<tab>")
-    'company-complete-common-or-cycle)
-  (define-key company-active-map (kbd "S-TAB") 'company-select-previous)
-  (define-key company-active-map (kbd "<backtab>") 'company-select-previous))
-
-(use-package iedit
-  :ensure t)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load "~/.emacs.d/ek_el_files/ek-magit.el")
+(load "~/.emacs.d/ek_el_files/ek-company.el")
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")      ;; organize this !
@@ -49,7 +16,7 @@
 (load "~/.emacs.d/ek_el_files/ek-org.el")
 (load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
 (load "~/.emacs.d/ek_el_files/ek-iedit-and-rainbow-delimiters.el")
-(load "~/.emacs.d/ek_el_files/which-key-setup.el")
+(load "~/.emacs.d/ek_el_files/ek-which-key.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

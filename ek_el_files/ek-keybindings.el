@@ -56,8 +56,6 @@
 (global-set-key "\M-s" 'copy-to-register)
 (global-set-key "\M-i" 'insert-register)
 (global-set-key (kbd "C-c i") 'info-lookup-symbol)
-; Fix iedit bug in Mac
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
 
 ;;http://whattheemacsd.com/key-bindings.el-03.html
 (global-set-key (kbd "M-j")

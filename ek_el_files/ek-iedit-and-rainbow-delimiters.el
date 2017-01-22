@@ -8,9 +8,8 @@
 (unless (package-installed-p 'rainbow-delimiters)
     (package-refresh-contents)
     (package-install 'rainbow-delimiters))
-
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (use-package iedit
   :ensure t
-  :bind (("C-c ;" . iedit-mode)))
+  :bind (("C-c ;" . iedit-mode))) ;; fixes iedit bug on os x
