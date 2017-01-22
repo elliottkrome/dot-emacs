@@ -5,6 +5,7 @@
 
 /ek_el_files/ek-private.el
 /ek_el_files/ek-registers.el
+/ek_el_files/ek-org-capture-templates.el
 *~
 *#
 *.last
