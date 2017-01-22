@@ -1,16 +1,22 @@
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
 ;;
 (package-initialize)
 (load "~/.emacs.d/ek_el_files/ek-init-gnrl-package-stuff.el")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; everything else
+;;
 (load "~/.emacs.d/ek_el_files/ek-magit.el")
 (load "~/.emacs.d/ek_el_files/ek-company.el")
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
-(load "~/.emacs.d/ek_el_files/ek-misc.el")      ;; organize this !
-(load "~/.emacs.d/ek_el_files/ek-misc-2.el")    ;;  ||
+(load "~/.emacs.d/ek_el_files/ek-misc.el")    ;; organize this !
+(load "~/.emacs.d/ek_el_files/ek-misc-2.el")  ;;  ||
 (load "~/.emacs.d/ek_el_files/ek-private.el")
 (load "~/.emacs.d/ek_el_files/ek-dired.el")
 (load "~/.emacs.d/ek_el_files/ek-org.el")
@@ -20,8 +26,6 @@
 (load "~/.emacs.d/ek_el_files/ek-which-key.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 
 
 
