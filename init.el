@@ -41,6 +41,9 @@
   (define-key company-active-map (kbd "S-TAB") 'company-select-previous)
   (define-key company-active-map (kbd "<backtab>") 'company-select-previous))
 
+(use-package iedit
+  :ensure t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
@@ -66,7 +69,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ido-occur company-quickhelp company-flx magit use-package))))
+    (rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
