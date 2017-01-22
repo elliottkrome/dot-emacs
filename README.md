@@ -11,13 +11,13 @@ If you plan on using python, you might want to have [anaconda](https://www.conti
 
 Anyway:
 
-	`git clone https://github.com/elliottkrome/dot-emacs ~/.emacs.d`
+`git clone https://github.com/elliottkrome/dot-emacs ~/.emacs.d`
 
 then go into `~/.emacs.d/init.el` and delete the following lines:
 
-	`(load "~/.emacs.d/ek_el_files/ek-private.el")`
+`(load "~/.emacs.d/ek_el_files/ek-private.el")`
 
-	`(load "~/.emacs.d/ek_el_files/ek-registers.el")`
+`(load "~/.emacs.d/ek_el_files/ek-registers.el")`
 
 and voilà, launch emacs.
 
