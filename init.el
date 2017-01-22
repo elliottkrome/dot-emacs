@@ -25,10 +25,11 @@
     (use-package company-quickhelp
       :ensure t
       :init
-      (company-quickhelp-mode 1))
+      (company-quickhelp-mode 1)
+      (setq company-quickhelp-delay 1.5))
     (global-company-mode))
   :config
-  (setq company-idle-delay             0
+  (setq company-idle-delay             1.5
 	company-minimum-prefix-length  1
 	company-echo-delay             0
 	company-tooltip-limit         20)
