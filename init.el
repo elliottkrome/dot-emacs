@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (load "~/.emacs.d/ek_el_files/ek-init-gnrl-package-stuff.el")
 
 (use-package magit
@@ -15,12 +22,17 @@
     (use-package company-flx
       :ensure t
       :defer t)
+    (use-package company-quickhelp
+      :ensure t
+      :init
+      (company-quickhelp-mode 1))
     (global-company-mode))
   :config
   (setq company-idle-delay             0
 	company-minimum-prefix-length  2
 	company-echo-delay             0
 	company-tooltip-limit         20))
+
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -46,7 +58,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company-flx magit use-package))))
+ '(package-selected-packages (quote (company-quickhelp company-flx magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
