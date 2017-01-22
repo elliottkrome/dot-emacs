@@ -52,6 +52,7 @@
      (add-to-list 'grep-find-ignored-directories "elpa/archives")
      (add-to-list 'grep-find-ignored-directories "elpa/pkg-info*")))
 
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (defun smarter-move-beginning-of-line (arg)
     "Move point back to indentation of beginning of line.
