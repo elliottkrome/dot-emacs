@@ -4,6 +4,7 @@
 /backups/
 
 /ek_el_files/ek-private.el
+/ek_el_files/ek-registers.el
 *~
 *#
 *.last
@@ -12,4 +13,5 @@ bookmarks
 smex-items
 projectile-bookmarks.eld
 scratch.el
+
 
