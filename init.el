@@ -19,13 +19,24 @@
 	company-tooltip-limit         20))
 
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load "~/.emacs.d/ek_el_files/ek-python.el")
-(load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")
+(load "~/.emacs.d/ek_el_files/ek-misc-2.el")  ;; organize this !
 (load "~/.emacs.d/ek_el_files/ek-private.el")
+(load "~/.emacs.d/ek_el_files/ek-dired.el")
+(load "~/.emacs.d/ek_el_files/ek-org.el")
+(load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
+(load "~/.emacs.d/ek_el_files/which-key-setup.el")
+(load "~/.emacs.d/ek_el_files/ek-keybindings.el")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
