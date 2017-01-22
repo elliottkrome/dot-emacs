@@ -1,5 +1,5 @@
 # my useful and portable dot-emacs
-I declared dot emacs bankruptcy (for the first time) recently.
+I declared dot-emacs bankruptcy (for the first time) recently.
 
 I don't want to do that again, so I am starting over with the goals:
 - keep everything under version control (here)
@@ -7,8 +7,8 @@ I don't want to do that again, so I am starting over with the goals:
 - keep everything tidy, so I (and you) can change things easily
 
 ## how to use:
-###### small note:
-If you plan on using the python setup herein, you might want to have [anaconda](https://www.continuum.io/downloads) installed before you proceed.
+###### If you plan on using the python setup herein, you might want to have [anaconda](https://www.continuum.io/downloads) installed before you proceed.
+###### This is only tested on emacs 25, but should work on emacs versions <= 24.4
 
 #### clone into your ~/.emacs.d
 
