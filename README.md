@@ -8,7 +8,7 @@ I don't want to do that again, so I am starting over with the goals:
 
 ## how to use:
 ###### If you plan on using the python setup herein, you might want to have [anaconda](https://www.continuum.io/downloads) installed before you proceed.
-###### This is only tested on emacs 25, but should work on emacs versions <= 24.4
+###### This is only tested on emacs 25, but should work on all emacs versions >= 24.4
 
 #### clone into your ~/.emacs.d
 
