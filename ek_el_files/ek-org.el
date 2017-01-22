@@ -390,6 +390,7 @@
 ;; load capture templates
 (load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")
 
+(setq org-fontify-whole-heading-line t)
 (provide 'ek-org)
 ;;; org.el ends here
 

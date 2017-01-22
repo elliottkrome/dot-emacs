@@ -75,8 +75,8 @@
 (require 'which-func)
 (add-to-list 'which-func-modes
 	     'python-mode)
+(load-theme 'leuven t)   
 
-;;––––––––––––––––END_WINDOW_BEHAVIOR_____________________________
 
 (provide 'window_behavior)
 ;;; window_behavior.el ends here
