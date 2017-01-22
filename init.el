@@ -16,6 +16,7 @@
 (load "~/.emacs.d/ek_el_files/ek-org.el")
 (load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
 (load "~/.emacs.d/ek_el_files/ek-iedit-and-rainbow-delimiters.el")
+(load "~/.emacs.d/ek_el_files/ek-hideshow.el")
 (load "~/.emacs.d/ek_el_files/ek-which-key.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
