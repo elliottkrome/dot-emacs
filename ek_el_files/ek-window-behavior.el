@@ -1,5 +1,4 @@
-
-
+(load-theme 'leuven t)   
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
@@ -75,8 +74,6 @@
 (require 'which-func)
 (add-to-list 'which-func-modes
 	     'python-mode)
-(load-theme 'leuven t)   
-
 
 (provide 'window_behavior)
 ;;; window_behavior.el ends here
