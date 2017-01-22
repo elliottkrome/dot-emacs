@@ -1,6 +1,6 @@
 (load "~/.emacs.d/ek_el_files/ek-init-gnrl-package-stuff.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
-
+(load "~/.emacs.d/ek_el_files/misc.el")
 
 
 
@@ -13,8 +13,7 @@
   :defer t)
 
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
-
-
+(load "~/.em
 
 
 (custom-set-variables
