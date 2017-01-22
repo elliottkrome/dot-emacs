@@ -5,8 +5,16 @@
 ;  default/sebsequent window
 (setq default-frame-alist
       '((width . 80) ; character
-        (height . 65) ; lines
-        ))
+        (height . 65)) ; lines
+
+;; don't let the cursor go into minibuffer prompt
+;;  http://ergoemacs.org/emacs/emacs_stop_cursor_enter_prompt.html
+(setq minibuffer-prompt-properties
+      (quote
+       (read-only t
+		  point-entered
+		  minibuffer-avoid-prompt
+		  face minibuffer-prompt)))
 
 (defun highlight-selected-window ()
   "Highlight un-selected windows with a different background color."
