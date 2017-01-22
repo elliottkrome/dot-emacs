@@ -1,0 +1,5 @@
+* c, c++ modes
+get a reasonable and portable configuration going
+* keybindings
+** hideshow mode
+establish some reasonable keybindings for this
