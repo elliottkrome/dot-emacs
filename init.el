@@ -28,6 +28,7 @@
 (load "~/.emacs.d/ek_el_files/ek-iedit-and-rainbow-delimiters.el")
 (load "~/.emacs.d/ek_el_files/ek-hideshow.el")
 (load "~/.emacs.d/ek_el_files/ek-which-key.el")
+(load "~/.emacs.d/ek_el_files/ek-flycheck.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -53,7 +54,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
+    (flycheck-pyflakes flycheck markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
