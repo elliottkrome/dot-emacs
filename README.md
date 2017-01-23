@@ -7,7 +7,7 @@ I'd rather not do that again, so I am starting over with the goals:
 - keep everything tidy
 
 ## How to use:
-###### If you plan on using the python setup herein, you might want to have [anaconda](https://www.continuum.io/downloads) installed before you proceed.
+###### If you plan on using the python setup herein, you will want to install [anaconda](https://www.continuum.io/downloads).
 ###### This is only tested on emacs 25, but should work on all emacs versions >= 24.4
 
 #### git clone into your ~/.emacs.d
