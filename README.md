@@ -1,21 +1,21 @@
 # my (portable) dot-emacs
-I declared dot-emacs bankruptcy (for the first time) recently.
+My old emacs configuration was getting very ugly, so threw it away.
 
-I don't want to do that again, so I am starting over with the goals:
-- keep everything under version control (here)
+I'd rather not do that again, so I am starting over with the goals:
+- keep everything under version control
 - make everything as portable and easy to set up as possible (use-package, etc.)
-- keep everything tidy, so I (and you) can change things easily
+- keep everything tidy
 
-## how to use:
+## How to use:
 ###### If you plan on using the python setup herein, you might want to have [anaconda](https://www.continuum.io/downloads) installed before you proceed.
 ###### This is only tested on emacs 25, but should work on all emacs versions >= 24.4
 
-#### clone into your ~/.emacs.d
+#### git clone into your ~/.emacs.d
 
 `git clone https://github.com/elliottkrome/dot-emacs ~/.emacs.d`
 
-#### delete some stuff that is just for me
-then go into `~/.emacs.d/init.el` and delete the following lines:
+#### Delete some stuff that is just for me
+ Dfelete the following lines from `~/.emacs.d/init.el`:
 
 `(load "~/.emacs.d/ek_el_files/ek-private.el")`
 
@@ -23,6 +23,6 @@ then go into `~/.emacs.d/init.el` and delete the following lines:
 
 `(load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")`
 
-#### voilà, launch emacs.
+#### Voilà, launch emacs.
 
 It will take a little while the first time you launch emacs - many packages are downloading, compiling, and installing. Subsequent launches will be much faster.
