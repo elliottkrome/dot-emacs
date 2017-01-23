@@ -2,10 +2,12 @@
 /auto-save-list/
 /elpa/
 /backups/
+/url/
 
 /ek_el_files/ek-private.el
 /ek_el_files/ek-registers.el
 /ek_el_files/ek-org-capture-templates.el
+
 *~
 *#
 *.last
@@ -15,5 +17,3 @@ smex-items
 projectile-bookmarks.eld
 scratch.el
 
-
-/url/
