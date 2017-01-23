@@ -1,5 +1,13 @@
+* cleanup
+** ek-hideshow
+** ek-misc and ek-misc2 !!!
+** ek-org
+** ek-python
+** ek-window-behavior
 * c, c++ modes
 get a reasonable and portable configuration going
 * keybindings
 ** hideshow mode
 establish some reasonable keybindings for this
+* get latex exports working
+ouch
