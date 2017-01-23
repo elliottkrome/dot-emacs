@@ -15,7 +15,7 @@ I'd rather not do that again, so I am starting over with the goals:
 `git clone https://github.com/elliottkrome/dot-emacs ~/.emacs.d`
 
 #### Delete some stuff that is just for me
- Dfelete the following lines from `~/.emacs.d/init.el`:
+ Delete the following lines from `~/.emacs.d/init.el`:
 
 `(load "~/.emacs.d/ek_el_files/ek-private.el")`
 
