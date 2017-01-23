@@ -7,8 +7,6 @@
 ;;  DELETE THIS PACKAGE FROM PACKAGE MANAGER
 ; (require 'readline-complete)
 
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
-
 ;; NOTES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; https://blog.fugue.co/2015-11-11-guide-to-emacs.html
 ;;   above link to use Dropbox w emacs
