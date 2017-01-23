@@ -2,11 +2,6 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
-;  default/sebsequent window
-(setq default-frame-alist
-      '((width . 80) ; character
-        (height . 65))) ; lines
-
 ;; don't let the cursor go into minibuffer prompt
 ;;  http://ergoemacs.org/emacs/emacs_stop_cursor_enter_prompt.html
 (setq minibuffer-prompt-properties
