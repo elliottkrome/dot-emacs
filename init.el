@@ -36,7 +36,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; locally useful stuff - delete if not on elk's machine
+;; local stuff goes here
 ;;
 (load "~/.emacs.d/ek_el_files/ek-private.el")
 (load "~/.emacs.d/ek_el_files/ek-registers.el")
@@ -54,11 +54,14 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (flycheck-pyflakes flycheck markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
+    (ls-lisp flycheck-pyflakes flycheck markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-calendar-event ((t (:background "#ffffff" :foreground "#3774CC" :weight bold)))))
+ '(org-agenda-calendar-event ((t (:background "#ffffff" :foreground "#3774CC" :weight bold))))
+ '(org-agenda-date ((t (:inherit org-agenda-structure :foreground "#1662AF" :weight light :height 1.05))) t)
+ '(org-agenda-date-today ((t (:inherit org-agenda-date :background "#FFFFCC" :foreground "#4F4A3D" :slant italic :weight light :height 1.2))) t)
+ '(org-agenda-date-weekend ((t (:inherit org-agenda-date :foreground "#4E4E4E" :weight light :height 1.02))) t))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
