@@ -132,6 +132,7 @@
 (define-key ctl-l-map "F" 'browse-url-of-file)
 (define-key ctl-l-map "\C-u" 'undo-only)
 (define-key ctl-l-map "t" 'term)
+(define-key ctl-l-map "v" 'visual-line-mode)
 (define-key ctl-l-map "s" 'shell)
 (define-key ctl-l-map "S" (switch-to-buffer (get-buffer-create "*scratch*")))
 ;; (define-kwy ctl-l-map "w" 'workspace-goto)
