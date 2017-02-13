@@ -1,7 +1,5 @@
 # my (portable) dot-emacs
-My old emacs configuration was getting very ugly, so I started over.
-
-I'd rather not do that again, so I am starting over with the goals:
+My old emacs configuration was getting very ugly, so I am starting over with the goals:
 - keep everything under version control
 - make everything as portable and easy to set up as possible (use-package, etc.)
 - keep everything tidy
