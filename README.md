@@ -1,5 +1,5 @@
 # my (portable) dot-emacs
-My old emacs configuration was getting very ugly, so I threw it away.
+My old emacs configuration was getting very ugly, so I started over.
 
 I'd rather not do that again, so I am starting over with the goals:
 - keep everything under version control
