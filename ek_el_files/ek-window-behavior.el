@@ -2,6 +2,9 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+(add-to-list 'default-frame-alist '(font . "Source Code Pro" ))
+(setq visible-bell t)
+
 ;; don't let the cursor go into minibuffer prompt
 ;;  http://ergoemacs.org/emacs/emacs_stop_cursor_enter_prompt.html
 (setq minibuffer-prompt-properties
@@ -26,9 +29,9 @@
 
 (setq scroll-conservatively 10000)
 
-(use-package hl-line
-  :ensure t
-  :config (set-face-background 'hl-line "#073642"))
+;; (use-package hl-line
+;;   :ensure t
+;;   :config (set-face-background 'hl-line "#073642"))
 
 
 ;; display column number in mode line
@@ -72,10 +75,8 @@
 			    ,(make-char 'greek-iso8859-7 112))
 			   nil)))))
 
-;;  display current function in mode-line
-(require 'which-func)
-(add-to-list 'which-func-modes
-	     'python-mode)
+(visual-line-mode)
 
+(blink-cursor-mode 0)
 (provide 'window_behavior)
 ;;; window_behavior.el ends here

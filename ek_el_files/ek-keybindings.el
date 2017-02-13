@@ -108,6 +108,7 @@
 (define-key ctl-l-map "R"  'replace-regexp)
 (define-key ctl-l-map "q"  'query-replace)
 (define-key ctl-l-map "Q"  'query-replace-regexp)
+(define-key ctl-l-map "k"  'kill-whole-line)
 (define-key ctl-l-map "o" 'ido-occur)
 (define-key ctl-l-map "O" 'ido-occur-at-point)
 (define-key ctl-l-map "C-o"  'ek-show-python-tags)

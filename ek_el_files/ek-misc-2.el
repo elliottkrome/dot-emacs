@@ -1,12 +1,4 @@
 
-;; discover.el for context menus (learn new stoof)
-; (require 'discover)
-; (global-discover-mode 1)
-
-;; shell autocompletion
-;;  DELETE THIS PACKAGE FROM PACKAGE MANAGER
-; (require 'readline-complete)
-
 ;; NOTES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; https://blog.fugue.co/2015-11-11-guide-to-emacs.html
 ;;   above link to use Dropbox w emacs
