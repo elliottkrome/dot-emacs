@@ -11,11 +11,13 @@
 (use-package flycheck
   :ensure t
   :commands global-flycheck-mode
+  :diminish t
   :config
   (progn
     (setq flycheck-check-syntax-automatically '(save mode-enabled))
     (setq flycheck-standard-error-navigation nil)
     (if (ek-setup-flycheck-for-pyflakes-if-conda-found)
 	(use-package flycheck-pyflakes
+	  :diminish t
 	  :ensure t))))
 (global-flycheck-mode)
