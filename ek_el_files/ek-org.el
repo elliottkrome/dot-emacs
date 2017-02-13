@@ -45,7 +45,9 @@
 ;; VERY IMPORTANT FOR PYTHON IN BABEL
 (setq org-src-preserve-indentation t)
 
-
+(defun org-mode-turn-off-company-hook ()
+  (company-mode -1))
+(add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
 ;; ****************__END_TEST_AREA__****************************
 
 (setq org-agenda-files '("~/Dropbox/org/applications.org"
@@ -58,10 +60,10 @@
 			 "~/Dropbox/org/misc_stuff/special_days.org"
 			 "~/Dropbox/org/misc_stuff/weekly.org"
 			 "~/Dropbox/org/notes/emacs_notes.org"
-			 "~/Dropbox/org/notes/microelectronics.org"
-			 "~/Dropbox/org/notes/gen_chem.org"
-			 "~/Dropbox/org/notes/mech_systems.org"
-			 "~/Dropbox/org/notes/power.org"
+			 "~/Dropbox/org/notes/vlsi.org"
+			 "~/Dropbox/org/notes/info_theory.org"
+			 "~/Dropbox/org/notes/stochastics.org"
+			 "~/Dropbox/org/notes/digicomm.org"
 			 "~/Dropbox/org/notes/notes_to_refile.org"
 			 "~/Dropbox/org/notes/sen_design.org"
 			 "~/Dropbox/org/personal_learning.org"
