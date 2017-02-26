@@ -17,8 +17,9 @@
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 (load "~/.emacs.d/ek_el_files/ek-markdown.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
+(load "~/.emacs.d/ek_el_files/ek-ido.el")
+(load "~/.emacs.d/ek_el_files/ek-projectile.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")    ;; organize this !
-(load "~/.emacs.d/ek_el_files/ek-misc-2.el")  ;;  ||
 (load "~/.emacs.d/ek_el_files/ek-dired.el")
 (load "~/.emacs.d/ek_el_files/ek-org.el")
 (load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
@@ -38,9 +39,6 @@
 (load "~/.emacs.d/ek_el_files/ek-registers.el")
 (load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; allow editing file permissions
-(setq wdired-allow-to-change-permissions t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables

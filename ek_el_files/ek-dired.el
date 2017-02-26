@@ -5,6 +5,8 @@
 (use-package dired-x
   :init
   (progn
+    ;; allow editing file permissions
+    (setq wdired-allow-to-change-permissions t)
     (setq-default dired-omit-files-p t)
     (setq dired-omit-files "^\\.?#\\|^\\.DS_store")
 

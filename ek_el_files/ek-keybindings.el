@@ -7,6 +7,7 @@
 ;; TODO: put somewhere reasonable
 (define-key isearch-mode-map (kbd "C-o") 'ido-occur-from-isearch)
 
+
 (global-unset-key [f1])
 (global-unset-key [f2])
 (global-unset-key [f11])
@@ -87,6 +88,9 @@
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
+(global-set-key "\M-n" (lambda () (interactive) (scroll-up 8)))
+(global-set-key "\M-p" (lambda () (interactive) (scroll-down 8)))
+
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs
 ;;
 (global-unset-key "\C-l")
@@ -135,7 +139,9 @@
 (define-key ctl-l-map "t" 'term)
 (define-key ctl-l-map "v" 'visual-line-mode)
 (define-key ctl-l-map "s" 'shell)
+(define-key ctl-l-map "i" 'ido-goto-symbol)
 (define-key ctl-l-map "S" (switch-to-buffer (get-buffer-create "*scratch*")))
+
 ;; (define-kwy ctl-l-map "w" 'workspace-goto)
 (provide 'ek-keybindings)
 ;;; ek-keybindings ends here
