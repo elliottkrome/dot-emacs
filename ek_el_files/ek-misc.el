@@ -1,5 +1,6 @@
 
 
+(put 'narrow-to-region 'disabled nil)
 
 (eval-after-load "grep"
   '(progn
