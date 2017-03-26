@@ -15,11 +15,13 @@
 (load "~/.emacs.d/ek_el_files/ek-git-gutter.el")
 (load "~/.emacs.d/ek_el_files/ek-company.el")
 (load "~/.emacs.d/ek_el_files/ek-python.el")
+; (load "~/.emacs.d/ek_el_files/ek-c-gen.el")
 (load "~/.emacs.d/ek_el_files/ek-markdown.el")
 (load "~/.emacs.d/ek_el_files/ek-scratch.el")
 (load "~/.emacs.d/ek_el_files/ek-ido.el")
 (load "~/.emacs.d/ek_el_files/ek-projectile.el")
 (load "~/.emacs.d/ek_el_files/ek-misc.el")    ;; organize this !
+; (load "~/.emacs.d/ek_el_files/ek-wttrin.el")
 (load "~/.emacs.d/ek_el_files/ek-dired.el")
 (load "~/.emacs.d/ek_el_files/ek-org.el")
 (load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
@@ -38,6 +40,8 @@
 (load "~/.emacs.d/ek_el_files/ek-private.el")
 (load "~/.emacs.d/ek_el_files/ek-registers.el")
 (load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq custom-file
