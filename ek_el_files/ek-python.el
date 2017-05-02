@@ -12,6 +12,10 @@
   :ensure t
   :init (add-to-list 'company-backends 'company-anaconda))
 
+; allows pdb to work
+;
+(setenv "PYTHONPATH" "/Users/elliottkrome/anaconda/lib/python2.7/site-packages:")
+
 ; this gets PATH-vars (such as python path) from a shell.
 ; if it is not defined and called, python-path is usr/bin, rather than Users...
 ; http://stackoverflow.com/questions/8606954/path-and-exec-path-set-but-emacs-does-not-find-executable
