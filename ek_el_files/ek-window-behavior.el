@@ -1,4 +1,10 @@
-(load-theme 'leuven t)   
+(use-package eziam-theme
+  :ensure t
+  :defer t
+  :init
+  (load-theme 'eziam-dark t))
+
+; (load-theme 'leuven t)   
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
@@ -19,7 +25,7 @@
   (walk-windows (lambda (w)
 		  (unless (eq w (selected-window))
                     (with-current-buffer (window-buffer w)
-		      (buffer-face-set '(:background "#bbbbbb"))))))
+		      (buffer-face-set '(:background "#000e26"))))))
   (buffer-face-set 'default))
 (add-hook 'buffer-list-update-hook 'highlight-selected-window)
 
