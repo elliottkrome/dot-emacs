@@ -2,14 +2,23 @@
 ;;; Commentary:
 ;;; Code:
 
+
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+;; allow editing file permissions
+(setq wdired-allow-to-change-permissions t)
+(setq-default dired-omit-files-p t)
+(setq dired-omit-files "^\\.?#\\|^\\.DS_store")
+
+
+(use-package ls-lisp
+  :init
+  (progn
+    (setq ls-lisp-use-insert-directory-program nil)
+    (setq ls-lisp-verbosity '(links))))
+
 (use-package dired-x
   :init
   (progn
-    ;; allow editing file permissions
-    (setq wdired-allow-to-change-permissions t)
-    (setq-default dired-omit-files-p t)
-    (setq dired-omit-files "^\\.?#\\|^\\.DS_store")
-
     ;; https://oremacs.com/2017/03/18/dired-ediff/ ;;;;;;;;;;;;;;;;;; **
     (defun elk-ediff-for-dired ()
       (interactive)
@@ -29,17 +38,8 @@
 			(lambda ()
 			  (setq ediff-after-quit-hook-internal nil)
 			  (set-window-configuration wnd))))
-	  (error "No more than 2 files should be marked"))))
-    (define-key dired-mode-map "e" 'elk-ediff-for-dired)
-    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; **
+	  (error "No more than 2 files should be marked"))))))
+    ; (define-key dired-mode-map "e" 'elk-ediff-for-dired)
 
-
-    (use-package ls-lisp
-    :init
-    (progn
-      (setq ls-lisp-use-insert-directory-program nil)
-      (setq ls-lisp-verbosity '(links))))))
-
-
-
+(provide 'ek-dired)
 ;;; dired.el ends here
