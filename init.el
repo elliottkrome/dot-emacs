@@ -1,6 +1,5 @@
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
 ;;
@@ -29,6 +28,7 @@
 (load "~/.emacs.d/ek_el_files/ek-hideshow.el")
 (load "~/.emacs.d/ek_el_files/ek-which-key.el")
 (load "~/.emacs.d/ek_el_files/ek-suggest.el")
+(load "~/.emacs.d/ek_el_files/ek-messages.el")
 (load "~/.emacs.d/ek_el_files/ek-flycheck.el")
 (load "~/.emacs.d/ek_el_files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

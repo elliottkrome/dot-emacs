@@ -140,6 +140,7 @@
 (define-key ctl-l-map "v" 'visual-line-mode)
 (define-key ctl-l-map "s" 'shell)
 (define-key ctl-l-map "i" 'ido-goto-symbol)
+(define-key ctl-l-map "e" 'show-some-last-messages)
 (define-key ctl-l-map "S" (switch-to-buffer (get-buffer-create "*scratch*")))
 
 ;; (define-kwy ctl-l-map "w" 'workspace-goto)
