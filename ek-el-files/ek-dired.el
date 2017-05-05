@@ -10,7 +10,8 @@
 
 (setq-default dired-omit-files-p t)
 
-(setq dired-omit-files "^\\.?#\\|^\\.DS_store\\|^auto-save-list"
+(setq dired-omit-files
+      "^\\.?#\\|^\\.DS_store\\|^auto-save-list\\|^backups"
       dired-omit-verbose nil)
 
 

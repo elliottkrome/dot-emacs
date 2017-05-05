@@ -91,6 +91,15 @@
 (global-set-key "\M-n" (lambda () (interactive) (scroll-up 8)))
 (global-set-key "\M-p" (lambda () (interactive) (scroll-down 8)))
 
+
+
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cb" 'org-iswitchb)
+(define-key org-mode-map (kbd "<f5>") 'org-deadline)
+(global-set-key (kbd "<f6>") 'org-yank-more)
+
+
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs
 ;;
 (global-unset-key "\C-l")

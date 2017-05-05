@@ -78,3 +78,7 @@ Test cases
   (org-babel-open-src-block-result nil)
   (image-mode-fit-frame nil t)
   (image-toggle-animation))
+
+
+;; path to plantuml.jar
+(setq org-plantuml-jar-path "~/eclipse/java-mars/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/501/0/.cp/lib/plantUml/plantuml.jar")
