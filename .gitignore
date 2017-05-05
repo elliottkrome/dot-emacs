@@ -1,19 +1,24 @@
 /anaconda-mode/
-/auto-save-list/
-/elpa/
-/backups/
-/url/
 
-/ek_el_files/ek-private.el
-/ek_el_files/ek-registers.el
-/ek_el_files/ek-org-capture-templates.el
+/elpa/
+
+/_notes/
+
+
+/ek-el-files/ek-private.el
+/ek-el-files/ek-registers.el
+/ek-el-files/ek-org-capture-templates.el
+
+/data/backups
+/data/auto-save-list/
+/data/recentf
+/data/bookmarks
+/data/smex-items
+/data/scratch.el
+
 
 *~
 *#
 *.last
 *.dat
-bookmarks
-smex-items
-projectile-bookmarks.eld
-scratch.el
 

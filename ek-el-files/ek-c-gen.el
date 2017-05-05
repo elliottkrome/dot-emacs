@@ -16,9 +16,6 @@
 ;; (setq flycheck-clangcheck-analyze t)
 
 
-(load "~/.emacs.d/vendor/qt-doc.el")
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; https://github.com/coldnew/coldnew-emacs
 (setq qt-base-directory "~/Qt")

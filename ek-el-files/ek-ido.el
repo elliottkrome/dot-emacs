@@ -2,6 +2,7 @@
   :ensure t
   :init
   (progn
+    (setq ido-save-directory-list-file (concat ek-data-directory "ido.last"))
     (ido-mode 1)
     (setq ido-use-virtual-buffers t)
     (use-package ido-ubiquitous
@@ -14,8 +15,11 @@
     (use-package ido-occur
       :ensure t) 
     (use-package smex
-      :ensure t
-      :init (smex-initialize)
+      :ensure t ;smex-save-file
+      :init
+      (progn
+	(setq smex-save-file (concat ek-data-directory "smex-items"))
+	(smex-initialize))
       :bind ("M-x" . smex)))
 
   :config
