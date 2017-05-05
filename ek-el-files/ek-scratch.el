@@ -3,7 +3,7 @@
 ;; make scratch buffer persistent between sessions without saving
 
 ;;; Code:
-(setq scratch-buffer-file "~/.emacs.d/scratch.el")
+(setq scratch-buffer-file "~/.emacs.d/data/scratch.el")
 (setq initial-major-mode 'org-mode)
 
 (setq initial-scratch-message "")             ; initial message

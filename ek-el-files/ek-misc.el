@@ -34,7 +34,6 @@ point reaches the beginning or end of the buffer, stop there."
 	(move-beginning-of-line 1))))
 
 
-
 ;; NOTES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; https://blog.fugue.co/2015-11-11-guide-to-emacs.html
 ;;   above link to use Dropbox w emacs
@@ -72,7 +71,7 @@ point reaches the beginning or end of the buffer, stop there."
 
 ;;________BACKUP_AND_VERSION_CONTROL________________________
 ;; set backup directory
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
+(setq backup-directory-alist '(("." . "~/.emacs.d/data/backups")))
 
 ;; prevent "trimming" of old backups
 (setq delete-old-versions -1)
