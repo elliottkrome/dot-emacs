@@ -9,14 +9,7 @@
 ;; ****************__TEST_AREA__********************************
 (setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil)))
 
-;; not working
-(defun  image-new-frame-fitted  ()
-  "View image in new frame."
-  (interactive)
-  (make-frame)
-  (org-babel-open-src-block-result)
-  (delete-other-windows)
-  (image-mode-fit-frame))
+
 ;; end not working
 
 (defun ek-org-capture-separate-frame ()
@@ -388,9 +381,16 @@
 (setq org-agenda-skip-deadline-if-done t)
 (setq org-agenda-skip-timestamp-if-done t)
 
-(setq org-fontify-whole-heading-line t)
-
 (setq org-src-fontify-natively t)
+
+(defun agenda-new-frame ()
+  "Make agenda in new frame."
+  (interactive)
+  (make-frame)
+  (org-agenda)
+  (delete-other-windows))
+
+
 
 (provide 'ek-org)
 ;;; org.el ends here

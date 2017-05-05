@@ -8,6 +8,15 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
+
+
+
+;; Show unfinished keystrokes early.
+(setq echo-keystrokes 0.1)
+
+(toggle-scroll-bar -1)
+
+
 (add-to-list 'default-frame-alist '(font . "Source Code Pro" ))
 (setq visible-bell t)
 

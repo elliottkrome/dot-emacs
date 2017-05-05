@@ -11,16 +11,17 @@
 ;; everything that is portable
 ;;
 (load "~/.emacs.d/ek-el-files/ek-organization.el")
+(load "~/.emacs.d/ek-el-files/ek-backup.el")
 (load "~/.emacs.d/ek-el-files/ek-magit.el")
 (load "~/.emacs.d/ek-el-files/ek-company.el")
-(load "~/.emacs.d/ek-el-files/ek-python.el")
-; (load "~/.emacs.d/ek-el-files/ek-c-gen.el")
-(load "~/.emacs.d/ek-el-files/ek-markdown.el")
 (load "~/.emacs.d/ek-el-files/ek-scratch.el")
 (load "~/.emacs.d/ek-el-files/ek-ido.el")
 (load "~/.emacs.d/ek-el-files/ek-projectile.el")
-(load "~/.emacs.d/ek-el-files/ek-misc.el")    ;; organize this !
+(load "~/.emacs.d/ek-el-files/ek-misc.el")
 (load "~/.emacs.d/ek-el-files/ek-dired.el")
+(load "~/.emacs.d/ek-el-files/ek-editing-behavior.el")
+(load "~/.emacs.d/ek-el-files/ek-grep.el")
+(load "~/.emacs.d/ek-el-files/ek-buffer-management.el")
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-window-behavior.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
@@ -29,6 +30,9 @@
 (load "~/.emacs.d/ek-el-files/ek-which-key.el")
 (load "~/.emacs.d/ek-el-files/ek-suggest.el")
 (load "~/.emacs.d/ek-el-files/ek-messages.el")
+(load "~/.emacs.d/ek-el-files/ek-python.el")
+; (load "~/.emacs.d/ek-el-files/ek-c-gen.el")
+(load "~/.emacs.d/ek-el-files/ek-markdown.el")
 (load "~/.emacs.d/ek-el-files/ek-flycheck.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
