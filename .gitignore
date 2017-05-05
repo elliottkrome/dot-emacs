@@ -4,13 +4,14 @@
 
 /_notes/
 
+/auto-save-list/
 
 /ek-el-files/ek-private.el
 /ek-el-files/ek-registers.el
 /ek-el-files/ek-org-capture-templates.el
 
 /data/backups
-/data/auto-save-list/
+
 /data/recentf
 /data/bookmarks
 /data/smex-items

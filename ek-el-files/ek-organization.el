@@ -8,9 +8,6 @@
 (setq bookmark-default-file
       (concat ek-data-directory "bookmarks"))
 
-(setq auto-save-list-file-prefix
-      (concat ek-data-directory "auto-save-list/.saves-"))
-
 (setq ac-comphist-file
       (concat ek-data-directory "ac-comphist.dat"))
 
