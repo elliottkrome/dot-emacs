@@ -7,6 +7,7 @@
 (require 'org)
 
 ;; ****************__TEST_AREA__********************************
+(setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil)))
 
 ;; not working
 (defun  image-new-frame-fitted  ()
