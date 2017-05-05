@@ -2,7 +2,7 @@
 
 /elpa/
 
-/_notes/
+
 
 /auto-save-list/
 
@@ -12,11 +12,11 @@
 
 /data/backups
 
-/data/recentf
-/data/bookmarks
-/data/smex-items
-/data/scratch.el
-
+/hidden/data/recentf
+/hidden/data/bookmarks
+/hidden/data/smex-items
+/hidden/data/scratch.el
+/hidden/_notes/
 
 *~
 *#

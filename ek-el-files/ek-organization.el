@@ -1,7 +1,9 @@
-
+(setq ek-hidden-directory
+      (concat user-emacs-directory
+	      (convert-standard-filename "hidden/")))
 
 (setq ek-data-directory
-      (concat user-emacs-directory
+      (concat ek-hidden-directory
 	      (convert-standard-filename "data/")))
 
 
@@ -12,4 +14,4 @@
       (concat ek-data-directory "ac-comphist.dat"))
 
 (setq recentf-save-file
-      (concat ek-data-directory "ac-comphist.dat"))
+      (concat ek-data-directory "recentf"))

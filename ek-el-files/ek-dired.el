@@ -4,10 +4,14 @@
 
 
 (add-hook 'dired-mode-hook 'auto-revert-mode)
+
 ;; allow editing file permissions
 (setq wdired-allow-to-change-permissions t)
+
 (setq-default dired-omit-files-p t)
-(setq dired-omit-files "^\\.?#\\|^\\.DS_store")
+
+(setq dired-omit-files "^\\.?#\\|^\\.DS_store\\|^auto-save-list"
+      dired-omit-verbose nil)
 
 
 (use-package ls-lisp

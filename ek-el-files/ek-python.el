@@ -1,6 +1,7 @@
 
 (eval-after-load "company"
   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+
 (defun run-python-once ()
   (remove-hook 'python-mode-hook 'run-python-once)
   (run-python (python-shell-parse-command)))
