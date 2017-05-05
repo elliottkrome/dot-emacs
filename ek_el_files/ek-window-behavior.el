@@ -46,7 +46,7 @@
 ;; no splash screen
 (setq inhibit-splash-screen t)
 
-(set-fringe-mode 0)
+; (set-fringe-mode t)
 
 ; each line of text gets one line on the screen (i.e., text will run
 ; off the left instead of wrapping around onto a new line)

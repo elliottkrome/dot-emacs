@@ -11,7 +11,6 @@
 ;; everything that is portable
 ;;
 (load "~/.emacs.d/ek_el_files/ek-magit.el")
-(load "~/.emacs.d/ek_el_files/ek-git-gutter.el")
 (load "~/.emacs.d/ek_el_files/ek-company.el")
 (load "~/.emacs.d/ek_el_files/ek-python.el")
 ; (load "~/.emacs.d/ek_el_files/ek-c-gen.el")
@@ -24,6 +23,7 @@
 (load "~/.emacs.d/ek_el_files/ek-dired.el")
 (load "~/.emacs.d/ek_el_files/ek-org.el")
 (load "~/.emacs.d/ek_el_files/ek-window-behavior.el")
+(load "~/.emacs.d/ek_el_files/ek-git-gutter.el")
 (load "~/.emacs.d/ek_el_files/ek-iedit-and-rainbow-delimiters.el")
 (load "~/.emacs.d/ek_el_files/ek-hideshow.el")
 (load "~/.emacs.d/ek_el_files/ek-which-key.el")
