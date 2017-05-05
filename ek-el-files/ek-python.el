@@ -1,3 +1,4 @@
+(setq anaconda-mode-installation-directory "~/.emacs.d/hidden/anaconda-mode")
 
 (eval-after-load "company"
   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
