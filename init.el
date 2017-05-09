@@ -21,6 +21,7 @@
 (load "~/.emacs.d/ek-el-files/ek-dired.el")
 (load "~/.emacs.d/ek-el-files/ek-editing-behavior.el")
 (load "~/.emacs.d/ek-el-files/ek-grep.el")
+(load "~/.emacs.d/ek-el-files/ek-wgrep.el")
 (load "~/.emacs.d/ek-el-files/ek-buffer-management.el")
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-window-behavior.el")
