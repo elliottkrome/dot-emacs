@@ -134,15 +134,3 @@
 ;  (setq org-deadline-warning-days 30)
 
 
-;; recursively include all org files from a directory into the agenda
-;  Nice command to have around: <M-x org-edit-agenda-file-list>
-;  http://orgmode.org/worg/org-faq.html
-;  ((?)) http://thread.gmane.org/gmane.emacs.orgmode/8992
-;;;; KEEP AROUND ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (setq org-agenda-files
-;;       (mapcar 'abbreviate-file-name
-;;               (split-string
-;;                (shell-command-to-string
-;; 		"find ~/Dropbox/org -name \"*.org\"")
-;; 	       "\n")))
-;;;; KEEP AROUND ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

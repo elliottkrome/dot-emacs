@@ -1,4 +1,6 @@
-
+;;; package -- summary
+;;; Commentary:
+;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
@@ -49,3 +51,6 @@
 (setq custom-file
       (expand-file-name "ek-el-files/ek-custom.el" user-emacs-directory))
 (load custom-file)
+
+(provide 'init)
+;;; init.el ends here
