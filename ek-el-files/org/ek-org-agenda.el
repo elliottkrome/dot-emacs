@@ -34,24 +34,6 @@
   (org-agenda)
   (delete-other-windows))
 
-(setq org-agenda-files '("~/Dropbox/org/applications.org"
-			 "~/Dropbox/org/appointments.org"
-			 "~/Dropbox/org/class.org"
-			 "~/Dropbox/org/diary.org"
-			 "~/Dropbox/org/hw.org"
-			 "~/Dropbox/org/misc_stuff/music.org"
-			 "~/Dropbox/org/misc_stuff/purchase_list.org"
-			 "~/Dropbox/org/misc_stuff/special_days.org"
-			 "~/Dropbox/org/misc_stuff/weekly.org"
-			 "~/Dropbox/org/notes/emacs_notes.org"
-			 "~/Dropbox/org/notes/vlsi.org"
-			 "~/Dropbox/org/notes/stochastic.org"
-			 "~/Dropbox/org/notes/digicomm.org"
-			 "~/Dropbox/org/notes/notes_to_refile.org"
-			 "~/Dropbox/org/notes/sen_design.org"
-			 "~/Dropbox/org/personal_learning.org"
-			 "~/Dropbox/org/refile.org"))
-
 ;; Custom agenda command definitions
 (setq org-agenda-custom-commands
       (quote (("N" "Notes" tags "NOTE"

@@ -1,6 +1,4 @@
-; (setq org-directory "~/Dropbox/org")
 
-(setq org-default-notes-file "~/Dropbox/org/refile.org")
 
 (defun ek-org-capture-separate-frame ()
   "Create a new frame and run `org-capture."

@@ -43,9 +43,6 @@
 ;; local stuff goes here
 ;;
 (load "~/.emacs.d/ek-el-files/ek-private.el")
-(load "~/.emacs.d/ek-el-files/ek-registers.el")
-(load "~/.emacs.d/ek-el-files/ek-org-capture-templates.el")
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
