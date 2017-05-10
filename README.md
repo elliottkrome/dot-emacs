@@ -12,14 +12,10 @@ My old emacs configuration was getting very ugly, so I am starting over with the
 
 `git clone https://github.com/elliottkrome/dot-emacs ~/.emacs.d`
 
-#### Delete some stuff that is just for me
- Delete the following lines from `~/.emacs.d/init.el`:
-
-`(load "~/.emacs.d/ek_el_files/ek-private.el")`
-
-`(load "~/.emacs.d/ek_el_files/ek-registers.el")`
-
-`(load "~/.emacs.d/ek_el_files/ek-org-capture-templates.el")`
+#### (**optional**) Delete some stuff that is just for me 
+ If you want, delete the following line from `~/.emacs.d/init.el`:
+ 
+`(load "~/.emacs.d/ek_el_files/ek-private.el" t)`
 
 #### Voilà, launch emacs.
 
