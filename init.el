@@ -48,8 +48,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(setq custom-file
-      (expand-file-name "ek-el-files/ek-custom.el" user-emacs-directory))
+(setq custom-file (expand-file-name "ek-el-files/ek-custom.el"
+				    user-emacs-directory))
 (load custom-file)
 
 (provide 'init)
