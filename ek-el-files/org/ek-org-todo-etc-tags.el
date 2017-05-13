@@ -1,3 +1,9 @@
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
+(require 'org)
+
 ; todo keywords list
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
@@ -29,3 +35,7 @@
               ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
               ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+
+
+(provide 'ek-org-todo-etc-tags)
+;;; ek-org-todo-etc-tags.el ends here

@@ -1,5 +1,14 @@
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
+(require 'org)
+(require 'ido)
+
 (defun org-mode-turn-off-company-hook ()
+  "Turn off company mode for org."
   (company-mode -1))
+
 (add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
 ;; ****************__END_TEST_AREA__****************************
 
@@ -47,3 +56,7 @@
 
 ;; follow link with return
 (setq org-return-follows-link t)
+
+
+(provide 'ek-org-gnrl-ui)
+;;; ek-org-gnrl-ui.el ends here

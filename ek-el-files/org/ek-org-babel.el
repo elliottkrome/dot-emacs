@@ -1,4 +1,9 @@
-; (require 'ob-tcl)
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
+(require 'org)
+
 ;; source code languages
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -29,3 +34,6 @@
     (error nil)))
 
 (add-hook 'org-babel-after-execute-hook 'display-inline-images 'append)
+
+(provide 'ek-org-babel)
+;;; ek-org-babel.el ends here

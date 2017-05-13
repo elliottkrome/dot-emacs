@@ -1,4 +1,8 @@
-;; ****************__TEST_AREA__********************************
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
+(require 'org)
 (setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil)))
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html
@@ -14,3 +18,6 @@
 
 ;(add-to-list 'org-export-filter-plain-text-functions
 ;	     #'my-html-nobreak-space-filter)
+
+(provide 'ek-org-export)
+;;; ek-org-export ends here

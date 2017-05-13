@@ -1,3 +1,7 @@
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
 ;; Use sticky agenda's so they persist
 (setq org-agenda-sticky t)
 (setq org-agenda-skip-scheduled-if-done t)
@@ -134,3 +138,5 @@
 ;  (setq org-deadline-warning-days 30)
 
 
+(provide 'ek-org-agenda)
+;;; ek-org-agenda.el ends here

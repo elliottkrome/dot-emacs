@@ -6,6 +6,8 @@
 ;; http://orgmode.org/manual/Template-expansion.html
 
 ;;; Code:
+(require 'org)
+
 
 (setq org-capture-templates
       (quote
@@ -110,5 +112,5 @@
 	       entry (file ek-org-file-class-1)
 	      ))))
 
-(provide 'org_capture_templates)
-;;; org_capture_templates.el ends here
+(provide 'ek-org-capture-templates)
+;;; ek-org-capture-templates.el ends here
