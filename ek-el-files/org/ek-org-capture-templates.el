@@ -8,7 +8,7 @@
 ;;; Code:
 (require 'org)
 
-
+(defvar org-capture-templates)
 (setq org-capture-templates
       (quote
        (("t" "TODO no time no file link"
@@ -98,19 +98,18 @@
 
 	("W" "weekly with time"
 	 entry (file ek-org-file-weekly)
-	 "* %^{****REMEMBER TO ADD +1W TO TIMESTAMP****    Description:}\n%^T\n%?\n")
+	 "* %^{****REMEMBER TO ADD +1W TO TIMESTAMP****
+Description:}\n%^T\n%?\n")
 	      
 	("h" "habit"
-	 hentry (file ek-org-file-refile-gnrl)
-	 "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+	 entry (file ek-org-file-refile-gnrl)
+	 "* NEXT %?\n%U\n%a\nSCHEDULED:
+%(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n
+:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
 
 	("*" "empty asterisked entry (just example for now)"
 	 entry (file ek-org-file-refile-gnrl)
-	 "* %?\n")
-	      
-	      ("1" "chem"
-	       entry (file ek-org-file-class-1)
-	      ))))
+	 "* %?\n"))))
 
 (provide 'ek-org-capture-templates)
 ;;; ek-org-capture-templates.el ends here

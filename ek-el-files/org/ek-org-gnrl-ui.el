@@ -3,7 +3,6 @@
 ;;; Code:
 
 (require 'org)
-(require 'ido)
 
 (defun org-mode-turn-off-company-hook ()
   "Turn off company mode for org."
@@ -38,12 +37,8 @@
 
 ; Use IDO for both buffer and file completion and ido-everywhere to t
 (setq org-completion-use-ido t)
-(setq ido-max-directory-size 100000)
-(ido-mode (quote both))
-; Use the current window when visiting files and buffers with ido
-(setq ido-default-file-method 'selected-window)
-(setq ido-default-buffer-method 'selected-window)
-; Use the current window for indirect buffer display
+
+;; Use the current window for indirect buffer display
 (setq org-indirect-buffer-display 'current-window)
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
@@ -56,7 +51,6 @@
 
 ;; follow link with return
 (setq org-return-follows-link t)
-
 
 (provide 'ek-org-gnrl-ui)
 ;;; ek-org-gnrl-ui.el ends here

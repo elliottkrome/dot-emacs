@@ -1,3 +1,9 @@
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
+(require 'imenu)
+
 (use-package ido
   :ensure t
   :init
@@ -13,7 +19,7 @@
       :ensure t
       :init (ido-vertical-mode 1))
     (use-package ido-occur
-      :ensure t) 
+      :ensure t)
     (use-package smex
       :ensure t ;smex-save-file
       :init
@@ -28,8 +34,10 @@
         ido-use-filename-at-point              'guess
         ido-max-prospects                       10
         ido-default-file-method                'selected-window
+	ido-default-buffer-method              'selected-window
         ido-auto-merge-work-directories-length -1
-	ido-everywhere                          t))
+	ido-everywhere                          t
+	ido-max-directory-size                  100000))
 
 
 
@@ -93,3 +101,6 @@
                       (insert ?-)
                     (funcall ,ido-cannot-complete-command)))))
           ad-do-it))
+
+(provide 'ek-ido)
+;;; ek-ido ends here
