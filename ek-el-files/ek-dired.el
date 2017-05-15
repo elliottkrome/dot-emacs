@@ -14,12 +14,30 @@
       "^\\.?#\\|^\\.DS_Store\\|^auto-save-list\\|^backups"
       dired-omit-verbose nil)
 
-
 (use-package ls-lisp
   :init
   (progn
     (setq ls-lisp-use-insert-directory-program nil)
     (setq ls-lisp-verbosity '(links))))
+(defmacro image-view (direction)
+  `(lambda ()
+     (interactive)
+     (quit-window)
+     (let ((pt (point))
+           filename)
+       (or (ignore-errors
+             (catch 'filename
+               (while (dired-next-line ,direction)
+                 (when (image-type-from-file-name
+                        (setq filename (dired-get-filename)))
+                   (throw 'filename filename)))))
+           (goto-char pt))
+       (dired-view-file))))
+
+(eval-after-load "image-mode"
+  '(progn
+    (define-key image-mode-map "n" (image-view 1))
+    (define-key image-mode-map "h" (image-view -1))))
 
 (use-package dired-x
   :init
@@ -45,6 +63,10 @@
 			  (set-window-configuration wnd))))
 	  (error "No more than 2 files should be marked"))))))
     ; (define-key dired-mode-map "e" 'elk-ediff-for-dired)
-
+(use-package peep-dired
+  :ensure t
+  :defer t ; don't access `dired-mode-map' until `peep-dired' is loaded
+  :bind (:map dired-mode-map
+              ("P" . peep-dired)))
 (provide 'ek-dired)
 ;;; dired.el ends here
