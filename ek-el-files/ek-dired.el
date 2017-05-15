@@ -14,30 +14,15 @@
       "^\\.?#\\|^\\.DS_Store\\|^auto-save-list\\|^backups"
       dired-omit-verbose nil)
 
+;; lets us use set flags to ls for dired (to make it less verbose)
+;;
 (use-package ls-lisp
   :init
   (progn
-    (setq ls-lisp-use-insert-directory-program nil)
-    (setq ls-lisp-verbosity '(links))))
-(defmacro image-view (direction)
-  `(lambda ()
-     (interactive)
-     (quit-window)
-     (let ((pt (point))
-           filename)
-       (or (ignore-errors
-             (catch 'filename
-               (while (dired-next-line ,direction)
-                 (when (image-type-from-file-name
-                        (setq filename (dired-get-filename)))
-                   (throw 'filename filename)))))
-           (goto-char pt))
-       (dired-view-file))))
-
-(eval-after-load "image-mode"
-  '(progn
-    (define-key image-mode-map "n" (image-view 1))
-    (define-key image-mode-map "h" (image-view -1))))
+    (setq ls-lisp-use-insert-directory-program nil ;; should make work on
+	                                           ;; Windows
+	  ls-lisp-verbosity '(links))        ;; decrease dired's verbosity
+    ))
 
 (use-package dired-x
   :init
@@ -63,10 +48,22 @@
 			  (set-window-configuration wnd))))
 	  (error "No more than 2 files should be marked"))))))
     ; (define-key dired-mode-map "e" 'elk-ediff-for-dired)
+
+;; lets us easily preview images from a dired buffer
+;;
 (use-package peep-dired
   :ensure t
   :defer t ; don't access `dired-mode-map' until `peep-dired' is loaded
+  :init
+  (progn
+    (setq peep-dired-cleanup-eagerly t ;;  kill image buffer immediately after 
+				       ;;  navigating to another entry
+	  peep-dired-enable-on-directories t ;; dired buffers that were peeped
+					     ;; have peep dired enabled
+	  peep-dired-ignored-extensions '("mkv" "iso" "mp4") ;; files to ignore
+	  ))
   :bind (:map dired-mode-map
               ("P" . peep-dired)))
+
 (provide 'ek-dired)
 ;;; dired.el ends here
