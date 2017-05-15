@@ -56,8 +56,10 @@
   :defer t ; don't access `dired-mode-map' until `peep-dired' is loaded
   :init
   (progn
-    (setq peep-dired-cleanup-eagerly t ;;  kill image buffer immediately after 
-				       ;;  navigating to another entry
+    (setq peep-dired-cleanup-on-disable t ;; kill opened buffers after disabling
+	                                  ;; peep dired
+	  ;; peep-dired-cleanup-eagerly t ;;  kill image buffer immediately
+				          ;;  after navigating to another entry
 	  peep-dired-enable-on-directories t ;; dired buffers that were peeped
 					     ;; have peep dired enabled
 	  peep-dired-ignored-extensions '("mkv" "iso" "mp4") ;; files to ignore
