@@ -1,8 +1,12 @@
+;;; package -- summary
+;;; Commentary:
+;;; Code:
+
 ;; load packages repos
 ;;
 (when (>= emacs-major-version 24)
   (require 'package)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+  ; (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
   (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
   (package-initialize))
