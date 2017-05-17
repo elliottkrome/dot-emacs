@@ -14,8 +14,10 @@
   :diminish t
   :config
   (progn
-    (setq flycheck-check-syntax-automatically '(save mode-enabled))
-    (setq flycheck-standard-error-navigation nil)
+    (setq flycheck-check-syntax-automatically '(save mode-enabled)
+	  flycheck-standard-error-navigation nil)
+    (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+    
     (if (ek-setup-flycheck-for-pyflakes-if-conda-found)
 	(use-package flycheck-pyflakes
 	  :diminish t
