@@ -5,11 +5,18 @@
   (load-theme 'eziam-dark t))
 
 ; (load-theme 'leuven t)   
+
+;; Spaceline - A mode line
+(use-package spaceline
+  :ensure spaceline)
+
+(use-package spaceline-config
+  :ensure spaceline
+   :config
+   (spaceline-emacs-theme))
+
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
-
-
-
 
 ;; Show unfinished keystrokes early.
 (setq echo-keystrokes 0.1)

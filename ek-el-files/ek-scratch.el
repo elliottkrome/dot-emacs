@@ -1,8 +1,6 @@
-;;; package --- Summary
-;;; Commentary:
 ;; make scratch buffer persistent between sessions without saving
+;;
 
-;;; Code:
 (setq scratch-buffer-file (concat ek-data-directory "scratch.el"))
 (setq initial-major-mode 'org-mode)
 

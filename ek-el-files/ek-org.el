@@ -16,5 +16,5 @@
 (load "~/.emacs.d/ek-el-files/org/ek-org-gnrl-ui.el")
 
 (provide 'ek-org)
-;;; org.el ends here
+;;; ek-org.el ends here
 
