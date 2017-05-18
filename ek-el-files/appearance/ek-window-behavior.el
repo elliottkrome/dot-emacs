@@ -1,8 +1,3 @@
-(diminish 'buffer-face-mode)
-; (diminish 'which-key-mode)
-(diminish 'auto-revert-mode)
-(diminish 'anaconda-mode)
-
 
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -27,16 +22,6 @@
 ;; 				     ;; instead of wrapping around onto a new line)
 ;;  truncate-partial-width-windows t ;; truncate lines in partial-width windows
 ;;  )
-
-
-;; don't let the cursor go into minibuffer prompt
-;;  http://ergoemacs.org/emacs/emacs_stop_cursor_enter_prompt.html
-(setq minibuffer-prompt-properties
-      (quote
-       (read-only t
-		  point-entered
-		  minibuffer-avoid-prompt
-		  face minibuffer-prompt)))
 
 (defun highlight-selected-window ()
   "Highlight un-selected windows with a different background color."
