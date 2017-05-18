@@ -1,31 +1,28 @@
-(use-package eziam-theme
-  :ensure t
-  :defer t
-  :init
-  (load-theme 'eziam-dark t))
-
-; (load-theme 'leuven t)   
-
-;; Spaceline - A mode line
-(use-package spaceline
-  :ensure spaceline)
-
-(use-package spaceline-config
-  :ensure spaceline
-   :config
-   (spaceline-emacs-theme))
 
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
+(toggle-scroll-bar 0)
+(global-font-lock-mode 't)
+(winner-mode 1)
+(column-number-mode 1)      ;; display column number in mode line
+(blink-cursor-mode 0)
+(show-paren-mode t)
+; (set-fringe-mode t)
 
-;; Show unfinished keystrokes early.
-(setq echo-keystrokes 0.1)
+(setq
+ echo-keystrokes 0.05       ;; show unfinished keystrokes early.
+ visible-bell t             ;; dinging noises annoy the people around me
+ scroll-conservatively 1000 ;; scroll just enough to bring point into view
+ inhibit-splash-screen t    ;; no splash screen
+ )
 
-(toggle-scroll-bar -1)
+;; (setq
+;;  truncate-lines t                 ;; each line of text gets one line on the
+;; 				     ;; screen (i.e., text will run off the left
+;; 				     ;; instead of wrapping around onto a new line)
+;;  truncate-partial-width-windows t ;; truncate lines in partial-width windows
+;;  )
 
-
-(add-to-list 'default-frame-alist '(font . "Source Code Pro" ))
-(setq visible-bell t)
 
 ;; don't let the cursor go into minibuffer prompt
 ;;  http://ergoemacs.org/emacs/emacs_stop_cursor_enter_prompt.html
@@ -44,61 +41,3 @@
 		      (buffer-face-set '(:background "#000e26"))))))
   (buffer-face-set 'default))
 (add-hook 'buffer-list-update-hook 'highlight-selected-window)
-
-(global-font-lock-mode 't)
-
-(winner-mode 1)
-
-(setq scroll-conservatively 10000)
-
-;; (use-package hl-line
-;;   :ensure t
-;;   :config (set-face-background 'hl-line "#073642"))
-
-
-;; display column number in mode line
-(column-number-mode 1)
-
-;; no splash screen
-(setq inhibit-splash-screen t)
-
-; (set-fringe-mode t)
-
-; each line of text gets one line on the screen (i.e., text will run
-; off the left instead of wrapping around onto a new line)
-;(setq truncate-lines t)
-; truncate lines even in partial-width windows
-;(setq truncate-partial-width-windows t)
-
-(require 'paren)
-(show-paren-mode t)
-
-;; font-lock: Use lambda for anonymous functions
-(font-lock-add-keywords
- 'python-mode `(("\\(lambda\\>\\)"
-                 (0 (progn (compose-region
-			    (match-beginning 1)
-			    (match-end 1)
-                           ,(make-char 'greek-iso8859-7 107))
-			   nil)))))
-(font-lock-add-keywords
- 'emacs-lisp-mode `(("\\(lambda\\>\\)"
-		     (0 (progn (compose-region
-				(match-beginning 1)
-				(match-end 1)
-                               ,(make-char 'greek-iso8859-7 107))
-			       nil)))))
-
-(font-lock-add-keywords
- 'python-mode `(("\\(np.pi\\>\\)"
-		 (0 (progn (compose-region
-			    (match-beginning 1)
-			    (match-end 1)
-			    ,(make-char 'greek-iso8859-7 112))
-			   nil)))))
-
-(visual-line-mode)
-
-(blink-cursor-mode 0)
-(provide 'window_behavior)
-;;; window_behavior.el ends here
