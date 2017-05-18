@@ -1,6 +1,3 @@
-;;; package -- summary
-;;; Commentary:
-;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
@@ -27,8 +24,7 @@
 (load "~/.emacs.d/ek-el-files/ek-buffer-management.el")
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
-(load "~/.emacs.d/ek-el-files/ek-iedit-and-rainbow-delimiters.el")
-(load "~/.emacs.d/ek-el-files/ek-hideshow.el")
+(load "~/.emacs.d/ek-el-files/ek-iedit.el")
 (load "~/.emacs.d/ek-el-files/ek-which-key.el")
 (load "~/.emacs.d/ek-el-files/ek-suggest.el")
 (load "~/.emacs.d/ek-el-files/ek-messages.el")
@@ -37,7 +33,6 @@
 (load "~/.emacs.d/ek-el-files/ek-markdown.el")
 (load "~/.emacs.d/ek-el-files/ek-flycheck.el")
 (load "~/.emacs.d/ek-el-files/ek-appearance.el")
-(load "~/.emacs.d/ek-el-files/ek-window-behavior.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -52,5 +47,3 @@
 				    user-emacs-directory))
 (load custom-file)
 
-(provide 'init)
-;;; init.el ends here

@@ -12,6 +12,7 @@
 /hidden/data/smex-items
 /hidden/data/scratch.el
 /hidden/_notes/
+/hidden/projectile/
 
 
 *~
@@ -19,4 +20,3 @@
 *.last
 *.dat
 
-/projectile-bookmarks.eld
