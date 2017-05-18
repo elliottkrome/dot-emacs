@@ -1,3 +1,8 @@
+(diminish 'buffer-face-mode)
+; (diminish 'which-key-mode)
+(diminish 'auto-revert-mode)
+(diminish 'anaconda-mode)
+
 
 (tool-bar-mode 0)
 (scroll-bar-mode 0)

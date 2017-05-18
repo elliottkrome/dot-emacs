@@ -4,7 +4,9 @@
                         "git-gutter-fringe"
                       "git-gutter")))
   (eval `(use-package ,package-name
-    :ensure t
-    :init (global-git-gutter-mode +1))))
+	   :ensure t
+	   :diminish git-gutter-mode
+	   :init (global-git-gutter-mode +1))))
+
 
 
