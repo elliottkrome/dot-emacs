@@ -6,7 +6,5 @@
 
 ; (load-theme 'leuven t)   
 
-
-
-
-
+(set-face-background 'isearch "coral4")
+(set-face-attribute 'font-lock-comment-face nil :slant 'normal)
