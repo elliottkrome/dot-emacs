@@ -33,7 +33,16 @@
   (interactive)
   (insert "[[")
     (yank)
-  (insert "][more]]"))
+    (insert "][more]]"))
+
+(defun org-yank-hyperlink (arg)
+  (interactive
+   (list
+    (read-string "Description: ")))
+  (insert "[[")
+  (yank)
+  (insert (format "][%s]]" arg)))
+
 
 ; Use IDO for both buffer and file completion and ido-everywhere to t
 (setq org-completion-use-ido t)
