@@ -29,7 +29,7 @@
 (load "~/.emacs.d/ek-el-files/ek-suggest.el")
 (load "~/.emacs.d/ek-el-files/ek-messages.el")
 (load "~/.emacs.d/ek-el-files/ek-prog.el")
-(load "~/.emacs.d/ek-el-files/ek-flycheck.el")
+(load "~/.emacs.d/ek-el-files/ek-yasnippet.el")
 (load "~/.emacs.d/ek-el-files/ek-appearance.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
