@@ -23,11 +23,11 @@
 ;;  truncate-partial-width-windows t ;; truncate lines in partial-width windows
 ;;  )
 
-(defun highlight-selected-window ()
-  "Highlight un-selected windows with a different background color."
-  (walk-windows (lambda (w)
-		  (unless (eq w (selected-window))
-                    (with-current-buffer (window-buffer w)
-		      (buffer-face-set '(:background "#000e26"))))))
-  (buffer-face-set 'default))
-(add-hook 'buffer-list-update-hook 'highlight-selected-window)
+;; (defun highlight-selected-window ()
+;;   "Highlight un-selected windows with a different background color."
+;;   (walk-windows (lambda (w)
+;; 		  (unless (eq w (selected-window))
+;;                     (with-current-buffer (window-buffer w)
+;; 		      (buffer-face-set '(:background "#000e26"))))))
+;;   (buffer-face-set 'default))
+;;     (add-hook 'buffer-list-update-hook 'highlight-selected-window))
