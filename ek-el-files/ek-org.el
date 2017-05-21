@@ -8,5 +8,5 @@
 (load "~/.emacs.d/ek-el-files/org/ek-org-export.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-formatting.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-gnrl-ui.el")
-
+(load "~/.emacs.d/ek-el-files/org/ek-org-download.el")
 

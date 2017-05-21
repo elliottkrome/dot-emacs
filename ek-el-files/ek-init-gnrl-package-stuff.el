@@ -1,6 +1,4 @@
-;;; package -- summary
-;;; Commentary:
-;;; Code:
+(package-initialize)
 
 ;; load packages repos
 ;;
@@ -18,9 +16,10 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+
 ;; speeds up load-time
 ;;
 (eval-when-compile
   (require 'use-package))
-(require 'diminish)
+
 
