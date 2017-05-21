@@ -1,10 +1,7 @@
-;;; package -- summary
-;;; Commentary:
-;;; Code:
-
 (require 'bookmark)
 
 (defun ek-mkdir-p (dir-path)
+  "If the directory at dir-path does not exist, then make it."
   (unless (file-exists-p dir-path)
     (make-directory dir-path t)))
 
@@ -18,7 +15,7 @@
       (concat ek-hidden-directory "data/"))
 
 
-;; now lets do the actual hiding of those pesky little things
+;; now hide those pesky little things
 ;;
 (setq bookmark-default-file
       (concat ek-data-directory "bookmarks"))
@@ -27,5 +24,3 @@
 (setq recentf-save-file
       (concat ek-data-directory "recentf"))
 
-(provide 'ek-organization)
-;;; ek-organization ends here

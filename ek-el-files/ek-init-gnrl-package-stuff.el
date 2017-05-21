@@ -1,4 +1,3 @@
-(package-initialize)
 
 ;; load packages repos
 ;;
