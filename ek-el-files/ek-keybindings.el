@@ -151,7 +151,7 @@
 (define-key ctl-l-map "i" 'ido-goto-symbol)
 (define-key ctl-l-map "e" 'show-some-last-messages)
 (define-key ctl-l-map "S" (switch-to-buffer (get-buffer-create "*scratch*")))
-
+(define-key ctl-l-map "y" 'yas-insert-snippet)
 ;; (define-kwy ctl-l-map "w" 'workspace-goto)
 (provide 'ek-keybindings)
 ;;; ek-keybindings ends here
