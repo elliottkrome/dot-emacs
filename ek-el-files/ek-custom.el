@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet spaceline wgrep git-gutter-fringe suggest ox-latex ls-lisp flycheck-pyflakes flycheck markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
+    (hideshowvis yasnippet spaceline wgrep git-gutter-fringe suggest ox-latex ls-lisp flycheck-pyflakes flycheck markdown-mode rainbow-delimiters-mode t rainbow-delimiters iedit ido-occur company-quickhelp company-flx magit use-package))))
  
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
