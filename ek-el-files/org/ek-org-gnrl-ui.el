@@ -62,5 +62,7 @@
 ;; follow link with return
 (setq org-return-follows-link t)
 
+(setq org-tags-column 60)
+
 (provide 'ek-org-gnrl-ui)
 ;;; ek-org-gnrl-ui.el ends here
