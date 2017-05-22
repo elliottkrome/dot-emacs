@@ -7,7 +7,7 @@
       ;;
       (remove-if-not #'file-directory-p  ;; remove-if-not requires 'cl
 		     (directory-files    ;; get all files in following directory
-		      (concat user-emacs-directory "snippets/")
+		      (concat user-emacs-directory "submodules/snippets/")
 		      t                  ;; full path
 		      )))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

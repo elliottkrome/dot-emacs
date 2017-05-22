@@ -1,5 +1,5 @@
-[submodule "snippets"]
-	path = snippets
+[submodule "submodules/snippets"]
+	path = submodules/snippets
 	url = https://github.com/AndreaCrotti/yasnippet-snippets.git
 [submodule "submodules/org-mode"]
 	path = submodules/org-mode
