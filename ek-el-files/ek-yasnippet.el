@@ -1,15 +1,8 @@
 ;; get the snippet-dirs ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 (require 'cl)
-(setq ek-snippet-dir
+(setq ek-snippet-dirs '("~/.emacs.d/submodules/snippets"))
 
-      ;; get all sub-directories under .emacs.d/snippets/
-      ;;
-      (remove-if-not #'file-directory-p  ;; remove-if-not requires 'cl
-		     (directory-files    ;; get all files in following directory
-		      (concat user-emacs-directory "submodules/snippets/")
-		      t                  ;; full path
-		      )))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -27,7 +20,7 @@
                 (when (eql major-mode 'snippet-mode)
                   (yas-reload-all))))
     (setq
-     yas-snippet-dirs ek-snippet-dir
+     yas-snippet-dirs ek-snippet-dirs
      yas-prompt-functions '(yas/ido-prompt)
      yas-indent-line 'auto)
 
