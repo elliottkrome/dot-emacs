@@ -3,6 +3,9 @@
 (use-package irony
   :ensure t
   :config
+  (unless (package-installed-p 'irony)
+    (irony-mode)
+    (irony-install-server))
   (use-package company-irony
     :ensure t
     :config
