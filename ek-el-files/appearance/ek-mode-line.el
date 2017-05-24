@@ -6,7 +6,6 @@
   :ensure spaceline
   :config
   (spaceline-emacs-theme))
-(add-to-list 'default-frame-alist '(font . "Source Code Pro" ))
 
 (diminish 'which-key-mode)
 (diminish 'auto-revert-mode)
