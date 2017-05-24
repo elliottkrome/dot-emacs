@@ -1,9 +1,0 @@
-
-* get class-1 org template going
-see ek-org-capture-templates
-get a reasonable and portable configuration going
-* keybindings
-** hideshow mode
-learn / establish some reasonable keybindings for this
-* get latex exports working
-ouch

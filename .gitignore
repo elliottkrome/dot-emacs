@@ -1,19 +1,7 @@
 /elpa/
-/auto-save-list/
-/backups/
+/hidden/
 
 /ek-el-files/ek-private.el
-/ek-el-files/ek-registers.el
-/ek-el-files/ek-org-capture-templates.el
-
-/hidden/anaconda-mode/
-/hidden/data/recentf
-/hidden/data/bookmarks
-/hidden/data/smex-items
-/hidden/data/scratch.el
-/hidden/_notes/
-/hidden/projectile/
-
 
 *~
 *#
