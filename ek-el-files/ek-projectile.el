@@ -20,9 +20,13 @@
 
                ;; set projectile custom variables
 	       ;;
-               (let* ((ek-projectile-dir (file-name-as-directory ek-projectile-directory))
-                      (ek-projectile-cache-file (concat ek-projectile-dir ek-projectile-cache-filename))
-                      (ek-projectile-bookmarks-file (concat ek-projectile-dir ek-projectile-bookmarks-filename)))
+               (let* ((ek-projectile-dir
+		       (file-name-as-directory
+			(concat ek-data-directory ek-projectile-directory)))
+		      (ek-projectile-cache-;FIXME: le
+		       (concat ek-projectile-dir ek-projectile-cache-filename))
+		      (ek-projectile-bookmarks-;FIXME: le
+		       (concat ek-projectile-dir ek-projectile-bookmarks-filename)))
                  (setq projectile-cache-file          ek-projectile-cache-file
                        projectile-known-projects-file ek-projectile-bookmarks-file
                        projectile-indexing-method     'alien ;; does not work well on windows
