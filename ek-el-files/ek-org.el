@@ -1,8 +1,9 @@
 ;; much taken from http://doc.norang.ca/org-mode.html
 
-;; the newer org-mode stuff seems to require this
+;; the newer org-mode stuff seems to require the package `f'
 ;;
-(require 'f)
+(use-package f
+  :ensure t)
 
 
 ;; use the submodule org-version, as well as the extra stuff in the contrib
