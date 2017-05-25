@@ -4,11 +4,6 @@
 
 (require 'org)
 
-(defun org-mode-turn-off-company-hook ()
-  "Turn off company mode for org."
-  (company-mode -1))
-
-(add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
 ;; ****************__END_TEST_AREA__****************************
 
 ;; local

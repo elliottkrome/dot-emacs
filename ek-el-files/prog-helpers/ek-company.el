@@ -27,3 +27,9 @@
 (global-company-mode)
 
 
+;; I find company is annoying in org-mode
+;;
+(defun org-mode-turn-off-company-hook ()
+  "Turn off company mode for org."
+  (company-mode -1))
+(add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
