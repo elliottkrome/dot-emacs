@@ -23,7 +23,7 @@
 ;;;;;;;;;;;;;;;;;; end local keybindings ;;;;;;
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline54
-  (defun org-yank-more ()
+(defun org-yank-more ()
 "Quickly make a link with label 'more'."
   (interactive)
   (insert "[[")
@@ -38,6 +38,14 @@
   (yank)
   (insert (format "][%s]]" arg)))
 
+
+;; add a type of link so that the emacs will open the linked file with the
+;; default external application (useful for media such as movies, pdfs, etc.)
+;;
+(defun ek-open-ext (path-to-media)
+  (shell-command (concat "open " path-to-media)))
+(org-add-link-type "open-ext" 'ek-open-ext)
+(add-hook 'org-store-link-functions 'org-ek-store-link)
 
 ; Use IDO for both buffer and file completion and ido-everywhere to t
 (setq org-completion-use-ido t)
