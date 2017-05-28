@@ -44,3 +44,9 @@ point reaches the beginning or end of the buffer, stop there."
 
 ; ignore case when searching
 (setq case-fold-search t)
+
+
+(use-package browse-kill-ring
+  :ensure t
+  :config
+  (browse-kill-ring-default-keybindings))
