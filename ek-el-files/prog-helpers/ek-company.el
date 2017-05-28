@@ -33,3 +33,10 @@
   "Turn off company mode for org."
   (company-mode -1))
 (add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
+
+(use-package cmake-mode
+  :ensure t
+  :mode "CMakeLists.txt"
+  :init
+  (progn
+    (setq company-cmake-executable "/usr/local/bin/cmake")))
