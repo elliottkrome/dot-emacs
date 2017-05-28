@@ -1,6 +1,3 @@
-;;; package --- Summary
-;;; Commentary:
-
 ; much taken from http://doc.norang.ca/org-mode.html
 ;; http://orgmode.org/manual/Template-elements.html
 ;; http://orgmode.org/manual/Template-expansion.html
@@ -111,5 +108,3 @@ Description:}\n%^T\n%?\n")
 	 entry (file ek-org-file-refile-gnrl)
 	 "* %?\n"))))
 
-(provide 'ek-org-capture-templates)
-;;; ek-org-capture-templates.el ends here
