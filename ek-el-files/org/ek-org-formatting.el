@@ -4,7 +4,7 @@
 
 (require 'org)
 
-(setq org-startup-indented t       ; cleaner indentation
+(setq org-startup-indented nil     ; cleaner indentation
       org-hide-leading-stars t     ; hide stars, MAYBE UNNECESSARY
       org-hide-emphasis-markers t  ; make *bold* look plain, like bold
       org-src-fontify-natively t)
