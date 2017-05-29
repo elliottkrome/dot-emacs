@@ -1,0 +1,6 @@
+#name: drill_test
+#key: dt
+# --
+(setq org-drill-scope
+      (list
+       (concat ek-org-dir-knowledge "$1")))

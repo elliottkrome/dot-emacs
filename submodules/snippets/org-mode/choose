@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: choose
+# key: cho
+# --
+{$1 \choose $2}$3
