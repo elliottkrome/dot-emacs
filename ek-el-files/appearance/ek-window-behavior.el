@@ -7,7 +7,10 @@
 (column-number-mode 1)      ;; display column number in mode line
 (blink-cursor-mode 0)
 (show-paren-mode t)
-; (set-fringe-mode t)
+
+;; 8 pixels on the left, 0 pixels on the right
+;;
+(fringe-mode '(8 . 0))
 
 (setq
  echo-keystrokes 0.05       ;; show unfinished keystrokes early.
