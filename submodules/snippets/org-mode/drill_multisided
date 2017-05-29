@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: drill_multisided
+# key: drms
+# --
+* $1                                                   :drill:
+    :PROPERTIES:
+    :DRILL_CARD_TYPE: multisided
+    :END:
+** $2
+
+** $3
+
+** $4
+

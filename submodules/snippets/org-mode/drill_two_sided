@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: drill_two_sided
+# key: drts
+# --
+** $1                                                            :drill:
+    :PROPERTIES:
+    :DRILL_CARD_TYPE: twosided
+    :END:
+
+*** one
+
+*** two
+
+*** Notes

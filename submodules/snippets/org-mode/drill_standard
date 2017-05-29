@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: drill_standard
+# key: drst
+# --
+** $1                                                            :drill:
+
+*** Question
+
+*** Answer
+
+*** Notes

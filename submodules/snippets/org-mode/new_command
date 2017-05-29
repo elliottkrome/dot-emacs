@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: new_command
+# key: nc
+# --
+#+LaTeX_HEADER: \newcommand{\\$1}{\\$0}

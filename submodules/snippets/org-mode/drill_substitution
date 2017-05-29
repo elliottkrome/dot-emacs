@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: drill_substitution
+# key: drsu
+# --
+** $1                                                            :drill:
+    $1 [$2] $3

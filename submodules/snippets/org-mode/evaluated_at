@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: evaluated_at
+# key: ea
+# --
+\biggr\rvert_{$1}^{$2}
