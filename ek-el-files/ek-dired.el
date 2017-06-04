@@ -1,8 +1,3 @@
-;;; package --- Summary
-;;; Commentary:
-;;; Code:
-
-
 (add-hook 'dired-mode-hook 'auto-revert-mode)
 
 ;; allow editing file permissions
@@ -67,5 +62,9 @@
   :bind (:map dired-mode-map
               ("P" . peep-dired)))
 
-(provide 'ek-dired)
-;;; dired.el ends here
+
+(use-package dired-du
+  :ensure t
+  :init
+  (add-hook 'dired-mode-hook #'dired-du-mode))
+
