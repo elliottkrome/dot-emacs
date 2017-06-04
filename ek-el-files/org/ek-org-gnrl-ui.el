@@ -1,7 +1,3 @@
-;;; package -- summary
-;;; Commentary:
-;;; Code:
-
 (require 'org)
 
 ;; ****************__END_TEST_AREA__****************************
@@ -55,7 +51,8 @@
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
-(setq org-ellipsis " ↴")
+; (setq org-ellipsis " ↴")
+
 ;; makes org open local links with emacs
 (add-to-list 'org-file-apps '(directory . emacs))
 
@@ -69,5 +66,10 @@
 
 (setq org-tags-column 65)
 
-(provide 'ek-org-gnrl-ui)
+;; org mode will fontify bad links with `org-warning' face (on refontify)
+;;
+(org-link-set-parameters
+ "file"
+ :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
+
 ;;; ek-org-gnrl-ui.el ends here
