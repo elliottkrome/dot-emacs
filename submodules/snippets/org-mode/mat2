@@ -1,0 +1,11 @@
+f# -*- mode: snippet -*-
+# name: matrix2
+# key: mat2
+# possible improvement, compute the number of lines from the argument to array
+# --
+
+\begin{bmatrix}
+   $1  &  $2 \\
+\end{bmatrix}\begin{bmatrix}
+   $1  &  $2 \\
+\end{bmatrix}

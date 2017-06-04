@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: int_limits
+# key: il
+# --
+\int\limits_{$1}^{$2}

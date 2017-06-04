@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: cases
+# key: ca
+# --
+\[
+$1 =
+  \left \\{ \begin{array}{lr}
+   $2   &  $3    \\\
+   \end{array}
+\]

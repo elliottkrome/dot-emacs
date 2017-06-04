@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sum_limits
+# key: sl
+# --
+\sum\limits_{$1}^{$2}
