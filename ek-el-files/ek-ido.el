@@ -25,9 +25,20 @@
       :init
       (progn
 	(setq smex-save-file (concat ek-data-directory "smex-items"))
-	(smex-initialize))
-      :bind ("M-x" . smex)))
+	(smex-initialize)
 
+	(defadvice smex (around space-inserts-hyphen activate compile)
+	  "Insert hyphen in place of whitespace when M-x-ing."
+	  (let ((ido-cannot-complete-command
+		 `(lambda ()
+		    (interactive)
+		    (if ((string= ) " " (this-command-keys))
+			(insert ?-)
+		      (funcall ,ido-cannot-complete-command)))))
+	    ad-do-it)))
+      :bind (("M-x"         . smex)                       ; replace std M-x
+	     ("C-c C-c M-x" . 'execute-extended-command)  ; keep old M-x herex
+	     ))
   :config
   (setq ido-enable-flex-matching               t
         ido-create-new-buffer                  'always
@@ -89,18 +100,10 @@
               (add-to-list 'symbol-names name)
               (add-to-list 'name-and-pos (cons name position))))))))
 
+ ;; TODO: put somewhere reasonable
+ (define-key isearch-mode-map (kbd "C-o") 'ido-occur-from-isearch)
 
-;; This is old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-(defadvice smex (around space-inserts-hyphen activate compile)
-  "Insert hyphen in place of whitespace when M-x-ing."
-        (let ((ido-cannot-complete-command
-               `(lambda ()
-                  (interactive)
-                  (if (string= " " (this-command-keys))
-                      (insert ?-)
-                    (funcall ,ido-cannot-complete-command)))))
-          ad-do-it))
+
 
 (provide 'ek-ido)
 ;;; ek-ido ends here

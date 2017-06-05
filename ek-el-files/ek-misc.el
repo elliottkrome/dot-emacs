@@ -12,3 +12,8 @@
 		  point-entered
 		  minibuffer-avoid-prompt
 		  face minibuffer-prompt)))
+(defun ek-switch-to-scratch ()
+  "Switch to the scratch buffer."
+  (switch-to-buffer
+   (get-buffer-create "*scratch*")))
+  

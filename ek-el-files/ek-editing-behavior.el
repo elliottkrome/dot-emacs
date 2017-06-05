@@ -2,6 +2,7 @@
 (electric-pair-mode 1)
 (put 'narrow-to-region 'disabled nil)
 
+(setq set-mark-command-repeat-pop t)
 
 (defun smarter-move-beginning-of-line (arg)
     "Move point back to indentation of beginning of line.
@@ -27,7 +28,8 @@ point reaches the beginning or end of the buffer, stop there."
 	(move-beginning-of-line 1))))
 
 
-; http://stackoverflow.com/questions/17136216/emacs-shortcut-to-move-cursor-to-column-adding-spaces-if-needed
+;; http://stackoverflow.com/questions/17136216/emacs-shortcut-to-move-cursor-to-column-adding-spaces-if-needed
+;;
 (defun go-to-column (column)
   "Go to COLUMN, adding spaces if need be."
   (interactive "nColumn: ")
@@ -35,6 +37,7 @@ point reaches the beginning or end of the buffer, stop there."
 
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html
+;;
 (defadvice kill-region (before slick-cut activate compile)
   "When called interactively with no active region, kill a single line instead."
   (interactive
@@ -45,6 +48,18 @@ point reaches the beginning or end of the buffer, stop there."
 ; ignore case when searching
 (setq case-fold-search t)
 
+(defun ek-join-next-line ()
+  "Join next line to end of current line."
+    (join-line -1))
+
+(defun ek-scroll-up ()
+  "Scroll up a reasonable amount"
+  (scroll-up 8))
+
+
+(defun ek-scroll-down ()
+  "Scroll down a reasonable amount"
+  (scroll-down 8))
 
 (use-package browse-kill-ring
   :ensure t
