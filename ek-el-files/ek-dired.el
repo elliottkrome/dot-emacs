@@ -64,7 +64,6 @@
 
 
 (use-package dired-du
-  :ensure t
-  :init
-  (add-hook 'dired-mode-hook #'dired-du-mode))
+  :ensure t)
+  
 
