@@ -4,8 +4,7 @@
 
 (use-package spaceline-config
   :ensure spaceline
-  :config
-  (spaceline-emacs-theme))
+  )
 
 (diminish 'which-key-mode)
 (diminish 'auto-revert-mode)

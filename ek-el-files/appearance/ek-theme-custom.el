@@ -16,8 +16,11 @@
   (if (null (x-list-fonts font)) nil t))
 
 (defvar ek-default-font "Source Code Pro")
-(if (font-exists-p ek-default-font)
-     (set-face-attribute 'default nil :font ek-default-font))
+
+ (when (display-graphic-p)
+   (if (font-exists-p ek-default-font)
+       (set-face-attribute 'default nil :font ek-default-font)))
+
 
 
 

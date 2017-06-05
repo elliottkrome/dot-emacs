@@ -33,7 +33,7 @@
 
 ;; window management
 ;;
-(global-set-key (kbd "<M-f1>")      'make-frame)
+(global-set-key (kbd "<f1>")        'make-frame)
 (global-set-key (kbd "S-C-<left>")  'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>")  'shrink-window)
