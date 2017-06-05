@@ -37,7 +37,7 @@
 		      (funcall ,ido-cannot-complete-command)))))
 	    ad-do-it)))
       :bind (("M-x"         . smex)                       ; replace std M-x
-	     ("C-c C-c M-x" . 'execute-extended-command)  ; keep old M-x herex
+	     ("C-c C-c M-x" . execute-extended-command)  ; keep old M-x herex
 	     ))
   :config
   (setq ido-enable-flex-matching               t
@@ -48,7 +48,7 @@
 	ido-default-buffer-method              'selected-window
         ido-auto-merge-work-directories-length -1
 	ido-everywhere                          t
-	ido-max-directory-size                  100000))
+	ido-max-directory-size                  100000)))
 
 
 
