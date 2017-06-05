@@ -33,13 +33,13 @@
 
 ;; window management
 ;;
-(global-set-key [f1]                'make-frame)
+(global-set-key (kbd "<M-f1>")      'make-frame)
 (global-set-key (kbd "S-C-<left>")  'shrink-window-horizontally)
 (global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>")  'shrink-window)
 (global-set-key (kbd "S-C-<up>")    'enlarge-window)
-(global-set-key (kbd "M-f1")        'previous-buffer)
-(global-set-key (kbd "M-f2")        'next-buffer)
+(global-set-key (kbd "<M-f1>")      'previous-buffer)
+(global-set-key (kbd "<M-f2>")      'next-buffer)
 (global-set-key (kbd "s-p")         'windmove-up)
 (global-set-key (kbd "s-n")         'windmove-down)
 (global-set-key (kbd "s-b")         'windmove-left)
