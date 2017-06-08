@@ -20,9 +20,8 @@
 (global-set-key (kbd "C-c f")   'find-file-at-point)
 (global-set-key (kbd "C-x p")   'pop-to-mark-command)
 (global-set-key (kbd "M-j")     'ek-join-next-line)
-(global-set-key "\M-n"          'ek-scroll-down)
-(global-set-key "\M-p"          'ek-scroll-up)
-
+(global-set-key (kbd "M-n")     'ek-scroll-down)
+(global-set-key (kbd "\M-p")    'ek-scroll-up)
 (global-set-key [remap move-beginning-of-line]
 		'smarter-move-beginning-of-line)
 
@@ -111,3 +110,5 @@
 (define-key ctl-l-map "\C-w"  'kill-rectangle)
 (define-key ctl-l-map "y" 'yas-insert-snippet)
 (define-key ctl-l-map "\C-y"  'yank-rectangle)
+(define-key ctl-l-map "1"  'org-mobile-push)
+(define-key ctl-l-map "2"  'org-mobile-pull)
