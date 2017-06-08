@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: multiline_comment
+# key: mc
+# --
+%{
+<* $1 *>
+$2
+%}

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: determinant
+# key: det
+# --
+\det
+{\begin{vmatrix}
+ $1 & $2 \\\
+ $3 & $4 \\\
+\end{vmatrix}}
