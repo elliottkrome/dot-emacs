@@ -1,4 +1,4 @@
-;; Spaceline - A mode line
+
 (use-package spaceline
   :ensure spaceline)
 
@@ -12,6 +12,7 @@
 (diminish 'hs-minor-mode)
 
 ;; Remove BufFace from mode line
+;;
 (eval-after-load "face-remap"
   '(diminish 'buffer-face-mode))
 
