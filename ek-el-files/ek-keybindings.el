@@ -44,6 +44,11 @@
 (global-set-key (kbd "s-b")         'windmove-left)
 (global-set-key (kbd "s-f")         'windmove-right)
 (global-set-key (kbd "H-f")         'toggle-frame-fullscreen)
+(define-key org-mode-map (kbd "S-C-<left>") nil)
+(define-key org-mode-map (kbd "S-C-<right>") nil)
+(define-key org-mode-map (kbd "S-C-<up>") nil)
+(define-key org-mode-map (kbd "S-C-<down>") nil)
+
 
 
 ;; org-mode stuff
