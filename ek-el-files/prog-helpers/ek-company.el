@@ -8,7 +8,10 @@
 
     (use-package company-flx                   ;;;; fuzzy matching
       :ensure t                                ;; ensure installation
-      :defer t)                                ;; load lazily
+      :defer t                                 ;; load lazily
+      :init
+      (with-eval-after-load 'company
+	 (company-flx-mode +1)))
 
     (use-package company-quickhelp             ;;;; documentation tooltip
       :ensure t                                ;; ensure installation

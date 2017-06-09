@@ -43,10 +43,12 @@
 (org-add-link-type "open-ext" 'ek-open-ext)
 (add-hook 'org-store-link-functions 'org-ek-store-link)
 
-; Use IDO for both buffer and file completion and ido-everywhere to t
+;; Use IDO for both buffer and file completion and ido-everywhere to t
+;;
 (setq org-completion-use-ido t)
 
 ;; Use the current window for indirect buffer display
+;;
 (setq org-indirect-buffer-display 'current-window)
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
