@@ -1,5 +1,6 @@
 (use-package irony
   :ensure t
+  :defer t
   :config
   (use-package company-irony
     :ensure t

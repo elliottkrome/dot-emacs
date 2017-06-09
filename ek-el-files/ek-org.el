@@ -9,9 +9,9 @@
 ;; use the submodule org-version, as well as the extra stuff in the contrib
 ;;
 (add-to-list 'load-path
-	     (concat user-emacs-directory "submodules/org-mode/lisp"))
+	     (concat user-emacs-directory "submodules/org-mode/lisp/"))
 (add-to-list 'load-path
-	     (concat user-emacs-directory "submodules/org-mode/contrib/lisp") t)
+	     (concat user-emacs-directory "submodules/org-mode/contrib/lisp/") t)
 
 
 (setq org-modules '(org-bbdb
@@ -24,7 +24,8 @@
 		    org-mhe
 		    org-rmail
 		    org-w3m
-		    org-drill))
+		    org-drill
+		    org-eww))
 
 (load "~/.emacs.d/ek-el-files/org/ek-org-todo-etc-tags.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-agenda.el")

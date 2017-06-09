@@ -6,12 +6,17 @@
   :init
   (progn
 
+    ;; not used currently. Seems to slow some stuff (especially octave-shell)
+    ;;
     (use-package company-flx                   ;;;; fuzzy matching
       :ensure t                                ;; ensure installation
       :defer t                                 ;; load lazily
       :init
       (with-eval-after-load 'company
-	 (company-flx-mode +1)))
+	(company-flx-mode nil))
+      :config
+      (setq company-flx-limit 100))
+    
 
     (use-package company-quickhelp             ;;;; documentation tooltip
       :ensure t                                ;; ensure installation
@@ -20,7 +25,7 @@
       (setq company-quickhelp-delay 0.9))
 
   :config
-  (setq company-idle-delay                0.5  ;; shorten
+  (setq company-idle-delay                0.2  ;; shorten
 	company-minimum-prefix-length       1
 	company-echo-delay                  0
 	company-tooltip-limit              20

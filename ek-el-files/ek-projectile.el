@@ -1,6 +1,6 @@
 
 (defvar ek-projectile-directory
-  (concat ek-data-directory "projectile"))
+  (concat ek-data-directory "projectile/"))
 
 (defvar ek-projectile-cache-file "projectile.cache"
   "Projectile Cache filename")
