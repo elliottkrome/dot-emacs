@@ -17,6 +17,17 @@
 ;;
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
+;; to allow for streamlining capture of a todo or note
+(defun ek-org-capture-todo ()
+  (interactive)
+  "Capture a TODO item"
+  (org-capture nil "t"))
+
+(defun ek-org-capture-knowledge ()
+  (interactive)
+  "Capture a TODO item"
+  (org-capture nil "k"))
+
 ; Exclude DONE state tasks from refile targets
 ;; (defun verify-refile-target ()
 ;;   "Exclude todo keywords with a done state from refile targets."

@@ -44,19 +44,22 @@
 (global-set-key (kbd "s-b")         'windmove-left)
 (global-set-key (kbd "s-f")         'windmove-right)
 (global-set-key (kbd "H-f")         'toggle-frame-fullscreen)
-(define-key org-mode-map (kbd "S-C-<left>") nil)
-(define-key org-mode-map (kbd "S-C-<right>") nil)
-(define-key org-mode-map (kbd "S-C-<up>") nil)
-(define-key org-mode-map (kbd "S-C-<down>") nil)
+(define-key org-mode-map (kbd "S-C-<left>")  nil) ;;; unset some stuff in 
+(define-key org-mode-map (kbd "S-C-<right>") nil) ;;  org-mode-map to allow
+(define-key org-mode-map (kbd "S-C-<up>")    nil) ;;  for "S-C-<*>" keybindings
+(define-key org-mode-map (kbd "S-C-<down>")  nil) ;;  to work across all modes
 
 
 
 ;; org-mode stuff
 ;;
-(global-set-key (kbd "C-c c")   'org-capture)
-(global-set-key (kbd "C-c l")  'org-store-link)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "M-0")   'ek-org-capture-todo)
+(global-set-key (kbd "M-9")   'ek-org-capture-knowledge)
+
 
 ;; create the ctrl-l keymap
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs

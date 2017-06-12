@@ -12,8 +12,8 @@
       :ensure t                                ;; ensure installation
       :defer t                                 ;; load lazily
       :init
-      (with-eval-after-load 'company
-	(company-flx-mode nil))
+      ;; (with-eval-after-load 'company
+      ;; 	(company-flx-mode t)
       :config
       (setq company-flx-limit 100))
     
