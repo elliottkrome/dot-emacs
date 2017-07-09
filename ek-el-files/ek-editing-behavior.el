@@ -61,7 +61,7 @@ point reaches the beginning or end of the buffer, stop there."
   "Scroll down a reasonable amount"
   (scroll-down 8))
 
-(use-package browse-kill-ring
-  :ensure t
-  :config
-  (browse-kill-ring-default-keybindings))
+;; (use-package browse-kill-ring
+;;   :ensure t
+;;   :config
+;;   (browse-kill-ring-default-keybindings))
