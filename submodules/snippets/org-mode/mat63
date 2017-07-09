@@ -1,14 +1,14 @@
-f# -*- mode: snippet -*-
+# -*- mode: snippet -*-
 # name: matrix63
 # key: mat63
 # possible improvement, compute the number of lines from the argument to array
 # --
 
 \begin{bmatrix}
-   $1  &  $2  &  $3 \\\
-   $4  &  $5  &  $6 \\\
-   $7  &  $8  &  $9 \\\
-   $10  &  $11  &  $12 \\\
-   $13  &  $14  &  $15 \\\
-   $16  &  $17  &  $18 \\\
+ $1 & $2 & $3 \\\
+ $4 & $5 & $6 \\\
+ $7 & $8 & $9 \\\
+ $10 & $11 & $12 \\\
+ $13 & $14 & $15 \\\
+ $16 & $17 & $18 \\\
 \end{bmatrix}

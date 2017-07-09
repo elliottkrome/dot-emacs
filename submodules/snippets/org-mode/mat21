@@ -1,10 +1,10 @@
-f# -*- mode: snippet -*-
+# -*- mode: snippet -*-
 # name: matrix21
 # key: mat21
 # possible improvement, compute the number of lines from the argument to array
 # --
 
 \begin{bmatrix}
-   $1  \\\
-   $2  \\\
+ $1 \\\
+ $2 \\\
 \end{bmatrix}

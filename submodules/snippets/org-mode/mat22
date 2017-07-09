@@ -1,10 +1,10 @@
-f# -*- mode: snippet -*-
+# -*- mode: snippet -*-
 # name: matrix22
 # key: mat22
 # possible improvement, compute the number of lines from the argument to array
 # --
 
 \begin{bmatrix}
-   $1  &  $2 \\\
-   $3  &  $4 \\\
+ $1 & $2 \\\
+ $3 & $4 \\\
 \end{bmatrix}

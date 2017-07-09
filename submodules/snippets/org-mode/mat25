@@ -1,4 +1,4 @@
-f# -*- mode: snippet -*-
+# -*- mode: snippet -*-
 # name: matrix25
 # key: mat25
 # possible improvement, compute the number of lines from the argument to array
