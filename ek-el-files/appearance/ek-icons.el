@@ -14,5 +14,8 @@
       (spaceline-all-the-icons--setup-git-ahead))
     (use-package all-the-icons-dired
       :ensure t
-      :init (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)))
+      :init (progn
+	      (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
+      )
+    )
   )
