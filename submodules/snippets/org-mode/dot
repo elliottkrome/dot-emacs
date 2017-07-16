@@ -2,7 +2,7 @@
 # name: dot
 # key: dot_
 # --
-#+begin_src dot :file `(org-download--dir)`/$1.png :cmdline -Kdot -Tpng
+#+begin_src dot :file `(org-download--dir)`$1.png :cmdline -Kdot -Tpng
             $0
 #+end_src
 

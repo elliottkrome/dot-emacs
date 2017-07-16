@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: partial derivative
+# key: derp
+# --
+\frac{\partial}{\partial $1}$0
