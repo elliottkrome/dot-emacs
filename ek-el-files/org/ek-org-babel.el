@@ -14,12 +14,11 @@
 ;   (tcl . true)
    (C . true)
    (clojure . true)
-;   (dot . true)
+   (dot . true)
 ;   (R . true)
 ;   (ruby . true)
    (gnuplot . true)
    (octave . true)
-;   (clojure . true)
 ;   (ledger . true)
    (latex . t)))
 
