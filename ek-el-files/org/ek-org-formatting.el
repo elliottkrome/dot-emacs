@@ -4,10 +4,12 @@
 
 (require 'org)
 
-(setq org-startup-indented nil     ; cleaner indentation
-      org-hide-leading-stars t     ; hide stars, MAYBE UNNECESSARY
-      org-hide-emphasis-markers t  ; make *bold* look plain, like bold
-      org-src-fontify-natively t)
+(setq org-startup-indented      nil  ; cleaner indentation
+      org-hide-leading-stars    t    ; hide stars, MAYBE UNNECESSARY
+      org-hide-emphasis-markers t    ; make *bold* look plain, like bold
+      org-src-fontify-natively  t    ; 
+      org-image-actual-width    550  ; rescale pixel-width of inline images
+      )
 
 ;; visual line mode by default
 ;;

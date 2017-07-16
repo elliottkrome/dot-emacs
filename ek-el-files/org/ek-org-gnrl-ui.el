@@ -1,6 +1,5 @@
 (require 'org)
 
-;; ****************__END_TEST_AREA__****************************
 
 ;; local
 (add-hook 'org-mode-hook
