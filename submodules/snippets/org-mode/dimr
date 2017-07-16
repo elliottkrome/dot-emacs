@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: diminsion_real
+# key: dimr
+# --
+\mathbb{R}^{$1 \times $2}$0
