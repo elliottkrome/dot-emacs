@@ -14,7 +14,11 @@
             ;; display images
             (local-set-key "\M-I" 'org-toggle-iimage-in-org)
             ;; fix tab
-            (local-set-key "\C-y" 'yank)))
+            (local-set-key "\C-y" 'yank)
+	    ))
+;; gets rid of org-mode iedit shadowing
+(bind-keys :map org-mode-map
+	       ("C-c ;" . iedit-mode))
 ;;;;;;;;;;;;;;;;;; end local keybindings ;;;;;;
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline54
