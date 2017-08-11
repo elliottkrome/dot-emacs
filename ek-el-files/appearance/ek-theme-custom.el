@@ -1,4 +1,17 @@
+(defun clear-themes ()
+  (interactive)
+  (mapc #'disable-theme custom-enabled-themes))
 
+;; use this in place of `load-theme' it will clear!
+;; 
+(defun set-theme (theme)
+  (interactive
+   (list
+    (intern (completing-read "Load custom theme: "
+                             (mapcar 'symbol-name
+                                     (custom-available-themes))))))
+  (clear-themes)
+  (load-theme theme t))
 
 
 (set-face-background 'isearch "coral4")
@@ -20,7 +33,6 @@
  (when (display-graphic-p)
    (if (font-exists-p ek-default-font)
        (set-face-attribute 'default nil :font ek-default-font)))
-
 
 
 
