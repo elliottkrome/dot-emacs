@@ -19,6 +19,7 @@
  inhibit-splash-screen t    ;; no splash screen
  )
 
+(setq-default truncate-lines t)
 ;; (setq
 ;;  truncate-lines t                 ;; each line of text gets one line on the
 ;; 				     ;; screen (i.e., text will run off the left
@@ -33,4 +34,4 @@
 ;;                     (with-current-buffer (window-buffer w)
 ;; 		      (buffer-face-set '(:background "#000e26"))))))
 ;;   (buffer-face-set 'default))
-;;     (add-hook 'buffer-list-update-hook 'highlight-selected-window))
+;; (add-hook 'buffer-list-update-hook 'highlight-selected-window)
