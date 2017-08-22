@@ -24,7 +24,7 @@
 (global-set-key (kbd "C-x p")   'pop-to-mark-command)
 (global-set-key (kbd "M-j")     'ek-join-next-line)
 (global-set-key (kbd "M-n")     'ek-scroll-down)
-(global-set-key (kbd "\M-p")    'ek-scroll-up)
+(global-set-key (kbd "M-p")    'ek-scroll-up)
 (global-set-key [remap move-beginning-of-line]
 		'smarter-move-beginning-of-line)
 
@@ -49,8 +49,9 @@
 (global-set-key (kbd "H-f")         'toggle-frame-fullscreen)
 (define-key org-mode-map (kbd "S-C-<left>")  nil) ;;; unset some stuff in 
 (define-key org-mode-map (kbd "S-C-<right>") nil) ;;  org-mode-map to allow
-(define-key org-mode-map (kbd "S-C-<up>")    nil) ;;  for "S-C-<*>" keybindings
-(define-key org-mode-map (kbd "S-C-<down>")  nil) ;;  to work across all modes
+(define-key org-mode-map (kbd "S-C-<up>")    nil) ;;  some keybindings to work
+(define-key org-mode-map (kbd "S-C-<down>")  nil) ;;  across all modes
+(define-key org-mode-map (kbd "M-a")  nil)        ;;
 
 
 
@@ -58,11 +59,11 @@
 ;;
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "M-a")   'ek-switch-to-buffer-weekly-agenda)
 (global-set-key (kbd "M-0")   'ek-org-capture-todo)
 (global-set-key (kbd "M-9")   'ek-org-capture-knowledge)
-
 
 ;; create the ctrl-l keymap
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs
