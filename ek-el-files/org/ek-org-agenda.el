@@ -24,6 +24,14 @@
 ;; starts agenda view on current day
 (setq org-agenda-start-on-weekday nil)
 
+;; for easy switching to weekly agenda view
+;;
+(defun ek-switch-to-buffer-weekly-agenda (&optional arg)
+  "A helper function for immediate switching to *Org Agenda(a)* buffer."
+  (interactive "P")
+  (org-agenda arg "a"))
+
+
 ;; sets agenda view default to be 5 days
 ;  (setq org-agenda-span 5)
 

@@ -24,7 +24,7 @@
 (global-set-key (kbd "C-x p")   'pop-to-mark-command)
 (global-set-key (kbd "M-j")     'ek-join-next-line)
 (global-set-key (kbd "M-n")     'ek-scroll-down)
-(global-set-key (kbd "\M-p")    'ek-scroll-up)
+(global-set-key (kbd "M-p")    'ek-scroll-up)
 (global-set-key [remap move-beginning-of-line]
 		'smarter-move-beginning-of-line)
 
@@ -58,8 +58,9 @@
 ;;
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "M-a")   'ek-switch-to-buffer-weekly-agenda)
 (global-set-key (kbd "M-0")   'ek-org-capture-todo)
 (global-set-key (kbd "M-9")   'ek-org-capture-knowledge)
 

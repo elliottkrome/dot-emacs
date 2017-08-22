@@ -50,16 +50,19 @@ point reaches the beginning or end of the buffer, stop there."
 
 (defun ek-join-next-line ()
   "Join next line to end of current line."
-    (join-line -1))
+  (interactive
+   (join-line -1)))
 
 (defun ek-scroll-up ()
   "Scroll up a reasonable amount"
-  (scroll-up 8))
+  (interactive
+   (scroll-up 8)))
 
 
 (defun ek-scroll-down ()
   "Scroll down a reasonable amount"
-  (scroll-down 8))
+  (interactive
+   (scroll-down 8)))
 
 ;; (use-package browse-kill-ring
 ;;   :ensure t
