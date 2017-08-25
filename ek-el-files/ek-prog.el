@@ -3,3 +3,4 @@
 (load "~/.emacs.d/ek-el-files/prog/ek-python.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-octave.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-cmake.el")
+(load "~/.emacs.d/ek-el-files/prog/ek-clisp.el")
