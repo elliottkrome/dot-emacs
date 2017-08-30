@@ -2,4 +2,4 @@
 # name: download_header_knowledge
 # key: dhk
 # --
--*- mode: Org; org-download-image-dir: "~/ddrop/org/knowledge/resources/$0" ; -*-
+# -*- mode: Org; org-download-image-dir: "~/ddrop/org/knowledge/resources/$0" ; -*-

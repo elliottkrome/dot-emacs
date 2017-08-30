@@ -2,4 +2,4 @@
 # name: download_header_plans
 # key: dhp
 # --
--*- mode: Org; org-download-image-dir: "~/ddrop/org/plans_sched/_resources/$0" ; -*-
+# -*- mode: Org; org-download-image-dir: "~/ddrop/org/plans_sched/_resources/$0" ; -*-
