@@ -53,6 +53,15 @@
 (define-key org-mode-map (kbd "S-C-<down>")  nil) ;;  across all modes
 (define-key org-mode-map (kbd "M-a")  nil)        ;;
 
+;; make some octave-mode shell interaction available from within org-mode
+;;
+(define-key org-mode-map "\C-c\C-il" 'octave-send-line)
+(define-key org-mode-map "\C-c\C-ib" 'octave-send-block)
+(define-key org-mode-map "\C-c\C-if" 'octave-send-defun)
+(define-key org-mode-map "\C-c\C-ir" 'octave-send-region)
+(define-key org-mode-map "\C-c\C-ia" 'octave-send-buffer)
+(define-key org-mode-map "\C-c\C-is" 'octave-show-process-buffer)
+(define-key org-mode-map "\C-c\C-iq" 'octave-hide-process-buffer)
 
 
 ;; org-mode stuff
@@ -61,7 +70,8 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "M-a")   'ek-switch-to-buffer-weekly-agenda)
+(global-set-key (kbd "M-a")   'ek-switch-to-agenda)
+(global-set-key (kbd "M-A")   'ek-agenda-new-frame)
 (global-set-key (kbd "M-0")   'ek-org-capture-todo)
 (global-set-key (kbd "M-9")   'ek-org-capture-knowledge)
 
