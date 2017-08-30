@@ -20,38 +20,42 @@
 ; includes holidays and astronomical info in agenda
 (setq org-agenda-include-diary t)
 
-
 ;; Compact the block agenda view
 (setq org-agenda-compact-blocks t)
 
 ;; starts agenda view on current day
 ;; (setq org-agenda-start-on-weekday nil)
-(setq org-agenda-start-on-weekday 1)
+(setq org-agenda-start-on-weekday 0)
 
-;; for easy switching to weekly agenda view
+;; for easy switching to a weekly agenda view
 ;;
-(defun ek-switch-to-buffer-weekly-agenda (&optional arg)
+(defun ek-switch-to-agenda (&optional arg)
   "A helper function for immediate switching to *Org Agenda(a)* buffer."
   (interactive "P")
-  (org-agenda arg "a"))
+  (org-agenda arg "w"))
 
 
-;; sets agenda view default to be 5 days
-;  (setq org-agenda-span 5)
+(setq org-agenda-custom-commands
+      (quote ( ("w" "Agenda without drill tags" agenda ""
+		((org-agenda-span ek-num-days-agenda)
+		 (org-agenda-tag-filter-preset
+		  (quote ("-drill"))))))))
 
-;; TESTING, check it out
-;(setq org-agenda-time-grid
-;      '((daily today require-timed)
-;       "----------------"
-;       (800 1000 1200 1400 1600 1800)))
-
-
-(defun agenda-new-frame ()
+(defun ek-agenda-new-frame ()
   "Make agenda in new frame."
   (interactive)
   (make-frame)
-  (org-agenda)
+  (ek-switch-to-agenda)
   (delete-other-windows))
+
+(set-face-attribute 'org-agenda-calendar-event nil
+		    :height ek-org-agenda-face-height)
+(set-face-attribute 'org-agenda-date nil
+		    :height ek-org-agenda-face-height)
+(set-face-attribute 'org-scheduled-today nil
+		    :height ek-org-agenda-face-height)
+(set-face-attribute 'org-time-grid nil
+		    :height (- ek-org-agenda-face-height 0.4))
 
 
 (add-hook 'org-agenda-finalize-hook 'ek-color-org-agenda)
@@ -69,8 +73,10 @@
   (goto-char (point-min))
   (while (re-search-forward tag nil t)
     (add-text-properties (point-at-bol) (point-at-eol)
-                     `(face (:background, backcolor, :foreground, forecolor)))))
-
+			 `(face (:background, backcolor,
+				 :foreground, forecolor,
+				 :height, ek-org-agenda-face-height)))))
+    
 
 
 ;; org-deadline-warning-days specifies how many days fore agenda shows warning
