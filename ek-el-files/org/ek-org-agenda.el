@@ -6,7 +6,7 @@
 (require 'org-agenda)
 
 (defvar ek-org-agenda-face-height 1.2 "Size for org agenda faces.")
-(defvar ek-num-days-agenda 14 "Number of days in agenda view")
+(defvar ek-num-days-agenda 10 "Number of days in agenda view")
 
 ;; Use sticky agenda's so they persist
 (setq org-agenda-sticky t)
