@@ -37,5 +37,10 @@
 
 (add-hook 'org-babel-after-execute-hook 'display-inline-images 'append)
 
+(add-to-list 'org-babel-tangle-lang-exts '("octave" . "m"))
+
+(add-to-list 'org-babel-default-header-args:octave
+             '(:session . "*Oct*"))
+
 (provide 'ek-org-babel)
 ;;; ek-org-babel.el ends here
