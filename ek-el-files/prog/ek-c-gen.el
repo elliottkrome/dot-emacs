@@ -3,6 +3,8 @@
 (add-hook 'objc-mode-hook 'irony-mode)
 (delete 'company-backends 'company-clang)
 
+(setq irony-user-directory (concat ek-hidden-directory "irony/"))
+
 (use-package cmake-ide
   :ensure t
   :init
