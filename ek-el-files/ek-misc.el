@@ -17,7 +17,8 @@
   (switch-to-buffer
    (get-buffer-create "*scratch*")))
   
-
+(setq tramp-persistency-file-name (concat ek-data-directory "tramp"))
+(setq url-configuration-directory (concat ek-data-directory "url"))
 
 ;; Open files in dired mode using 'open'
 ;; bound to "z" in dired

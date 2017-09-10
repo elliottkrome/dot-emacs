@@ -3,11 +3,18 @@
 
 
 ;; set some modifier keys on mac
+;; perhaps preface with ns-* on a different machine
 ;;
 (setq mac-right-option-modifier  'super) 
-(setq mac-right-command-modifier 'meta) 
-(setq ns-function-modifier       'hyper)
+(setq mac-right-command-modifier 'meta)
+(setq mac-command-modifier       'super)
+(setq mac-function-modifier      'hyper)
 
+;; frame command shortcuts
+;;
+(global-set-key (kbd "s-w") 'delete-frame)
+(global-set-key (kbd "s-<left>") 'other-frame)
+(global-set-key (kbd "s-<right>") (lambda () (interactive) (other-frame -1)))
 
 ;; if you want to bind a key to insert some text, do like this
 ;;
@@ -130,7 +137,7 @@
 (define-key ctl-l-map "w"    'write-region) ;; this looks cool, how do use it?
 ;; (define-kwy ctl-l-map ""w    'workspace-goto)
 (define-key ctl-l-map "W"    'ediff-regions-wordwise)
-(define-key ctl-l-map "\C-"w 'kill-rectangle)
+(define-key ctl-l-map "\C-w" 'kill-rectangle)
 (define-key ctl-l-map "y"    'yas-insert-snippet)
 (define-key ctl-l-map "\C-y" 'yank-rectangle)
 (define-key ctl-l-map "1"    'org-mobile-push)
