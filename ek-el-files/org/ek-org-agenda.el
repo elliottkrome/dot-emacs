@@ -55,7 +55,9 @@
 (set-face-attribute 'org-scheduled-today nil
 		    :height ek-org-agenda-face-height)
 (set-face-attribute 'org-time-grid nil
-		    :height (- ek-org-agenda-face-height 0.4))
+		    :height ek-org-agenda-face-height)
+(set-face-attribute 'org-agenda-date nil
+		    :height ek-org-agenda-face-height)
 
 
 (add-hook 'org-agenda-finalize-hook 'ek-color-org-agenda)
@@ -65,17 +67,26 @@
 (defun ek-color-org-agenda ()
   (interactive)
   (save-excursion
-  (color-org-header "class:" "black" "#cd950c")
-  (color-org-header "fitness:" "#3b0000" "RosyBrown1")))
+    (color-org-header "class:" "black" "#cd950c")
+    (color-org-header "appts:" "#162228" "green")
+    (color-org-header "^refile:" "yellow" "red") ;;  ^ is to ignore
+                                                 ;; 'notes_to_refile.org'
+    ; (color-org-header "rand_now:" "OrangeRed4")
+    (color-org-header "fitness:" "#3b0000" "RosyBrown1")))
 
-(defun color-org-header (tag backcolor forecolor)
+(defun color-org-header (tag backcolor &optional forecolor)
   "Color agenda entries based on tag."
   (goto-char (point-min))
   (while (re-search-forward tag nil t)
-    (add-text-properties (point-at-bol) (point-at-eol)
-			 `(face (:background, backcolor,
-				 :foreground, forecolor,
-				 :height, ek-org-agenda-face-height)))))
+    (if forecolor
+	(add-text-properties (point-at-bol) (+ 1 (point-at-eol))
+			     `(face (:background, backcolor,
+				     :foreground, forecolor,
+				     :height, ek-org-agenda-face-height)))
+       (add-text-properties (point-at-bol) (+ 1 (point-at-eol))
+			     `(face (:background, backcolor,
+   				     :height, ek-org-agenda-face-height))))
+    ))
     
 
 

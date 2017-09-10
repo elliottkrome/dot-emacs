@@ -5,5 +5,5 @@
 (load "~/.emacs.d/ek-el-files/appearance/ek-hideshow.el")
 (load "~/.emacs.d/ek-el-files/appearance/ek-icons.el")
 
-(load "~/.emacs.d/ek-el-files/appearance/theme/material.el")
+(load "~/.emacs.d/ek-el-files/appearance/theme/leuven")
 (load "~/.emacs.d/ek-el-files/appearance/ek-theme-custom.el")

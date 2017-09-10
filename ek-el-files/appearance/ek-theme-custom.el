@@ -14,7 +14,8 @@
   (load-theme theme t))
 
 
-(set-face-background 'isearch "coral4")
+; (set-face-background 'isearch "coral4")
+(set-face-background 'isearch "goldenrod")
 
 (set-face-attribute 'font-lock-comment-face nil :slant 'normal)
 

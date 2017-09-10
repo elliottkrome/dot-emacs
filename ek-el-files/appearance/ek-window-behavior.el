@@ -1,4 +1,5 @@
 
+(setq frame-title-format '("%b")) ;; display buffer name in title-bar
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (toggle-scroll-bar 0)
