@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tangle
+# key: ta
+# --
+:tangle src/$0
