@@ -12,7 +12,7 @@
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "red" :weight bold)
               ("NEXT" :foreground "green" :weight bold)
-              ("DONE" :foreground "white" :weight bold)
+              ("DONE" :foreground "blue" :weight bold)
               ("WAITING" :foreground "orange" :weight bold)
               ("HOLD" :foreground "magenta" :weight bold)
               ("CANCELLED" :foreground "yellow" :weight bold)
