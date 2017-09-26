@@ -44,13 +44,16 @@
     ;; create a hood to add to octave-mode hook
     ;;
     (defun my-octave-mode-hook ()
-      (progn
-	(add-to-list 'company-backends 'company-octave)
-	(lambda ()
-	    (abbrev-mode 1)
-	    (auto-fill-mode 1)
-	    (if (eq window-system 'x)
-		(font-lock-mode 1)))))
+      (lambda ()
+	(progn
+	  (setq octave-comment-char ?%)
+	  (setq comment-start "% ")
+	  (setq comment-add 0)
+	  (add-to-list 'company-backends 'company-octave)
+	  (abbrev-mode 1)
+	  (auto-fill-mode 1)
+	  (if (eq window-system 'x)
+	      (font-lock-mode 1)))))
 
     ;; add customized hook to octave-mode-hook
     ;;
