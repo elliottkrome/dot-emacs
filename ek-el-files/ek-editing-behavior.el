@@ -29,10 +29,11 @@ point reaches the beginning or end of the buffer, stop there."
 
 
 ;; http://stackoverflow.com/questions/17136216/emacs-shortcut-to-move-cursor-to-column-adding-spaces-if-needed
+
 ;;
 (defun go-to-column (column)
   "Go to COLUMN, adding spaces if need be."
-  (interactive "nColumn: ")
+  (interactive "ntarget column: ")
   (move-to-column column t))
 
 
