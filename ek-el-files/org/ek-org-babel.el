@@ -42,6 +42,11 @@
 (add-to-list 'org-babel-default-header-args:octave
              '(:session . "*Oct*"))
 
+(add-to-list 'org-babel-default-header-args:octave
+             '(:eval . "never-export"))
+(add-to-list 'org-babel-default-header-args:octave
+             '(:results . "none"))
+
 (defun ek-org-babel-tangle-file ()
   "Tangle the currently open file. Avoid the prompt."
   (interactive)
