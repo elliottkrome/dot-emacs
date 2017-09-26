@@ -11,10 +11,10 @@
     (setq ido-save-directory-list-file (concat ek-data-directory "ido.last"))
     (ido-mode 1)
     (setq ido-use-virtual-buffers t)
-    (use-package ido-ubiquitous
+    (use-package ido-completing-read+
       :ensure t
       :config
-      (ido-ubiquitous-mode +1))
+      (ido-ubiquitous-mode 1))
     (use-package ido-vertical-mode
       :ensure t
       :init (ido-vertical-mode 1))
