@@ -142,3 +142,4 @@
 (define-key ctl-l-map "\C-y" 'yank-rectangle)
 (define-key ctl-l-map "1"    'org-mobile-push)
 (define-key ctl-l-map "2"    'org-mobile-pull)
+(define-key ctl-l-map "|"    'go-to-column)
