@@ -12,8 +12,13 @@
 	  doom-one-brighter-comments nil);; doom-one  ||
 
     ;; Load the theme (doom-one, doom-dark, etc.)
-    (load-theme 'doom-one t)
+    (load-theme 'doom-vibrant t)
 
+    ;; Enable flashing mode-line on errors
+    (doom-themes-visual-bell-config)
+    
+    ;; Corrects (and improves) org-mode's native fontification.
+    (doom-themes-org-config)
 
     ;; brighter source buffers (that represent files)
     (add-hook 'find-file-hook #'doom-buffer-mode-maybe)
