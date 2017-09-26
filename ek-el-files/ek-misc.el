@@ -29,3 +29,13 @@
        (lambda () (interactive)
          (let ((fn (dired-get-file-for-visit)))
            (start-process "default-app" nil "open" fn))))))
+
+(defhydra hydra-yank-pop ()
+  "yank"
+  ("C-y" yank nil)
+  ("M-y" yank-pop nil)
+  ("y" (yank-pop 1) "next")
+  ("Y" (yank-pop -1) "prev")
+  ("l" browse-kill-ring "list" :color blue))   ; or browse-kill-ring
+(global-set-key (kbd "M-y") #'hydra-yank-pop/yank-pop)
+(global-set-key (kbd "C-y") #'hydra-yank-pop/yank)
