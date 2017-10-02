@@ -98,14 +98,14 @@ Version 2016-10-15"
   
 (defhydra hydra-dired (:hint nil :color pink)
   "
-_+_ mkdir          _v_iew         _m_ark             _(_ details        _i_nsert-subdir    wdired
-_C_opy             _O_ view other _U_nmark all       _)_ omit-mode      _$_ hide-subdir    C-x C-q: edit
-_D_elete           _o_pen other   _u_nmark           _l_ redisplay      _w_ kill-subdir    C-c C-c : commit
-_R_ename           _M_ chmod      _t_oggle           _g_ revert buf     _e_ ediff          C-c ESC : abort
-_Y_ rel symlink    _G_ chgrp      _E_xtension mark   _s_ort             _=_ pdiff
-_S_ymlink     open _E_xternal     _F_ind marked      _._ toggle hydra   \\ flyspell
-_r_sync            _X_shell cmnd  ^ ^                ^ ^                _?_ summary
-_z_ compress-file  _A_ find regexp
+_+_ mkdir          _v_iew          _m_ark             _(_ details        _i_nsert-subdir    wdired
+_C_opy             _O_ view other  _U_nmark all       _)_ omit-mode      _$_ hide-subdir    C-x C-q: edit
+_D_elete           _o_pen other    _u_nmark           _l_ redisplay      _w_ kill-subdir    C-c C-c : commit
+_R_ename           _M_ chmod       _t_oggle           _g_ revert buf     _e_ ediff          C-c ESC : abort
+_Y_ rel symlink    _G_ chgrp      e_*_tension mark    _s_ort             _=_ pdiff
+_S_ymlink     open _E_xternally    _F_ind marked      _._ toggle hydra   \\ flyspell
+_r_sync            _X_ shell cmnd  _d_ delete flag set^ ^                _?_ summary
+_z_ compress-file  _A_ find regexp _x_punge
 _Z_ compress       _Q_ repl regexp
 
 T - tag prefix
@@ -116,12 +116,14 @@ T - tag prefix
   ("+" dired-create-directory)
   ("=" diredp-ediff)         ;; smart diff
   ("?" dired-summary)
+  ("*" dired-mark-extension)
   ("$" diredp-hide-subdir-nomove)
   ("A" dired-do-find-regexp)
   ("C" dired-do-copy)        ;; Copy all marked files
   ("D" dired-do-delete)
-  ("E" dired-mark-extension)
+  ("d" dired-flag-file-deletion)
   ("e" dired-ediff-files)
+  ("E" xah-open-in-external-app)
   ("F" dired-do-find-marked-files)
   ("G" dired-do-chgrp)
   ("g" revert-buffer)        ;; read all directories again (refresh)
@@ -140,13 +142,15 @@ T - tag prefix
   ("U" dired-unmark-all-marks)
   ("u" dired-unmark)
   ("v" dired-view-file)      ;; q to exit, s to search, = gets line #
+  ("X" dired-do-shell-command)
+  ("x" dired-do-flagged-delete)
   ("w" dired-kill-subdir)
   ("Y" dired-do-relsymlink)
   ("z" diredp-compress-this-file)
   ("Z" dired-do-compress)
-  ("E" xah-open-in-external-app)
-  ("X" dired-do-shell-command)
   ("q" nil)
   ("." nil :color blue))
 
 (define-key dired-mode-map "." 'hydra-dired/body)
+
+
