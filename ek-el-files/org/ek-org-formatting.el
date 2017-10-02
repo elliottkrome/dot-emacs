@@ -15,5 +15,9 @@
 ;;
 (add-hook 'org-mode-hook #'visual-line-mode)
 
+(use-package org-bullets
+  :ensure t
+  :commands org-bullets-mode)
+
 (provide 'ek-org-formatting)
 ;;; ek-org-formatting ends here
