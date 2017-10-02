@@ -24,7 +24,7 @@
    ; (tcl        . true)
    )
  )
-
+(add-to-list 'org-src-lang-modes (quote ("gnuplot" . gnuplot)))
 ;; VERY IMPORTANT FOR PYTHON IN BABEL
 (setq org-src-preserve-indentation t)
 

@@ -5,3 +5,4 @@
 (load "~/.emacs.d/ek-el-files/prog/ek-matlab.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-cmake.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-clisp.el")
+(load "~/.emacs.d/ek-el-files/prog/ek-gnuplot.el")
