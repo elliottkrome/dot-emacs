@@ -41,8 +41,10 @@
 (load "~/.emacs.d/ek-el-files/ek-private.el" t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-
+(use-package ob-spice
+  :ensure t)
+(use-package spice-mode
+  :ensure t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; custom file is moved into ek-el-files
 ;;

@@ -18,6 +18,7 @@
    (octave     . true)
    (dot        . true)
    (latex      . true)
+   (spice      . true)
    ; (R          . true)
    ; (ruby       . true)
    ; (ledger     . true)
