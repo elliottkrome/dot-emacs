@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src_octave
+# key: <so
+# --
+#+BEGIN_SRC octave
+$0
+#+END_SRC
