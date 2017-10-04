@@ -152,5 +152,6 @@ T - tag prefix
   ("." nil :color blue))
 
 (define-key dired-mode-map "." 'hydra-dired/body)
+(define-key dired-mode-map "E" 'xah-open-in-external-app)
 
 
