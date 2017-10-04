@@ -20,16 +20,6 @@
 (setq tramp-persistency-file-name (concat ek-data-directory "tramp"))
 (setq url-configuration-directory (concat ek-data-directory "url"))
 
-;; Open files in dired mode using 'open'
-;; bound to "z" in dired
-;;
-(eval-after-load "dired"
-  '(progn
-     (define-key dired-mode-map (kbd "z")
-       (lambda () (interactive)
-         (let ((fn (dired-get-file-for-visit)))
-           (start-process "default-app" nil "open" fn))))))
-
 (defhydra hydra-yank-pop ()
   "yank"
   ("C-y" yank nil)
