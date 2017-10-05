@@ -7,7 +7,7 @@
 ;; source code languages
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((sh         . true)
+ '((shell      . true)
    (python     . true)
    (emacs-lisp . true)
    (lisp       . true)
@@ -25,6 +25,7 @@
    ; (tcl        . true)
    )
  )
+
 (add-to-list 'org-src-lang-modes (quote ("gnuplot" . gnuplot)))
 ;; VERY IMPORTANT FOR PYTHON IN BABEL
 (setq org-src-preserve-indentation t)
