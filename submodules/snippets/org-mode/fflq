@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: fflq
+# key: fflq
+# temporary snippet for crypto homework
+# --
+$q_$1 = \ffloor{$2}{$3} = $4, \qquad r_$1 = $2 - ($3)($4) = $5, \qquad $2 = ($3)($4) + $5$$0
