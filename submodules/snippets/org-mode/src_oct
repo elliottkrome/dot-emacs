@@ -2,6 +2,6 @@
 # name: src_octave
 # key: <so
 # --
-#+BEGIN_SRC octave
+#+BEGIN_SRC octave :tangle ${1:nil} :results $2 :session
 $0
 #+END_SRC

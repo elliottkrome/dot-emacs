@@ -2,6 +2,6 @@
 # name: src_python
 # key: <sp
 # --
-#+BEGIN_SRC python
+#+BEGIN_SRC python :tangle ${1:nil} :results $2 :session
 $0
 #+END_SRC
