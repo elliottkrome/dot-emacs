@@ -22,7 +22,7 @@
 
 
 ; this gets PATH-vars (such as python path) from a shell.
-; if it is not defined and called, python-path is usr/bin, rather than Users...
+; if it is not defined and called, python-path is usr/bin, rather than /Users...
 ; http://stackoverflow.com/questions/8606954/path-and-exec-path-set-but-emacs-does-not-find-executable
 ; more tweakable method is exec-path-from-shell package,
 ; ----see https://github.com/purcell/exec-path-from-shell

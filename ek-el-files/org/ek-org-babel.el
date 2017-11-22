@@ -18,7 +18,7 @@
    (octave     . true)
    (dot        . true)
    (latex      . true)
-   (spice      . true)
+   ; (spice      . true)
    ; (R          . true)
    ; (ruby       . true)
    ; (ledger     . true)
@@ -46,8 +46,8 @@
 
 (add-to-list 'org-babel-default-header-args:octave
              '(:eval . "never-export"))
-(add-to-list 'org-babel-default-header-args:octave
-             '(:results . "none"))
+;; (add-to-list 'org-babel-default-header-args:octave
+;;              '(:results . "none"))
 
 (defun ek-org-babel-tangle-file ()
   "Tangle the currently open file. Avoid the prompt."

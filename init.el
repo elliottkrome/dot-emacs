@@ -11,6 +11,7 @@
 (load "~/.emacs.d/ek-el-files/ek-organization.el")
 (load "~/.emacs.d/ek-el-files/ek-backup.el")
 (load "~/.emacs.d/ek-el-files/ek-magit.el")
+(load "~/.emacs.d/ek-el-files/ek-hydra.el")
 (load "~/.emacs.d/ek-el-files/ek-scratch.el")
 (load "~/.emacs.d/ek-el-files/ek-ido.el")
 (load "~/.emacs.d/ek-el-files/ek-projectile.el")
@@ -21,6 +22,7 @@
 (load "~/.emacs.d/ek-el-files/ek-buffer-management.el")
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-treemacs.el")
+(load "~/.emacs.d/ek-el-files/ek-tramp.el")
 (load "~/.emacs.d/ek-el-files/ek-pdf-tools.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
 (load "~/.emacs.d/ek-el-files/ek-iedit.el")
@@ -34,17 +36,16 @@
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(server-start)
+
+(use-package magit-tramp :ensure t)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; local stuff goes here
 ;;
 (load "~/.emacs.d/ek-el-files/ek-private.el" t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(use-package ob-spice
-  :ensure t)
-(use-package spice-mode
-  :ensure t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; custom file is moved into ek-el-files
 ;;

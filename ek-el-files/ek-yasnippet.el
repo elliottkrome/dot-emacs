@@ -38,7 +38,7 @@
   :mode ("\\.yasnippet" . snippet-mode))
 
 ;; EVERYTHING BELOW THIS IS TAKEN FROM ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;; https://github.com/AndreaCrotti/Emacs-configuration/blob/master/modules/ca-yas.el
 
 
 

@@ -22,10 +22,10 @@
       :ensure t                                ;; ensure installation
       :init                                    ;; 
       (company-quickhelp-mode 1)
-      (setq company-quickhelp-delay 0.9))
+      (setq company-quickhelp-delay 0.1))
 
   :config
-  (setq company-idle-delay                0.2  ;; shorten
+  (setq company-idle-delay                0.1  ;; shorten
 	company-minimum-prefix-length       1
 	company-echo-delay                  0
 	company-tooltip-limit              20

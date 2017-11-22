@@ -32,8 +32,8 @@
 (global-set-key (kbd "M-j")     'ek-join-next-line)
 (global-set-key (kbd "M-n")     'ek-scroll-down)
 (global-set-key (kbd "M-p")    'ek-scroll-up)
-(global-set-key [remap move-beginning-of-line]
-		'smarter-move-beginning-of-line)
+;; (global-set-key [remap move-beginning-of-line]
+;;	  	   'smarter-move-beginning-of-line)
 
 ;; simplify register usage
 ;;
@@ -62,6 +62,7 @@
 
 ;; make some octave-mode shell interaction available from within org-mode
 ;;
+(define-key org-mode-map "\C-c\C-i" 'nil)
 (define-key org-mode-map "\C-c\C-il" 'octave-send-line)
 (define-key org-mode-map "\C-c\C-ib" 'octave-send-block)
 (define-key org-mode-map "\C-c\C-if" 'octave-send-defun)
@@ -110,6 +111,7 @@
 ;; (define-key ctl-l-map "i"    'ido-goto-symbol)
 (define-key ctl-l-map "i"    'imenu)
 (define-key ctl-l-map "j"    'bookmark-jump)
+(define-key ctl-l-map "J"    'bookmark-set)
 (define-key ctl-l-map "k"    'kill-whole-line)
 (define-key ctl-l-map "L"    'ediff-regions-linewise)
 (define-key ctl-l-map "\C-l" 'goto-line)

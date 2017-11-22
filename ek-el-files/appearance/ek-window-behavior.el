@@ -11,7 +11,8 @@
 
 ;; 8 pixels on the left, 0 pixels on the right
 ;;
-(fringe-mode '(8 . 0))
+;; (fringe-mode '(8 . 0))
+(fringe-mode '(0 . 0))
 
 (setq
  echo-keystrokes 0.05       ;; show unfinished keystrokes early.

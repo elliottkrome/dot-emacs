@@ -1,10 +1,10 @@
 
-(use-package spaceline
-  :ensure spaceline)
+;; (use-package spaceline
+;;   :ensure spaceline)
 
-(use-package spaceline-config
-  :ensure spaceline
-  )
+;; (use-package spaceline-config
+;;   :ensure spaceline
+;;   )
 
 (diminish 'which-key-mode)
 (diminish 'auto-revert-mode)

@@ -4,6 +4,8 @@
 (setq wdired-allow-to-change-permissions t)
 
 (setq-default dired-omit-files-p t)
+(setq dired-dwim-target t)
+
 
 (setq dired-omit-files
       "^\\.?#\\|^\\.DS_Store\\|^auto-save-list\\|^backups"

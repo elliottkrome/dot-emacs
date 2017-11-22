@@ -24,9 +24,9 @@
   ;; probably a better way of doing this.
   ;; TODO: move someplace else
   ;;
-  (defun ek-create-directory (dir_a)
+  (defun ek-mkdir (dir_a)
     (unless (file-exists-p dir_a)
-      (message (concat "ek-create-directory --> target dir:" dir_a))
+      (message (concat "ek-mkdir --> target dir:" dir_a))
       (make-directory dir_a)))
 
   ;; one of my earliest successful non-trivial functions
@@ -39,17 +39,8 @@ TARGET_DIR/resources/images"
 			      default-directory))
 	   (dir_resources (concat dir_base_target "resources/"))
 	   (dir_images    (concat dir_resources "images")))
-      (ek-create-directory dir_resources)
-      (ek-create-directory dir_images)))
+      (ek-mkdir dir_resources)
+      (ek-mkdir dir_images)
+      dir_images))
   )
-)
 
-
-(ek-setup-org-download-image-dir "~/Desktop/emacs_demo/")
-
-
-
-
-
-
-(ek-setup-org-download-image-dir)
