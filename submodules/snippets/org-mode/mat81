@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: matrix61
-# key: mat61
+# name: matrix81
+# key: mat81
 # possible improvement, compute the number of lines from the argument to array
 # --
 
@@ -11,4 +11,6 @@
  $4 \\\
  $5 \\\
  $6 \\\
+ $7 \\\
+ $8 \
 \end{bmatrix}
