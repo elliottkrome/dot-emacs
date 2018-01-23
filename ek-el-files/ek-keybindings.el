@@ -78,6 +78,7 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c d") 'org-drill-tree)
 (global-set-key (kbd "M-a")   'ek-switch-to-agenda)
 (global-set-key (kbd "M-A")   'ek-agenda-new-frame)
 (global-set-key (kbd "M-0")   'ek-org-capture-todo)
