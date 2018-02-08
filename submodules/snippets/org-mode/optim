@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: optim
+# key: optim
+# --
+\begin{align*}
+\text{minimize}\qquad
+ & $1 \\\
+\text{subject to }\qquad
+ & $2 \\\
+\end{align*}
