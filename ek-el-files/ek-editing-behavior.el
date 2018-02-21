@@ -4,6 +4,9 @@
 
 (setq set-mark-command-repeat-pop t)
 
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
 ;; Why not just use M-m (`back-to-indentation')?
 ;;
 ;; (defun smarter-move-beginning-of-line (arg)

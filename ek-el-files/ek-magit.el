@@ -7,3 +7,6 @@
     (setq magit-completing-read-function 'magit-ido-completing-read)
     )
   )
+
+
+(use-package magit-tramp :ensure t)
