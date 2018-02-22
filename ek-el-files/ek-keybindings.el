@@ -130,7 +130,7 @@
 (define-key ctl-l-map "R"    'replace-regexp)
 (define-key ctl-l-map "\C-r" 'isearch-backward-regexp)
 (define-key ctl-l-map "s"    'shell)
-(define-key ctl-l-map "S"    'ek-switch-to-scratch)
+;; (define-key ctl-l-map "S"    'ek-switch-to-scratch)
 (define-key ctl-l-map "\C-s" 'isearch-forward-regexp)
 (define-key ctl-l-map "t"    'ek-org-babel-tangle-file)
 (define-key ctl-l-map "T"    'delete-trailing-whitespace)
@@ -146,3 +146,4 @@
 (define-key ctl-l-map "1"    'org-mobile-push)
 (define-key ctl-l-map "2"    'org-mobile-pull)
 (define-key ctl-l-map "|"    'go-to-column)
+(define-key ctl-l-map "S" 'ek-org-scad-helper)
