@@ -16,7 +16,7 @@
   ;;
   (if (eq (org-element-type (org-element-at-point)) 'src-block)
 
-      ;; get where the source block ends and navigate there
+      ;; navigate to beginning of src bock
       ;;
       (let ((head (org-babel-where-is-src-block-head)))
 	(save-excursion
@@ -29,25 +29,22 @@
 	    (if (string-match-p ":tangle" (buffer-substring-no-properties
 					   (line-beginning-position)
 					   (line-end-position)))
+		(progn 
 
-		;; get the name of the target file for tangling and store in
-		;; `target-name'. There is certainly a better way to do this.
-		;;
-		(progn
-		  (search-forward ":tangle")
-		  (forward-whitespace 1)
-		  (let* ((target-file-name-start (point))
-			 (target-file-name-end (progn (forward-whitespace 1)
-						      (backward-char)
-						      (point)))
-			 (target-name
-			  (buffer-substring target-file-name-start target-file-name-end)))
-
-		    ;; if the target name ends in ".scad", then open the file
-		    ;; with OpenSCAD
+		  ;; get the name of the target file for tangling and store in
+  		  ;; `f-name'. Begin by moving point to the beginning of
+  		  ;; target string. There is certainly a better way to do this.
+		  ;;
+		  (search-forward ":tangle") (forward-word) (backward-word)
+		  (let* ((f-name-start (point))
+			 (f-name-end (- (forward-whitespace 1) 1))
+			 (f-name (buffer-substring f-name-start f-name-end)))
+		    
+		    ;; if `f-name' ends in ".scad", open with OpenSCAD
 		    ;;
-		    (if (s-suffix? ".scad" target-name)
-			(call-process scad-command nil 0 nil target-name)
+		    (if (s-suffix? ".scad" f-name)
+			(call-process scad-command nil 0 nil f-name)
+		      
 		      (message "You are not in a scad block, dummy."))))
 	      (message "Current source block not a tangle target.")))))
     (message "You are not in a source block at all!")))
