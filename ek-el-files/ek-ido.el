@@ -36,8 +36,9 @@
 			(insert ?-)
 		      (funcall ,ido-cannot-complete-command)))))
 	    ad-do-it)))
-      :bind (("M-x"         . smex)                       ; replace std M-x
-	     ("C-c C-c M-x" . execute-extended-command)  ; keep old M-x herex
+      :bind (("M-x"         . smex)                     ; replace std M-x
+	     ("C-c C-c M-x" . execute-extended-command) ; keep old M-x herex
+	     ("M-X"         . smex-major-mode-commands) ; major mode shortcut
 	     ))
   :config
   (setq ido-enable-flex-matching               t
