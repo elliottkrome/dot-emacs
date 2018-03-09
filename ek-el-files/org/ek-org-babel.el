@@ -7,7 +7,7 @@
 ;; source code languages
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((shell      . true)
+ '((sh         . true)
    (python     . true)
    (emacs-lisp . true)
    (lisp       . true)
