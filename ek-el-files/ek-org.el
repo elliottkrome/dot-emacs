@@ -5,15 +5,6 @@
 (use-package f
   :ensure t)
 
-
-;; use the submodule org-version, as well as the extra stuff in the contrib
-;;
-(add-to-list 'load-path
-	     (concat user-emacs-directory "submodules/org-mode/lisp/"))
-(add-to-list 'load-path
-	     (concat user-emacs-directory "submodules/org-mode/contrib/lisp/") t)
-
-
 (setq org-modules '(org-bbdb
 		    org-bibtex
 		    org-docview
