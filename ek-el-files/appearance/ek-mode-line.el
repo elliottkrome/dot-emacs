@@ -5,11 +5,14 @@
 ;; (use-package spaceline-config
 ;;   :ensure spaceline
 ;;   )
-
-(diminish 'which-key-mode)
-(diminish 'auto-revert-mode)
-(diminish 'anaconda-mode)
-(diminish 'hs-minor-mode)
+(use-package diminish
+  :ensure t
+  :init
+  (progn
+    (diminish 'which-key-mode)
+    (diminish 'auto-revert-mode)
+    (diminish 'anaconda-mode)
+    (diminish 'hs-minor-mode)))
 (setq mode-line-format
       '("%e"
 	; mode-line-front-space
