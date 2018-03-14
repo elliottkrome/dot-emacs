@@ -56,7 +56,7 @@
 (setq org-use-fast-todo-selection t)
 (setq org-treat-S-cursor-todo-selection-as-state-change nil)
 
-; (setq org-ellipsis " ↴")
+(setq org-ellipsis " ↴")
 
 ;; makes org open local links with emacs
 (add-to-list 'org-file-apps '(directory . emacs))

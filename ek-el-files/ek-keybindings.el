@@ -30,8 +30,8 @@
 (global-set-key (kbd "C-c f")   'find-file-at-point)
 (global-set-key (kbd "C-x p")   'pop-to-mark-command)
 (global-set-key (kbd "M-j")     'ek-join-next-line)
-(global-set-key (kbd "M-n")     'ek-scroll-down)
-(global-set-key (kbd "M-p")    'ek-scroll-up)
+(global-set-key (kbd "M-n")     'ek-scroll-up)
+(global-set-key (kbd "M-p")     'ek-scroll-down)
 ;; (global-set-key [remap move-beginning-of-line]
 ;;	  	   'smarter-move-beginning-of-line)
 
