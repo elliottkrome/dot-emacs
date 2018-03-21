@@ -16,7 +16,7 @@
     ;;
     (setq inferior-octave-buffer       ek-octave-repl-buffer-string
 	  inferior-octave-mode-hook    nil
-	  inferior-octave-program      "/usr/local/bin/octave-cli-4.2.1"
+	  inferior-octave-program      "/usr/local/bin/octave-cli-4.2.2"
 	  inferior-octave-startup-args '("-i" "--no-line-editing" "--no-gui")
 	  octave-block-offset          2)
 
