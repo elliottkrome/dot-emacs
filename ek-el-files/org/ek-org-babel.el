@@ -7,7 +7,7 @@
 ;; source code languages
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((sh         . true)
+ '((shell      . true)
    (python     . true)
    (emacs-lisp . true)
    (lisp       . true)
@@ -20,15 +20,33 @@
    (latex      . true)
    ; (spice      . true)
    ; (R          . true)
-   ; (ruby       . true)
+   (ruby       . true)
    ; (ledger     . true)
    ; (tcl        . true)
    )
  )
 
+
+(setq
+
+ ;; Do not require confirmation before interactively evaluating code blocks.
+ ;;
+ org-confirm-babel-evaluate nil
+
+ ;; make the effect of TAB in a code block is as if it were issued in the
+ ;; language major mode buffer.
+ ;;
+ org-src-tab-acts-natively t
+
+ ;; VERY IMPORTANT FOR PYTHON IN BABEL
+ ;; 
+ org-src-preserve-indentation t)
+
+     
+(add-to-list 'org-structure-template-alist
+             '("sc" "#+BEGIN_SRC C++\n?\n#+END_SRC\n" "<src lang=\"?\">\n\n</src>"))
+
 (add-to-list 'org-src-lang-modes (quote ("gnuplot" . gnuplot)))
-;; VERY IMPORTANT FOR PYTHON IN BABEL
-(setq org-src-preserve-indentation t)
 
 
 (defun display-inline-images ()

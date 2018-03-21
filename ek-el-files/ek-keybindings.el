@@ -109,6 +109,7 @@
 (define-key ctl-l-map "\C-f" 'projectile-find-file)
 (define-key ctl-l-map "g"    'rgrep)
 (define-key ctl-l-map "h"    'command-history)
+(define-key ctl-l-map "H"    'org-yank-hyperlink)
 ;; (define-key ctl-l-map "i"    'ido-goto-symbol)
 (define-key ctl-l-map "i"    'imenu)
 (define-key ctl-l-map "j"    'bookmark-jump)

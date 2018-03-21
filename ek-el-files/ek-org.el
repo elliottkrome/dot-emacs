@@ -27,14 +27,6 @@
 (load "~/.emacs.d/ek-el-files/org/ek-org-gnrl-ui.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-download.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-drill.el")
+(load "~/.emacs.d/ek-el-files/org/ek-org-pdfview.el")
 ; (load "~/.emacs.d/ek-el-files/org/ek-org-gcal.el")
 
-
-(use-package org-pdfview
-  :ensure t)
-(eval-after-load 'org '(require 'org-pdfview))
-(delete '("\\.pdf\\'" . default) org-file-apps)
-(add-to-list 'org-file-apps 
-	     '("\\.pdf\\'" . (lambda (file link) (org-pdfview-open link))))
-(add-to-list 'org-file-apps 
-	     '("\\.pdf::\\([[:digit:]]+\\)\\'" . (lambda (file link) (org-pdfview-open link))))
