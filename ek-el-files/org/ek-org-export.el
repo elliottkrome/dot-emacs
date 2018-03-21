@@ -4,6 +4,10 @@
 
 (require 'org)
 
+;; preserve line breaks in export
+;;
+(setq org-export-preserve-breaks t)
+
 (setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil "minted")))
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html
@@ -48,6 +52,25 @@
                   ("\\section{%s}" . "\\section*{%s}")
                   ("\\subsection{%s}" . "\\subsection*{%s}")
                   ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
+
+
+(add-to-list 'org-src-lang-modes '("latex-macros" . latex))
+(defvar org-babel-default-header-args:latex-macros
+  '((:results . "raw")
+    (:exports . "results")))
+
+(defun prefix-all-lines (pre body)
+  (with-temp-buffer
+    (insert body)
+    (string-insert-rectangle (point-min) (point-max) pre)
+    (buffer-string)))
+
+(defun org-babel-execute:latex-macros (body _params)
+  (concat
+   (prefix-all-lines "#+LATEX_HEADER: " body)
+   "\n#+HTML_HEAD_EXTRA: <div style=\"display: none\"> \\(\n"
+   (prefix-all-lines "#+HTML_HEAD_EXTRA: " body)
+   "\n#+HTML_HEAD_EXTRA: \\)</div>\n"))
 
 (provide 'ek-org-export)
 ;;; ek-org-export ends here
