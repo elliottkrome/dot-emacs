@@ -74,3 +74,18 @@
 ;;   :ensure t
 ;;   :config
 ;;   (browse-kill-ring-default-keybindings))
+
+
+(use-package fold-dwim
+  :ensure t
+  :config
+  (progn
+    (defhydra hydra-fold (:pre (hs-minor-mode 1))
+      "fold"
+      ("t" fold-dwim-toggle "toggle")
+      ("h" fold-dwim-hide-all "hide-all")
+      ("s" fold-dwim-show-all "show-all")
+      ("q" nil "quit"))
+    (global-set-key (kbd "C-F") 'hydra-fold/body)
+    ))
+
