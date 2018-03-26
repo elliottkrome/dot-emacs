@@ -34,6 +34,7 @@
 (load "~/.emacs.d/ek-el-files/ek-ibuffer.el")
 (load "~/.emacs.d/ek-el-files/ek-yasnippet.el")
 (load "~/.emacs.d/ek-el-files/ek-appearance.el")
+(load "~/.emacs.d/ek-el-files/ek-tldr.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
