@@ -2,8 +2,8 @@
 ;; https://github.com/abo-abo/hydra/wiki/Org-mode-block-templates
 
 ;; one of the nice things about this is if a region is active and `<'
-;; is pressed, that region is cut, the template is inserted, and the
-;; region is inserted inside of that template.
+;; is pressed, that region is killed, the template is inserted, and the
+;; region is yanked inside of that template.
 
  (defhydra horg-template (:color blue :hint nil)
     "
@@ -24,7 +24,7 @@
     ("L" (horg-template-expand "<L"))
     ("i" (horg-template-expand "<i"))
     ("E" (horg-template-expand "<s" '("elisp")))
-    ("P" (horg-template-expand "<s" '("python")))
+    ("P" horg-template-python/body :exit t)
     ("U" (horg-template-expand "<s" '("plantuml :file CHANGE.png")))
     ("O" horg-template-octave/body :exit t)
     ("+" (horg-template-expand "<s" '("C++ :includes <iostream>")))
@@ -42,12 +42,13 @@
       (self-insert-command 1))))
 
 ;;;  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun horg-template-expand (str &optional bgnsrcln-list header)
+(defun horg-template-expand (str &optional mainline-list header-list)
     "Expand org template
 
-STR is a structure template string recognised by org like <s. BGNSRCLN-LIST is a
-string with additional parameters to add the begin line of the
-structure element. HEADER string includes more parameters that are
+STR is a structure template string recognised by org like
+<s. MAINLINE-LIST is a list of strings with additional parameters
+to add the to the begin line of the structure element. HEADER is
+a list of strings that includes more parameters that are
 prepended to the element after the #+HEADER: tag."
 
     ;; if the region is active, kill it temporarily
@@ -60,64 +61,88 @@ prepended to the element after the #+HEADER: tag."
 
       ;; deal with header argument
       ;;
-      (when header (insert "#+HEADER: " (car header)) (forward-line))
-
+      (horg-template--deal-with-header-list header-list)
       ;; insert the template to expand, then try to expand it
       ;;
       (insert str)
       (org-try-structure-completion)
 
-      ;; deal with bgnsrcln-list argument
+      ;; deal with mainline-list argument
       ;;
-      (horg-template--deal-with-bgnsrcln-list-arg bgnsrcln-list)
+      (horg-template--deal-with-mainline-list mainline-list)
 
       ;; move point to be within template, then insert save region, if any
       ;;
       (next-line)
       (when text (insert text))))
 
-(defun horg-template--deal-with-bgnsrcln-list-arg (bgnsrcln-list-arg-list)
-  ""
-
-  ;; iterate over each member of bgnsrcln-list-arg-list
-  ;;
-  (dolist (bgnsrcln-string bgnsrcln-list-arg-list)
-
+(defun horg-template--deal-with-mainline-list (mainline-list)
+  "The second (and optional) argument to `horg-template-expand'
+is a list of strings associated with the mainline of the
+structure element. Each of these strings might have an associated
+function (via `horg-template--mainline-str-func-alist'), or might
+be inserted verbatim."
+  ;; iterate over each member of mainline-list
+  (dolist (mainline-string mainline-list)
     ;; for each string in list, get the associated function, if any
-    ;;
-    (let ((bgnsrcln-list-string-func (horg--get-bgnsrcln-func bgnsrcln-string)))
+    (let ((mainline-list-string-func (horg--get-mainline-func mainline-string)))
+      ;; if `mainline-list-string-func' is a function (it should be
+      ;; either `nil' or a function), then call it.
+      (if (functionp mainline-list-string-func)
+	  (funcall mainline-list-string-func)
+	;; if nil returned from `horg--get-mainline-func', then
+	;; simply insert mainline-string with some whitespace
+	(insert (concat mainline-string " "))))))
 
-      ;; if `bgnsrcln-list-string-func' is a function (it should be), then call it
-      ;;
-      (if (functionp bgnsrcln-list-string-func)
-	  (funcall bgnsrcln-list-string-func)
 
-	;; if nil returned from `horg--get-bgnsrcln-func', then
-	;; simply insert bgnsrcln-string with some whitespace
-	;;
-	(insert (concat bgnsrcln-string " "))))))
+(defun horg-template--deal-with-header-list (header-list)
+  "The third (and optional) argument to `horg-template-expand'
+is a list of strings associated with the headers of the
+structure element. Each of these strings might have an associated
+function (via `horg-template--header-str-func-alist'), or might
+be inserted verbatim."
 
-(defun horg--get-bgnsrcln-func (bgnsrcln-string)
-  (cdr
-   (assoc
-    bgnsrcln-string
-    horg-template--bgnsrcln-str-func-alist)))
+  ;; iterate over each member of header-list
+  (dolist (header-string header-list)
+    ;; for each string in list, get the associated function, if any
+    (let ((header-list-string-func (horg--get-header-func header-string)))
+      (progn
+	(insert "#+HEADER: ")
+	;; if `header-list-string-func' is a function (it should be
+	;; either `nil' or a function), then call it.
+	(if (functionp header-list-string-func)
+	    (funcall header-list-string-func)
+	  ;; if nil returned from `horg--get-header-func', then
+	  ;; simply insert header-string with some whitespace
+	  (insert (concat header-string " ")))))))
 
-(defvar horg-template--bgnsrcln-str-func-alist
-      '((":tangle" . horg-template--tangle-function)
-	(":" . (insert "asdf")))
-      "Associates bgnsrcln-list-list members with functions")
+
+(defun horg--get-mainline-func (mainline-string)
+  (cdr (assoc mainline-string horg-template--mainline-str-func-alist)))
+
+(defun horg--get-header-func (header-string)
+  (cdr (assoc header-string horg-template--header-str-func-alist)))
+
+(defvar horg-template--mainline-str-func-alist
+  '((":tangle" . horg-template--tangle-function)
+    (":" . (insert "asdf")))
+  "Associates mainline-list-list members with functions")
 
 (defvar horg-template--header-str-func-alist
-      '(("some_string" . (insert "some_string"))
-	("some_str"    . (insert "some_str   "))
-      "Associates bgnsrcln-list-list members with functions"))
+  '(("some_string" . horg-template--header-example-function)
+    ("some_str"    . (insert "some_str   ")))
+  "Associates mainline-list-list members with functions")
 
+(defun horg-template--header-example-function ()
+    ""
+  (progn (insert "some_poor_soul")
+	 (open-line 1)
+	 (next-line)))
 
 (defun horg-template--tangle-function ()
-  "Function to call when \":tangle\" has been passed to `horg-template--deal-with-bgnsrcln-list-arg'."
+  "Function to call when \":tangle\" has been passed to `horg-template--deal-with-mainline-list'."
   (progn (insert ":tangle ")
-	 (insert (read-string "Tangle target: "))))
+	 (insert (concat (read-string "Tangle target: ") " "))))
 
 ;;; language specific sub-hydras ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -128,5 +153,15 @@ prepended to the element after the #+HEADER: tag."
 "
     ("t" (horg-template-expand "<s" '("octave" ":tangle")))
     ("s" (horg-template-expand "<s" '("octave" ":session")))
-    ("&" (horg-template-expand "<s" '("octave" ":table" ":session")))
-)
+    ("&" (horg-template-expand "<s" '("octave" ":tangle" ":session") '("some_string"))))
+
+(defhydra horg-template-python  (:color blue :hint nil)
+    "
+ _t_angle  tangle _&_ session _S_ession, silent results
+ _s_ession _r_esults silent
+"
+    ("t" (horg-template-expand "<s" '("python" ":tangle")))
+    ("s" (horg-template-expand "<s" '("python" ":session")))
+    ("r" (horg-template-expand "<s" '("python" ":results silent")))
+    ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))    
+    ("&" (horg-template-expand "<s" '("python" ":tangle" ":session") '("some_string"))))
