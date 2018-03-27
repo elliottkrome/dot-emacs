@@ -86,6 +86,6 @@
       ("h" fold-dwim-hide-all "hide-all")
       ("s" fold-dwim-show-all "show-all")
       ("q" nil "quit"))
-    (global-set-key (kbd "C-F") 'hydra-fold/body)
+    (global-set-key (kbd "C-`") 'hydra-fold/body)
     ))
 
