@@ -28,5 +28,6 @@
 (load "~/.emacs.d/ek-el-files/org/ek-org-download.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-drill.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-pdfview.el")
+(load "~/.emacs.d/ek-el-files/org/ek-org-template-hydra.el")
 ; (load "~/.emacs.d/ek-el-files/org/ek-org-gcal.el")
 
