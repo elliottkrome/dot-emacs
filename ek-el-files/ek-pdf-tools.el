@@ -10,15 +10,13 @@
 (use-package pdf-tools
   :ensure t
   :config
-  (custom-set-variables
-   '(pdf-tools-handle-upgrades nil)) ; Use brew upgrade pdf-tools instead.
   (setq pdf-info-epdfinfo-program "/usr/local/bin/epdfinfo")
+  (pdf-tools-install)
   (bind-keys :map pdf-view-mode-map
 	     ("\\" . hydra-pdftools/body)
 	     ("<s-spc>" .  pdf-view-scroll-down-or-next-page)
 	     ("g"  . pdf-view-first-page)
 	     ("G"  . pdf-view-last-page)
-	     ("l"  . image-forward-hscroll)
 	     ("h"  . image-backward-hscroll)
 	     ("j"  . pdf-view-next-page)
 	     ("k"  . pdf-view-previous-page)
@@ -31,11 +29,10 @@
 	     ("at" . pdf-annot-add-text-annotation)
 	     ("y"  . pdf-view-kill-ring-save)
 	     ("i"  . pdf-misc-display-metadata)
+	     ("L"  . org-pdfview-store-link)
 	     ("s"  . pdf-occur)
 	     ("b"  . pdf-view-set-slice-from-bounding-box)
 	     ("r"  . pdf-view-reset-slice)))
-
-(pdf-tools-install)
 
 ;;; colors
 ;; everything below here from
@@ -88,7 +85,7 @@
          ^^^↑^^^      ^↓^  ╭─^─^─┐  ^↓^  ╭─^ ^─┐   [_ad_] delete  [_f_] search link
     _h_ ←pag_e_→ _l_  _N_  │ _P_ │  _-_    _b_     [_aa_] dired
          ^^^↓^^^      ^ ^  ╰─^─^─╯  ^ ^  ╰─^ ^─╯   [_y_]  yank
-         ^^_n_^^      ^ ^  _r_eset slice box
+         ^^_n_^^      ^ ^  _r_eset slice box       _L_ink-to-page 
          ^^^↓^^^
          ^^_G_^^
    --------------------------------------------------------------------------------
@@ -115,6 +112,7 @@
         ("g" pdf-view-first-page)
         ("G" pdf-view-last-page)
         ("e" pdf-view-goto-page)
+	("L" org-pdfview-store-link)
         ("o" pdf-outline)
         ("s" pdf-occur)
         ("i" pdf-misc-display-metadata)
