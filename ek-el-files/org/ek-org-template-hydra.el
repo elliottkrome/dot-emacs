@@ -55,9 +55,9 @@ prepended to the element after the #+HEADER: tag."
     ;;
     (let (text)
       (when (region-active-p)
-        (setq text (buffer-substring (region-beginning) (region-end)))
-        (delete-region (region-beginning) (region-end))
-        (deactivate-mark))
+	(setq text (buffer-substring (region-beginning) (region-end)))
+	(delete-region (region-beginning) (region-end))
+	(deactivate-mark))
 
       ;; deal with header argument
       ;;
@@ -149,10 +149,11 @@ be inserted verbatim."
 (defhydra horg-template-octave  (:color blue :hint nil)
     "
  _t_angle  tangle _&_ session
- _s_ession
+ _s_ession _p_lain
 "
     ("t" (horg-template-expand "<s" '("octave" ":tangle")))
     ("s" (horg-template-expand "<s" '("octave" ":session")))
+    ("p" (horg-template-expand "<s" '("octave" "")))
     ("&" (horg-template-expand "<s" '("octave" ":tangle" ":session") '("some_string"))))
 
 (defhydra horg-template-python  (:color blue :hint nil)
@@ -163,5 +164,5 @@ be inserted verbatim."
     ("t" (horg-template-expand "<s" '("python" ":tangle")))
     ("s" (horg-template-expand "<s" '("python" ":session")))
     ("r" (horg-template-expand "<s" '("python" ":results silent")))
-    ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))    
+    ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))
     ("&" (horg-template-expand "<s" '("python" ":tangle" ":session") '("some_string"))))
