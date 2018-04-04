@@ -57,6 +57,13 @@
   (setq pdf-view-midnight-colors '("#ff9900" . "#0a0a12")) ; amber
   (pdf-view-midnight-minor-mode))
 
+(defun ek-pdf-midnight-gray13 ()
+  (interactive)
+  (setq pdf-view-midnight-colors '("#ffffff" . "gray13"))
+  (pdf-view-midnight-minor-mode))
+
+;; not working for some reason, right now is just teal
+;;
 (defun ek-pdf-midnight-from-default ()
   (interactive)
   (setq pdf-view-midnight-colors '("#ffffff" . "#263238"))
@@ -65,13 +72,14 @@
 (defun ek-pdf-midnight-colour-schemes ()
   "Midnight mode colour schemes bound to keys"
         (local-set-key (kbd "!") (quote ek-pdf-no-filter))
-        (local-set-key (kbd "@") (quote ek-pdf-midnight-amber)) 
-        (local-set-key (kbd "#") (quote ek-pdf-midnight-from-default)))
+        (local-set-key (kbd "@") (quote ek-pdf-midnight-amber))
+        (local-set-key (kbd "#") (quote ek-pdf-midnight-gray13)) 	
+        (local-set-key (kbd "$") (quote ek-pdf-midnight-from-default)))
 
 (add-hook 'pdf-view-mode-hook
 	  (lambda () (progn (pdf-view-midnight-minor-mode)
 			    (ek-pdf-midnight-colour-schemes)		   
-			    (ek-pdf-midnight-from-default))))
+			    (ek-pdf-midnight-gray13))))
 
 ;;; hydra
 (defhydra hydra-pdftools (:color blue :hint nil)
