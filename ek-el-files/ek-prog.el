@@ -9,3 +9,5 @@
 (load "~/.emacs.d/ek-el-files/prog/ek-ruby.el")
 ; (load "~/.emacs.d/ek-el-files/prog/ek-spice.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-scad.el")
+(load "~/.emacs.d/ek-el-files/prog/ek-scheme.el")
+
