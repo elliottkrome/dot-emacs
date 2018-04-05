@@ -2,9 +2,7 @@
 # name: cases
 # key: ca
 # --
-\[
-$1 =
-  \left \\{ \begin{array}{lr}
+$1 = \\begin{cases}
    $2   &  $3    \\\
-   \end{array}
-\]
+   $4   &  $5    \\\
+\\end{cases}

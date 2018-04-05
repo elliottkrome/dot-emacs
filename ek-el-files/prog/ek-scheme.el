@@ -6,9 +6,18 @@
 (use-package sicp
   :ensure t)
 
+
 (defun ek-scheme-time ()
   (interactive)
   (progn
     (info "(SICP) Top")
     (run-scheme)))
 
+
+(defvar ek-sicp-info-loc
+  "~/ddrop/media/edu/pdfs_ppts/gnrl_prog"
+  "Where I keep sicp in texinfo format.")
+
+(setq Info-default-directory-list
+      (append '(ek-sicp-info-loc)
+	      Info-default-directory-list))

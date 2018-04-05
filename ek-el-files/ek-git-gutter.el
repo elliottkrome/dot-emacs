@@ -6,7 +6,7 @@
   (eval `(use-package ,package-name
 	   :ensure t
 	   :diminish git-gutter-mode
-	   :init (global-git-gutter-mode +1))))
+	   :init (global-git-gutter-mode nil))))
 
 
 
