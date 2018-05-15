@@ -36,10 +36,12 @@
 (load "~/.emacs.d/ek-el-files/ek-appearance.el")
 (load "~/.emacs.d/ek-el-files/ek-tldr.el")
 (load "~/.emacs.d/ek-el-files/ek-elfeed.el")
+(load "~/.emacs.d/ek-el-files/ek-idle-highlight-mode.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (setq mac-use-title-bar nil)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; local stuff goes here
 ;;
