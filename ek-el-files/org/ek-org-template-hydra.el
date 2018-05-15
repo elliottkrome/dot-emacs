@@ -7,7 +7,7 @@
 
  (defhydra horg-template (:color blue :hint nil)
     "
- _c_enter  _q_uote     _E_lisp    _L_aTeX:
+ _c_lisp  _q_uote     _E_lisp    _L_aTeX:
  _l_atex   _e_xample   _P_ython   _i_ndex:
  _a_scii   _v_erse     _O_ctave   _I_NCLUDE:
  _s_rc     C_+_+       _S_hell    _H_TML:
@@ -17,7 +17,7 @@
     ("e" (horg-template-expand "<e"))
     ("q" (horg-template-expand "<q"))
     ("v" (horg-template-expand "<v"))
-    ("c" (horg-template-expand "<c"))
+    ("c" horg-template-clisp/body :exit t)
     ("l" (horg-template-expand "<l"))
     ("h" (horg-template-expand "<h"))
     ("a" (horg-template-expand "<a"))
@@ -155,6 +155,17 @@ be inserted verbatim."
     ("s" (horg-template-expand "<s" '("octave" ":session")))
     ("p" (horg-template-expand "<s" '("octave" "")))
     ("&" (horg-template-expand "<s" '("octave" ":tangle" ":session") '("some_string"))))
+
+(defhydra horg-template-clisp  (:color blue :hint nil)
+    "
+ _t_angle  tangle _&_ session
+ _s_ession _p_lain
+"
+    ("t" (horg-template-expand "<s" '("lisp" ":tangle")))
+    ("s" (horg-template-expand "<s" '("lisp" ":session")))
+    ("p" (horg-template-expand "<s" '("lisp" "")))
+    ("&" (horg-template-expand "<s" '("lisp" ":tangle" ":session") '("some_string"))))
+
 
 (defhydra horg-template-python  (:color blue :hint nil)
     "
