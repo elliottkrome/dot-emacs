@@ -24,3 +24,11 @@
 (setq recentf-save-file
       (concat ek-data-directory "recentf"))
 
+;; perhaps the stuff below here should be moved to appropriate ek-*.el files
+;;
+
+(setq org-id-locations-file ; details of `org-id-locations-file' in org-id.el
+      (concat ek-data-directory ".org-id-locations"))
+(setq eww-bookmarks-directory
+      ek-data-directory)
+
