@@ -18,6 +18,7 @@
 	     ("g"  . pdf-view-first-page)
 	     ("G"  . pdf-view-last-page)
 	     ("h"  . image-backward-hscroll)
+	     ("l"  . image-forward-hscroll)
 	     ("j"  . pdf-view-next-page)
 	     ("k"  . pdf-view-previous-page)
 	     ("e"  . pdf-view-goto-page)
