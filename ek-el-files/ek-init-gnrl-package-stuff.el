@@ -9,6 +9,8 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 
+(setq use-package-enable-imenu-support t)
+
 ;; http://cachestocaches.com/2015/8/getting-started-use-package/#auto-installing-use-package
 ;; use-package cannot load itself, so we will give it some help.
 ;; Then it will take care of almost everything else
