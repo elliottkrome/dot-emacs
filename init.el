@@ -6,7 +6,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; everything that is portable
+;; everything that is portable (except for server stuff, which goes last)
 ;;
 (load "~/.emacs.d/ek-el-files/ek-organization.el")
 (load "~/.emacs.d/ek-el-files/ek-backup.el")
