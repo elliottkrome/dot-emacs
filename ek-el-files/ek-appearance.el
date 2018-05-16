@@ -6,6 +6,11 @@
 (load "~/.emacs.d/ek-el-files/appearance/ek-font-general.el")
 (load "~/.emacs.d/ek-el-files/appearance/miscellany.el")
 
+
+(defadvice load-theme (before clear-previous-themes activate)
+  "Clear existing theme settings instead of layering them"
+  (mapc #'disable-theme custom-enabled-themes))
+
 ; (load "~/.emacs.d/ek-el-files/appearance/theme/leuven.el")
 ; (load "~/.emacs.d/ek-el-files/appearance/theme/jazz.el")
 ; (load "~/.emacs.d/ek-el-files/appearance/ek-theme-custom.el")
