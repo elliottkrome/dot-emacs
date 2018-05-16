@@ -4,6 +4,11 @@
 
 (require 'org)
 
+;; allow emphasized regions to also end with a "s"
+;;
+(setcar (nthcdr 1 org-emphasis-regexp-components)
+	(concat (nth 1 org-emphasis-regexp-components) "s"))
+
 ;; visual line mode by default
 ;;
 ; (add-hook 'org-mode-hook #'visual-line-mode)
