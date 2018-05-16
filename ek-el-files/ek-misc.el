@@ -93,4 +93,4 @@ Info-mode:
       ("q"   Info-exit "Info exit")
       ("C-g" nil "cancel" :color blue))
 
-(define-key Info-mode-map (kbd "\\") 'hydra-info/body)
+(define-key Info-mode-map (kbd ".") 'hydra-info/body)
