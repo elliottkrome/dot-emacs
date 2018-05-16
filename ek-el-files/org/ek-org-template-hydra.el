@@ -11,7 +11,7 @@
  _l_atex   _e_xample   _P_ython   _i_ndex:
  _a_scii   _v_erse     _O_ctave   _I_NCLUDE:
  _s_rc     C_+_+       _S_hell    _H_TML:
- _h_tml    ^ ^         plant_U_ml _A_SCII:
+ _h_tml    _d_ot       plant_U_ml _A_SCII:
 "
     ("s" (horg-template-expand "<s"))
     ("e" (horg-template-expand "<e"))
@@ -21,6 +21,7 @@
     ("l" (horg-template-expand "<l"))
     ("h" (horg-template-expand "<h"))
     ("a" (horg-template-expand "<a"))
+    ("d" (horg-template-expand "<s"'("dot :file :export results")))    
     ("L" (horg-template-expand "<L"))
     ("i" (horg-template-expand "<i"))
     ("E" (horg-template-expand "<s" '("elisp")))

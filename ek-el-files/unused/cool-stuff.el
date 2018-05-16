@@ -81,4 +81,4 @@ Test cases
 
 
 ;; path to plantuml.jar
-(setq org-plantuml-jar-path "~/eclipse/java-mars/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/501/0/.cp/lib/plantUml/plantuml.jar")
+

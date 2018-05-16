@@ -19,6 +19,8 @@
       :init (ido-vertical-mode 1))
     (use-package ido-occur
       :ensure t)
+    (use-package idomenu
+      :ensure t)
     (use-package smex
       :ensure t ;smex-save-file
       :init

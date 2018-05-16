@@ -6,7 +6,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; everything that is portable
+;; everything that is portable (except for server stuff, which goes last)
 ;;
 (load "~/.emacs.d/ek-el-files/ek-organization.el")
 (load "~/.emacs.d/ek-el-files/ek-backup.el")
@@ -36,11 +36,12 @@
 (load "~/.emacs.d/ek-el-files/ek-appearance.el")
 (load "~/.emacs.d/ek-el-files/ek-tldr.el")
 (load "~/.emacs.d/ek-el-files/ek-elfeed.el")
+(load "~/.emacs.d/ek-el-files/ek-eshell.el")
+(load "~/.emacs.d/ek-el-files/ek-undo-tree.el")
+(load "~/.emacs.d/ek-el-files/ek-desktop.el")
 (load "~/.emacs.d/ek-el-files/ek-idle-highlight-mode.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(setq mac-use-title-bar nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; local stuff goes here
@@ -54,4 +55,10 @@
 (setq custom-file (expand-file-name "ek-el-files/ek-custom.el"
 				    user-emacs-directory))
 (load custom-file)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; server stuff should probably go last
+;;
+(load "~/.emacs.d/ek-el-files/ek-server-stuff.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

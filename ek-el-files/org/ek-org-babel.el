@@ -18,14 +18,18 @@
    (octave     . true)
    (dot        . true)
    (latex      . true)
+   (plantuml   . true)
    ; (spice      . true)
    ; (R          . true)
    (ruby       . true)
    ; (ledger     . true)
    ; (tcl        . true)
+   (js         . true)
    )
  )
 
+
+; (require 'org-babel-gnuplot)
 
 (setq
 
@@ -47,6 +51,7 @@
              '("sc" "#+BEGIN_SRC C++\n?\n#+END_SRC\n" "<src lang=\"?\">\n\n</src>"))
 
 (add-to-list 'org-src-lang-modes (quote ("gnuplot" . gnuplot)))
+(add-to-list 'org-src-lang-modes (quote ("dot" . graphviz-dot)))
 
 
 (defun display-inline-images ()

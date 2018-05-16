@@ -1,11 +1,15 @@
-(add-hook 'dired-mode-hook 'auto-revert-mode)
+(defun ek-dired-setup ()
+  (progn
+    (auto-revert-mode)
+    (dired-hide-details-mode 1)))
+
+(add-hook 'dired-mode-hook 'ek-dired-setup)
 
 ;; allow editing file permissions
 (setq wdired-allow-to-change-permissions t)
 
 (setq-default dired-omit-files-p t)
 (setq dired-dwim-target t)
-
 
 (setq dired-omit-files
       "^\\.?#\\|^\\.DS_Store\\|^auto-save-list\\|^backups"
@@ -74,8 +78,7 @@ The app is chosen from your OS's preference.
 URL `http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html'
 Version 2016-10-15"
   (interactive)
-  (let* (
-         ($file-list
+  (let* (($file-list
           (if (string-equal major-mode "dired-mode")
               (dired-get-marked-files)
             (list (buffer-file-name))))

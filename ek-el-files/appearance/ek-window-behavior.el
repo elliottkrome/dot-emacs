@@ -18,3 +18,5 @@
 ;; buffer-local variable, so must use `setq-default', rather then `setq'
 ;;
 (setq-default truncate-lines t)
+
+(global-visual-line-mode t)

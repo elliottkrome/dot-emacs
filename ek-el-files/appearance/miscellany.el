@@ -2,14 +2,16 @@
 ;; aesthetics - just playing with some frame appearance stuff
 ;; 
 (if (eq system-type 'darwin)
-    (setq initial-frame-alist
-	  `((scroll-bar-background . "gray54") ; emacs-mac build lets you color toolbar ("gray55" works well with dark-mode on mac, "Palevioletred3" is fun)
-	    (background-color      . "gray13")
-	    (alpha                 . (100 . 100))
-	    (scroll-bar-width      . 0))
-	  default-frame-alist (copy-alist initial-frame-alist)))
+    (progn
+      (setq initial-frame-alist
+	    `((scroll-bar-background . "gray54") ; emacs-mac build lets you color toolbar ("gray55" works well with dark-mode on mac, "Palevioletred3" is fun)
+	      (background-color      . "gray13")
+	      (alpha                 . (100 . 100))
+	      (scroll-bar-width      . 0))
+	    default-frame-alist (copy-alist initial-frame-alist))
+      (setq mac-use-title-bar nil)))
 
-
+(setq line-spacing 0)
 ;; i think this was the first non-trivial elisp i ever messed around
 ;; with. i'm keeping it around for nostalgia's sake.
 ;;

@@ -15,7 +15,13 @@
     (use-package all-the-icons-dired
       :ensure t
       :init (progn
-	      (add-hook 'dired-mode-hook 'all-the-icons-dired-mode))
-      )
-    )
-  )
+	      (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)))
+    ))
+
+;; XXX https://github.com/domtronn/all-the-icons.el/issues/99
+;; May 2018
+;;
+(defun HACK-icons-dired-mode-setup ()
+  "show less information in dired buffers"
+  (font-lock-mode 0))
+(add-hook 'dired-mode-hook 'HACK-icons-dired-mode-setup)
