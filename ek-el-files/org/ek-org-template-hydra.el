@@ -5,7 +5,7 @@
 ;; is pressed, that region is killed, the template is inserted, and the
 ;; region is yanked inside of that template.
 
- (defhydra horg-template (:color blue :hint nil)
+(defhydra horg-template (:color blue :hint nil)
     "
  _c_lisp  _q_uote     _E_lisp    _L_aTeX:
  _l_atex   _e_xample   _P_ython   _i_ndex:
@@ -35,8 +35,12 @@
     ("<" self-insert-command "ins")
     ("0" nil "quit"))
 
+;; override default `<' behaviour
 (define-key org-mode-map "<"
-  (lambda () (interactive)
+  (lambda ()
+    (interactive)
+    ;; if there either there is no active region or we are not at beginning of line
+    ;; then just insert `<'. otherwise do the thing.
     (if (or (region-active-p) (looking-back "^"))
 	(horg-template/body)
       (self-insert-command 1))))
@@ -62,6 +66,7 @@ prepended to the element after the #+HEADER: tag."
       ;; deal with header argument
       ;;
       (horg-template--deal-with-header-list header-list)
+
       ;; insert the template to expand, then try to expand it
       ;;
       (insert str)
@@ -116,33 +121,43 @@ be inserted verbatim."
 	  ;; simply insert header-string with some whitespace
 	  (insert (concat header-string " ")))))))
 
-
 (defun horg--get-mainline-func (mainline-string)
   (cdr (assoc mainline-string horg-template--mainline-str-func-alist)))
 
 (defun horg--get-header-func (header-string)
   (cdr (assoc header-string horg-template--header-str-func-alist)))
 
+(cdr (assoc ":var" horg-template--mainline-str-func-alist))
+;;; mainline functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar horg-template--mainline-str-func-alist
   '((":tangle" . horg-template--tangle-function)
-    (":" . (insert "asdf")))
-  "Associates mainline-list-list members with functions")
+    (":var"    . horg-template--tangle-function))
+  "Associates mainline-list members with functions")
+(setq horg-template--mainline-str-func-alist
+      '((":tangle" . horg-template--tangle-function)
+	(":var"    . horg-template--var-function)))
 
+(defun horg-template--tangle-function ()
+  "Function to call when \":tangle\" has been passed to `horg-template--deal-with-mainline-list'."
+  (progn (insert ":tangle ")
+	 (insert (concat (read-string "Tangle target: ") " "))))
+
+(defun horg-template--var-function ()
+  "Function to call when \":var\" has been passed to `horg-template--deal-with-mainline-list'."
+  (progn (insert ":var ")
+	 (insert (concat (read-string "Variable expression: ") " "))))
+
+;;; heaeder functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar horg-template--header-str-func-alist
   '(("some_string" . horg-template--header-example-function)
     ("some_str"    . (insert "some_str   ")))
-  "Associates mainline-list-list members with functions")
+  "Associates header-list members with functions")
 
 (defun horg-template--header-example-function ()
     ""
   (progn (insert "some_poor_soul")
 	 (open-line 1)
 	 (next-line)))
-
-(defun horg-template--tangle-function ()
-  "Function to call when \":tangle\" has been passed to `horg-template--deal-with-mainline-list'."
-  (progn (insert ":tangle ")
-	 (insert (concat (read-string "Tangle target: ") " "))))
 
 ;;; language specific sub-hydras ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -170,9 +185,10 @@ be inserted verbatim."
 (defhydra horg-template-python  (:color blue :hint nil)
     "
  _t_angle  tangle _&_ session _S_ession, silent results
- _s_ession _r_esults silent
+ _s_ession _r_esults silent   _v_ar
 "
     ("t" (horg-template-expand "<s" '("python" ":tangle")))
+    ("v" (horg-template-expand "<s" '("python" ":var")))
     ("s" (horg-template-expand "<s" '("python" ":session")))
     ("r" (horg-template-expand "<s" '("python" ":results silent")))
     ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))
