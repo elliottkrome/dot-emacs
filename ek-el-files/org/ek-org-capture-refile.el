@@ -34,3 +34,6 @@
 ;;   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 ;; (setq org-refile-target-verify-function 'verify-refile-target)
 
+;; allow refiling as top-level headline (!)
+;;
+(setq org-refile-use-outline-path 'file) 
