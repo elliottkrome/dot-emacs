@@ -26,6 +26,7 @@
 (load "~/.emacs.d/ek-el-files/ek-pdf-tools.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
 (load "~/.emacs.d/ek-el-files/ek-iedit.el")
+(load "~/.emacs.d/ek-el-files/ek-gdb.el")
 (load "~/.emacs.d/ek-el-files/ek-which-key.el")
 (load "~/.emacs.d/ek-el-files/ek-suggest.el")
 (load "~/.emacs.d/ek-el-files/ek-messages.el")
