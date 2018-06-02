@@ -10,6 +10,7 @@
 ; (load "~/.emacs.d/ek-el-files/prog/ek-spice.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-scad.el")
 (load "~/.emacs.d/ek-el-files/prog/ek-scheme.el")
+(load "~/.emacs.d/ek-el-files/prog/ek-lua.el")
 
 (use-package arduino-mode
   :ensure t)
