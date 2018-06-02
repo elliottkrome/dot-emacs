@@ -23,7 +23,7 @@
       org-hide-emphasis-markers t    ; make *bold* look plain, like bold
       org-src-fontify-natively  t    ; 
       org-image-actual-width    550  ; rescale pixel-width of inline images
-      org-bullets-bullet-list '(" ") ; no bullets
+      org-bullets-bullet-list '(">") ; no bullets
       )
 
 ;; alternative org-bullets-bullet-list vals
