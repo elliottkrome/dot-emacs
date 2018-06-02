@@ -128,11 +128,8 @@ be inserted verbatim."
 (defun horg--get-header-func (header-string)
   (cdr (assoc header-string horg-template--header-str-func-alist)))
 
-(cdr (assoc ":var" horg-template--mainline-str-func-alist))
 ;;; mainline functions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defvar horg-template--mainline-str-func-alist
-  '((":tangle" . horg-template--tangle-function)
-    (":var"    . horg-template--tangle-function))
   "Associates mainline-list members with functions")
 (setq horg-template--mainline-str-func-alist
       '((":tangle" . horg-template--tangle-function)
