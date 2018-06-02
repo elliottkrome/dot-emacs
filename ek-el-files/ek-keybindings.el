@@ -148,4 +148,8 @@
 (define-key ctl-l-map "2"    'org-mobile-pull)
 (define-key ctl-l-map "|"    'go-to-column)
 (define-key ctl-l-map "I"    'ido-goto-symbol)
-(define-key ctl-l-map "S" 'ek-org-scad-helper)
+(define-key ctl-l-map "S" 'ek/org-scad-helper)
+(define-key ctl-l-map "=" 'ek/org-mlh-increase)
+(define-key ctl-l-map "-" 'ek/org-mlh-decrease)
+(define-key ctl-l-map "0" 'ek/org-mlh-reset)
+
