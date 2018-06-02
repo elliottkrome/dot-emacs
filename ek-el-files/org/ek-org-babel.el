@@ -25,6 +25,7 @@
    ; (ledger     . true)
    ; (tcl        . true)
    (js         . true)
+   (lua        . true)
    )
  )
 
