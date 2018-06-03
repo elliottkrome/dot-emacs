@@ -53,8 +53,12 @@ Might not be worthy of being abstracted into a function, but it is nice to:
 			     0.1
 			   new-height-arg)))
     (progn
+<<<<<<< HEAD
       ; (set-face-attribute 'org-document-info-keyword nil :height new-height-safe)
       (set-face-attribute 'org-meta-line nil :height new-height-safe))))
+=======
+      ; (set-face-attribute 'org-document-info-keyword nil :height new-height)
+>>>>>>> b2c4536ec3522ebfd792b9af764b5c9a57acaaeb
 
 
 (defun ek/org-mlh--change (arg)
