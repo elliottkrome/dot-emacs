@@ -3,7 +3,7 @@
 (add-hook 'objc-mode-hook 'irony-mode)
 (delete 'company-backends 'company-clang)
 
-(setq irony-user-directory (concat ek-hidden-directory "irony/"))
+(setq irony-user-directory (concat ek/hidden-directory "irony/"))
 
 (use-package cmake-ide
   :ensure t
@@ -22,7 +22,7 @@
 		 (semantic-gcc-get-include-paths "c"))))
   (cmake-ide-setup))
 
-(defun ek-occur-cpp-methods ()
+(defun ek/occur-cpp-methods ()
   "This is for use in cc implementation files. It depends on the
 standard directory structure where the class name (i.e. `Fe') is
 the same as the name of the directory holding the implementation

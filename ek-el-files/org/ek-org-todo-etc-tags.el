@@ -37,5 +37,5 @@
               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 
 
-(provide 'ek-org-todo-etc-tags)
-;;; ek-org-todo-etc-tags.el ends here
+(provide 'ek/org-todo-etc-tags)
+;;; ek/org-todo-etc-tags.el ends here

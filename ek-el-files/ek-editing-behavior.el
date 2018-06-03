@@ -54,18 +54,18 @@
 ; ignore case when searching
 (setq case-fold-search t)
 
-(defun ek-join-next-line ()
+(defun ek/join-next-line ()
   "Join next line to end of current line."
   (interactive
    (join-line -1)))
 
-(defun ek-scroll-up ()
+(defun ek/scroll-up ()
   "Scroll up a reasonable amount"
   (interactive
    (scroll-up 8)))
 
 
-(defun ek-scroll-down ()
+(defun ek/scroll-down ()
   "Scroll down a reasonable amount"
   (interactive
    (scroll-down 8)))

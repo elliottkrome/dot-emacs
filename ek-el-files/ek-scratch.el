@@ -1,7 +1,7 @@
 ;; make scratch buffer persistent between sessions without saving
 ;;
 
-(setq scratch-buffer-file (concat ek-data-directory "scratch.el"))
+(setq scratch-buffer-file (concat ek/data-directory "scratch.el"))
 (setq initial-major-mode 'org-mode)
 
 (setq initial-scratch-message "")             ; initial message
@@ -35,5 +35,5 @@
   
   (ignore-errors (kill-buffer ".scratch")))
 
-(provide 'ek-scratch.el)
-;;; ek-scratch.el ends here
+(provide 'ek/scratch.el)
+;;; ek/scratch.el ends here

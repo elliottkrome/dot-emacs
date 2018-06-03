@@ -5,8 +5,8 @@
 (require 'org)
 (require 'org-agenda)
 
-(defvar ek-org-agenda-face-height 1.2 "Size for org agenda faces.")
-(defvar ek-num-days-agenda 10 "Number of days in agenda view")
+(defvar ek/org-agenda-face-height 1.2 "Size for org agenda faces.")
+(defvar ek/num-days-agenda 10 "Number of days in agenda view")
 
 ;; Use sticky agenda's so they persist
 (setq org-agenda-sticky t)
@@ -29,7 +29,7 @@
 
 ;; for easy switching to a weekly agenda view
 ;;
-(defun ek-switch-to-agenda (&optional arg)
+(defun ek/switch-to-agenda (&optional arg)
   "A helper function for immediate switching to *Org Agenda(a)* buffer."
   (interactive "P")
   (org-agenda arg "w"))
@@ -37,34 +37,34 @@
 
 (setq org-agenda-custom-commands
       (quote ( ("w" "Agenda without drill tags" agenda ""
-		((org-agenda-span ek-num-days-agenda)
+		((org-agenda-span ek/num-days-agenda)
 		 (org-agenda-tag-filter-preset
 		  (quote ("-drill"))))))))
 
-(defun ek-agenda-new-frame ()
+(defun ek/agenda-new-frame ()
   "Make agenda in new frame."
   (interactive)
   (make-frame)
-  (ek-switch-to-agenda)
+  (ek/switch-to-agenda)
   (delete-other-windows))
 
 (set-face-attribute 'org-agenda-calendar-event nil
-		    :height ek-org-agenda-face-height)
+		    :height ek/org-agenda-face-height)
 (set-face-attribute 'org-agenda-date nil
-		    :height ek-org-agenda-face-height)
+		    :height ek/org-agenda-face-height)
 (set-face-attribute 'org-scheduled-today nil
-		    :height ek-org-agenda-face-height)
+		    :height ek/org-agenda-face-height)
 (set-face-attribute 'org-time-grid nil
-		    :height ek-org-agenda-face-height)
+		    :height ek/org-agenda-face-height)
 (set-face-attribute 'org-agenda-date nil
-		    :height ek-org-agenda-face-height)
+		    :height ek/org-agenda-face-height)
 
 
-(add-hook 'org-agenda-finalize-hook 'ek-color-org-agenda)
+(add-hook 'org-agenda-finalize-hook 'ek/color-org-agenda)
 
 ;; some predefined colors: http://raebear.net/comp/emacscolors.html
 ;;
-(defun ek-color-org-agenda ()
+(defun ek/color-org-agenda ()
   (interactive)
   (save-excursion
     (color-org-header "class:" "black" "#cd950c")
@@ -82,10 +82,10 @@
 	(add-text-properties (point-at-bol) (+ 1 (point-at-eol))
 			     `(face (:background, backcolor,
 				     :foreground, forecolor,
-				     :height, ek-org-agenda-face-height)))
+				     :height, ek/org-agenda-face-height)))
        (add-text-properties (point-at-bol) (+ 1 (point-at-eol))
 			     `(face (:background, backcolor,
-   				     :height, ek-org-agenda-face-height))))
+   				     :height, ek/org-agenda-face-height))))
     ))
     
 
@@ -95,5 +95,5 @@
 ;  (setq org-deadline-warning-days 30)
 
 
-(provide 'ek-org-agenda)
-;;; ek-org-agenda.el ends here
+(provide 'ek/org-agenda)
+;;; ek/org-agenda.el ends here

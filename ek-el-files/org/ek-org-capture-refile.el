@@ -18,12 +18,12 @@
 (setq org-refile-allow-creating-parent-nodes (quote confirm))
 
 ;; to allow for streamlining capture of a todo or note
-(defun ek-org-capture-todo ()
+(defun ek/org-capture-todo ()
   (interactive)
   "Capture a TODO item"
   (org-capture nil "t"))
 
-(defun ek-org-capture-knowledge ()
+(defun ek/org-capture-knowledge ()
   (interactive)
   "Capture a TODO item"
   (org-capture nil "k"))

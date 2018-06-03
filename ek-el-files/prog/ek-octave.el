@@ -9,12 +9,12 @@
     (bind-keys :map octave-mode-map
 	       ("C-c ;" . iedit-mode))
 
-    (defvar ek-octave-repl-buffer-string "*Oct*")
+    (defvar ek/octave-repl-buffer-string "*Oct*")
 
     ;; TODO: make org-babel-default-header-args:octave
-    ;;        use ek-octave-repl-buffer-string
+    ;;        use ek/octave-repl-buffer-string
     ;;
-    (setq inferior-octave-buffer       ek-octave-repl-buffer-string
+    (setq inferior-octave-buffer       ek/octave-repl-buffer-string
 	  inferior-octave-mode-hook    nil
 	  inferior-octave-program      "/usr/local/bin/octave-cli-4.2.2"
 	  inferior-octave-startup-args '("-i" "--no-line-editing" "--no-gui")

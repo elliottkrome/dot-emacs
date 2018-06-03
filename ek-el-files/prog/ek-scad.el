@@ -4,13 +4,13 @@
    (when (eq system-type 'darwin)
     (setq scad-command "/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD")))
 
-(defun ek-org-scad-helper ()
+(defun ek/org-scad-helper ()
   "This allows you to open the scad source block under point via OpenSCAD."
   (interactive)
 
   ;; go ahead and tangle the file
   ;;
-  (ek-org-babel-tangle-file)
+  (ek/org-babel-tangle-file)
 
   ;; check to make sure that we are in a source block
   ;;

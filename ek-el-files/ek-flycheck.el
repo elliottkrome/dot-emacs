@@ -1,6 +1,6 @@
 
 
-(defun ek-setup-flycheck-for-pyflakes-if-conda-found ()
+(defun ek/setup-flycheck-for-pyflakes-if-conda-found ()
   "If we are able to find the anaconda package manager `conda', then we will use it to install pyflakes.  If this is successful, return true.  This return true value should then be used (outside of this function)to decide whether to use the package flycheck-pyflakes."
   (if (executable-find "conda")
       (progn
@@ -18,7 +18,7 @@
 	  flycheck-standard-error-navigation nil)
     (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
     
-    (if (ek-setup-flycheck-for-pyflakes-if-conda-found)
+    (if (ek/setup-flycheck-for-pyflakes-if-conda-found)
 	(use-package flycheck-pyflakes
 	  :diminish t
 	  :ensure t))))

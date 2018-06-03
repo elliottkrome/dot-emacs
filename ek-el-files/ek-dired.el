@@ -1,9 +1,9 @@
-(defun ek-dired-setup ()
+(defun ek/dired-setup ()
   (progn
     (auto-revert-mode)
     (dired-hide-details-mode 1)))
 
-(add-hook 'dired-mode-hook 'ek-dired-setup)
+(add-hook 'dired-mode-hook 'ek/dired-setup)
 
 ;; allow editing file permissions
 (setq wdired-allow-to-change-permissions t)

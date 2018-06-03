@@ -75,5 +75,5 @@
    (prefix-all-lines "#+HTML_HEAD_EXTRA: " body)
    "\n#+HTML_HEAD_EXTRA: \\)</div>\n"))
 
-(provide 'ek-org-export)
-;;; ek-org-export ends here
+(provide 'ek/org-export)
+;;; ek/org-export ends here

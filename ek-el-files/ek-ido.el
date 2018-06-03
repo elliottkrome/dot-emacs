@@ -4,8 +4,8 @@
 
 (require 'imenu)
 
-(defconst ek-ido-save-dir-list-file (concat ek-data-directory "ido.last"))
-(defconst ek-smex-save-file (concat ek-data-directory "smex-items"))
+(defconst ek/ido-save-dir-list-file (concat ek/data-directory "ido.last"))
+(defconst ek/smex-save-file (concat ek/data-directory "smex-items"))
 
 (use-package ido
   :ensure t
@@ -25,7 +25,7 @@
       :ensure t ;smex-save-file
       :init
       (progn
-	(setq smex-save-file ek-smex-save-file)
+	(setq smex-save-file ek/smex-save-file)
 	(smex-initialize)
 	(defadvice smex (around space-inserts-hyphen activate compile)
 	  "Insert hyphen in place of whitespace when M-x-ing."
@@ -50,7 +50,7 @@
 	  ido-auto-merge-work-directories-length -1
 	  ido-everywhere                         t
 	  ido-max-directory-size                 100000
-	  ido-save-directory-list-file           ek-ido-save-dir-list-file
+	  ido-save-directory-list-file           ek/ido-save-dir-list-file
 	  ido-use-virtual-buffers                t)))
 
 
@@ -170,7 +170,7 @@ Use RING instead. Default prompt is \"ring\"."
 ;; (put 'kill-ring-ido 'delete-selection 'yank)
 
 
-(provide 'ek-ido)
-;;; ek-ido ends here
+(provide 'ek/ido)
+;;; ek/ido ends here
 
 

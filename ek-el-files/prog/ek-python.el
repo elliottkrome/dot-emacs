@@ -40,6 +40,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 (set-exec-path-from-shell-PATH)
 
 
-(defun ek-show-python-tags ()
+(defun ek/show-python-tags ()
   (interactive)
   (occur "^\\s-*\\\(def \\\|class \\\|def \\\if \\\)"))

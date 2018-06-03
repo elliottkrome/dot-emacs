@@ -72,12 +72,12 @@
 ;; (add-to-list 'org-babel-default-header-args:octave
 ;;              '(:results . "none"))
 
-(defun ek-org-babel-tangle-file ()
+(defun ek/org-babel-tangle-file ()
   "Tangle the currently open file. Avoid the prompt."
   (interactive)
   (org-babel-tangle-file
    (buffer-file-name (current-buffer))))
 
 
-(provide 'ek-org-babel)
-;;; ek-org-babel.el ends here
+(provide 'ek/org-babel)
+;;; ek/org-babel.el ends here

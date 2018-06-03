@@ -29,9 +29,9 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c f")   'find-file-at-point)
 (global-set-key (kbd "C-x p")   'pop-to-mark-command)
-(global-set-key (kbd "M-j")     'ek-join-next-line)
-(global-set-key (kbd "M-n")     'ek-scroll-up)
-(global-set-key (kbd "M-p")     'ek-scroll-down)
+(global-set-key (kbd "M-j")     'ek/join-next-line)
+(global-set-key (kbd "M-n")     'ek/scroll-up)
+(global-set-key (kbd "M-p")     'ek/scroll-down)
 ;; (global-set-key [remap move-beginning-of-line]
 ;;	  	   'smarter-move-beginning-of-line)
 
@@ -79,10 +79,10 @@
 (global-set-key (kbd "C-c b") 'org-iswitchb)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "C-c d") 'org-drill-tree)
-(global-set-key (kbd "M-a")   'ek-switch-to-agenda)
-(global-set-key (kbd "M-A")   'ek-agenda-new-frame)
-(global-set-key (kbd "M-0")   'ek-org-capture-todo)
-(global-set-key (kbd "M-9")   'ek-org-capture-knowledge)
+(global-set-key (kbd "M-a")   'ek/switch-to-agenda)
+(global-set-key (kbd "M-A")   'ek/agenda-new-frame)
+(global-set-key (kbd "M-0")   'ek/org-capture-todo)
+(global-set-key (kbd "M-9")   'ek/org-capture-knowledge)
 
 ;; create the ctrl-l keymap
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs
@@ -122,7 +122,7 @@
 (define-key ctl-l-map "\C-n" 'linum-mode)
 (define-key ctl-l-map "o"    'ido-occur)
 (define-key ctl-l-map "O"    'ido-occur-at-point)
-(define-key ctl-l-map "\C-o" 'ek-show-python-tags)
+(define-key ctl-l-map "\C-o" 'ek/show-python-tags)
 (define-key ctl-l-map "p"    'windmove-up)
 (define-key ctl-l-map "q"    'query-replace)
 (define-key ctl-l-map "Q"    'query-replace-regexp)
@@ -131,9 +131,9 @@
 (define-key ctl-l-map "R"    'replace-regexp)
 (define-key ctl-l-map "\C-r" 'isearch-backward-regexp)
 (define-key ctl-l-map "s"    'shell)
-;; (define-key ctl-l-map "S"    'ek-switch-to-scratch)
+;; (define-key ctl-l-map "S"    'ek/switch-to-scratch)
 (define-key ctl-l-map "\C-s" 'isearch-forward-regexp)
-(define-key ctl-l-map "t"    'ek-org-babel-tangle-file)
+(define-key ctl-l-map "t"    'ek/org-babel-tangle-file)
 (define-key ctl-l-map "T"    'delete-trailing-whitespace)
 (define-key ctl-l-map "U"    'browse-url)
 (define-key ctl-l-map "\C-u" 'undo-only)

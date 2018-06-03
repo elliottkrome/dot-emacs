@@ -41,10 +41,10 @@
 ;; add a type of link so that the emacs will open the linked file with the
 ;; default external application (useful for media such as movies, pdfs, etc.)
 ;;
-(defun ek-open-ext (path-to-media)
+(defun ek/open-ext (path-to-media)
   (shell-command (concat "open " path-to-media)))
-(org-add-link-type "open-ext" 'ek-open-ext)
-(add-hook 'org-store-link-functions 'org-ek-store-link)
+(org-add-link-type "open-ext" 'ek/open-ext)
+(add-hook 'org-store-link-functions 'org-ek/store-link)
 
 ;; Use IDO for both buffer and file completion and ido-everywhere to t
 ;;
@@ -77,4 +77,4 @@
  "file"
  :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
 
-;;; ek-org-gnrl-ui.el ends here
+;;; ek/org-gnrl-ui.el ends here

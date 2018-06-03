@@ -1,7 +1,7 @@
 ;; get the snippet-dirs ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 (require 'cl)
-(setq ek-snippet-dirs '("~/.emacs.d/submodules/snippets"))
+(setq ek/snippet-dirs '("~/.emacs.d/submodules/snippets"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -21,7 +21,7 @@
                 (when (eql major-mode 'snippet-mode)
                   (yas-reload-all))))
     (setq
-     yas-snippet-dirs ek-snippet-dirs
+     yas-snippet-dirs ek/snippet-dirs
      yas-prompt-functions '(yas/ido-prompt)
      yas-indent-line 'auto)
 
@@ -46,7 +46,7 @@
 ;; TODO: make it smarter, it would be good to accept also a function,
 ;; in this way it can be made more generic
 ;;
-(defcustom ek-auto-header-conses
+(defcustom ek/auto-header-conses
       '(
         ("setup.py" . "setup")
         ("\.sh$" . "bash")
@@ -60,17 +60,17 @@
 
 ;; simple function to create a .yas-parents
 ;;
-(defun ek-make-yas-parents-file (path)
+(defun ek/make-yas-parents-file (path)
   (interactive "DPath: ")
   (find-file (concat path ".yas-parents"))
   (insert "text-mode"))
 
-(defun ek-find-matching-snippet (filename)
+(defun ek/find-matching-snippet (filename)
   (assoc-if
    (lambda (x) (string-match x filename))
-   ek-auto-header-conses))
+   ek/auto-header-conses))
 
-(defun ek-insert-at-startup (snippet)
+(defun ek/insert-at-startup (snippet)
   "try to expand a snippet at startup"
   (if
       (yes-or-no-p (format "expand snippet %s?" snippet))
