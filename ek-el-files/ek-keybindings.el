@@ -84,6 +84,8 @@
 (global-set-key (kbd "M-0")   'ek/org-capture-todo)
 (global-set-key (kbd "M-9")   'ek/org-capture-knowledge)
 
+(global-set-key (kbd "C-c m") 'ek/mingus)
+
 ;; create the ctrl-l keymap
 ;; http://stackoverflow.com/questions/5682631/what-are-good-custom-keybindings-in-emacs
 ;;
