@@ -21,8 +21,8 @@
       ("C-c g" . counsel-git)
       ("C-c j" . counsel-git-grep)
       ("C-c k" . counsel-ag)
-;;      ("C-c l" . scounsel-locate)
-)
+      ; ("C-c l" . counsel-locate)
+      )
      :config
      (progn
        (ivy-mode 1)
@@ -44,9 +44,20 @@
            ivy--switch-buffer-other-window-action
            "other window")))))
 
-  (use-package counsel-projectile
-    :ensure t
-    :config
-    (counsel-projectile-mode))
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-mode))
 
-  (use-package ivy-hydra :ensure t)
+(use-package all-the-icons-ivy
+  :ensure t
+  :config
+  (progn
+    (all-the-icons-ivy-setup)
+    (setq all-the-icons-ivy-file-commands '(counsel-find-file
+					    counsel-file-jump
+					    counsel-recentf
+					    counsel-projectile-find-file
+					    counsel-projectile-find-dir))))
+
+(use-package ivy-hydra :ensure t)
