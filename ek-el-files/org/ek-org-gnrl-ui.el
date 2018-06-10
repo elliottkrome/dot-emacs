@@ -69,7 +69,7 @@
 
 (setq org-use-speed-commands t)
 
-(setq org-tags-column 65)
+(setq org-tags-column -65)
 
 ;; org mode will fontify bad links with `org-warning' face (on refontify)
 ;;

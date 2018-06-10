@@ -14,10 +14,17 @@
       default-frame-alist (copy-alist initial-frame-alist))
 
 
+(setq ek/opt-3 `((scroll-bar-background . "DarkBlue") ; emacs-mac build lets you color toolbar ("gray55" works well with dark-mode on mac, "Palevioletred3" is fun)
+		 (alpha                 . (100 . 100))
+		 (scroll-bar-width      . 0))
+      default-frame-alist (copy-alist initial-frame-alist))
+
+
+
 (if (eq system-type 'darwin)
     (progn
-      (setq initial-frame-alist ek/opt-2
-	    mac-use-title-bar nil)))
+      (setq initial-frame-alist ek/opt-3
+	    mac-use-title-bar   nil)))
 
 (setq line-spacing 0)
 ;; i think this was the first non-trivial elisp i ever messed around
