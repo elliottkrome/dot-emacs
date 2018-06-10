@@ -19,8 +19,12 @@
 ;;
 (setq bookmark-default-file
       (concat ek/data-directory "bookmarks"))
+(setq projectile-known-projects-file
+      (concat ek/data-directory "projectile-bookmarks.eld"))
 (setq ac-comphist-file
       (concat ek/data-directory "ac-comphist.dat"))
+(setq smex-save-file
+      (concat ek/data-directory "smex-items"))
 (setq recentf-save-file
       (concat ek/data-directory "recentf"))
 

@@ -4,7 +4,6 @@
 (package-initialize)
 (load "~/.emacs.d/ek-el-files/ek-init-gnrl-package-stuff.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; everything that is portable (except for server stuff, which goes last)
 ;;
@@ -13,7 +12,9 @@
 (load "~/.emacs.d/ek-el-files/ek-magit.el")
 (load "~/.emacs.d/ek-el-files/ek-hydra.el")
 (load "~/.emacs.d/ek-el-files/ek-scratch.el")
-(load "~/.emacs.d/ek-el-files/ek-ido.el")
+(if nil ; one or the other (ido v. ivy)
+    (load "~/.emacs.d/ek-el-files/ek-ido.el")
+  (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el"))
 (load "~/.emacs.d/ek-el-files/ek-projectile.el")
 (load "~/.emacs.d/ek-el-files/ek-misc.el")
 (load "~/.emacs.d/ek-el-files/ek-dired.el")
