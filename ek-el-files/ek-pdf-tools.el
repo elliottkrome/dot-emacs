@@ -67,8 +67,13 @@
 ;;
 (defun ek/pdf-midnight-from-default ()
   (interactive)
-  (setq pdf-view-midnight-colors '("#ffffff" . "#263238"))
-  (pdf-view-midnight-minor-mode))
+    (progn
+      (setq pdf-view-midnight-colors
+	    (cons (face-foreground 'default)
+		  (face-background 'default)))
+      (pdf-view-midnight-minor-mode)))
+
+
 
 (defun ek/pdf-midnight-colour-schemes ()
   "Midnight mode colour schemes bound to keys"
