@@ -47,6 +47,11 @@
   (use-package counsel-projectile
     :ensure t
     :config
-    (counsel-projectile-mode))
+    (progn
+      (counsel-projectile-mode)
+      (defun ek/counsel-ag-project-at-point ()
+	 "use counsel ag to search for the word at point in the project"
+	 (interactive)
+	 (counsel-ag (thing-at-point 'symbol) (projectile-project-root)))))
 
   (use-package ivy-hydra :ensure t)

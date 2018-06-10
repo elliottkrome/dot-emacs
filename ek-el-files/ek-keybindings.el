@@ -109,7 +109,11 @@
 (define-key ctl-l-map "f"    'windmove-right)
 (define-key ctl-l-map "F"    'browse-url-of-file)
 (define-key ctl-l-map "\C-f" 'projectile-find-file)
-(define-key ctl-l-map "g"    'rgrep)
+(if ek/use-ivy
+    (progn
+      (define-key ctl-l-map "G" 'rgrep)
+      (define-key ctl-l-map "g" 'ek/counsel-ag-project-at-point))
+  (define-key ctl-l-map "g" 'rgrep))
 (define-key ctl-l-map "h"    'command-history)
 (define-key ctl-l-map "H"    'org-yank-hyperlink)
 ;; (define-key ctl-l-map "i"    'ido-goto-symbol)
