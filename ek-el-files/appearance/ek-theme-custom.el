@@ -35,7 +35,14 @@
    (if (font-exists-p ek/default-font)
        (set-face-attribute 'default nil :font ek/default-font)))
 
-
-
-
-
+;; maybe i want this, maybe i don't?
+(window-divider-mode)
+(when (boundp (window-divider-mode t))
+  ;; also nice:  (face-foreground 'font-lock-keyword-face)
+  (let ((color (face-foreground 'mode-line-inactive)))
+    (setq window-divider-default-bottom-width 0)
+    (setq window-divider-default-right-width 2)
+    (setq window-divider-default-places t)
+    (set-face-attribute 'window-divider nil
+			:foreground color)
+  (window-divider-mode)))

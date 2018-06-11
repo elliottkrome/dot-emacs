@@ -85,7 +85,7 @@
 (add-hook 'pdf-view-mode-hook
 	  (lambda () (progn (pdf-view-midnight-minor-mode)
 			    (ek/pdf-midnight-colour-schemes)		   
-			    (ek/pdf-midnight-gray13))))
+			    (ek/pdf-midnight-from-default))))
 
 ;;; hydra
 (defhydra hydra-pdftools (:color blue :hint nil)
