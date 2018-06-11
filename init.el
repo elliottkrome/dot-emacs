@@ -6,7 +6,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar ek/use-ivy t
-  "I'm not sure if I want to switch from `ido' to `ivy'.")
+  "Do I want to switch from `ido' to `ivy'?")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; everything that is portable (except for server stuff, which goes last)
 ;;
