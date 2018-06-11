@@ -49,6 +49,10 @@
   :config
   (counsel-projectile-mode))
 
+(use-package ivy-yasnippet              ; Preview yasnippets with Ivy
+  :ensure t
+  :bind ("C-c y" . ivy-yasnippet))
+
 (use-package all-the-icons-ivy
   :ensure t
   :config
@@ -61,3 +65,4 @@
 					    counsel-projectile-find-dir))))
 
 (use-package ivy-hydra :ensure t)
+
