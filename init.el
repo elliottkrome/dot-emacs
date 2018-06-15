@@ -42,8 +42,11 @@
 (load "~/.emacs.d/ek-el-files/ek-undo-tree.el")
 (load "~/.emacs.d/ek-el-files/ek-desktop.el")
 (load "~/.emacs.d/ek-el-files/ek-idle-highlight-mode.el")
+(load "~/.emacs.d/ek-el-files/ek-mu4e.el")
 (load "~/.emacs.d/ek-el-files/ek-mingus.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
