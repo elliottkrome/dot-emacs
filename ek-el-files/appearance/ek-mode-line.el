@@ -36,10 +36,11 @@
   '(diminish 'buffer-face-mode))
 
 
-
-(use-package powerline
-  :ensure t
-  :init
-  (progn
-    (setq powerline-default-separator 'wave)
-    (powerline-default-theme)))
+(when (display-graphic-p)
+  (use-package powerline
+    :ensure t
+    :init
+    (progn
+      (setq powerline-default-separator 'wave)
+      (powerline-default-theme)))
+)

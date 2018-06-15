@@ -12,12 +12,12 @@
   :diminish ivy-mode
   :ensure t
   :bind
-  (; ("C-s" . swiper)
+  (("C-s" . swiper)
    ("C-c C-r" . ivy-resume)
    ("C-x C-f" . counsel-find-file)
    ("C-c h f" . counsel-describe-function)
    ("C-c h v" . counsel-describe-variable)
-   ("C-c i u" . counsel-unicode-char)
+   ; ("C-c i u" . counsel-unicode-char)
    ("M-i" . counsel-imenu)
    ("C-c g" . counsel-git)
    ("C-c j" . counsel-git-grep)
@@ -51,16 +51,18 @@
   :ensure t
   :bind ("C-c y" . ivy-yasnippet))
 
-(use-package all-the-icons-ivy
-  :ensure t
-  :config
-  (progn
-    (all-the-icons-ivy-setup)
-    (setq all-the-icons-ivy-file-commands '(counsel-find-file
-					    counsel-file-jump
-					    counsel-recentf
-					    counsel-projectile-find-file
-					    counsel-projectile-find-dir))))
+(when (display-graphic-p)
+  (use-package all-the-icons-ivy
+    :ensure t
+    :config
+    (progn
+      (all-the-icons-ivy-setup)
+      (setq all-the-icons-ivy-file-commands '(counsel-find-file
+					      counsel-file-jump
+					      counsel-recentf
+					      counsel-projectile-find-file
+					      counsel-projectile-find-dir))))
+  )
 
 (use-package ivy-hydra :ensure t)
 
