@@ -1,9 +1,13 @@
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
 ;;
 (package-initialize)
 (load "~/.emacs.d/ek-el-files/ek-init-gnrl-package-stuff.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "~/.emacs.d/ek-el-files/ek/configuration.el")
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; everything that is portable (except for server stuff, which goes last)
 ;;
@@ -12,9 +16,6 @@
 (load "~/.emacs.d/ek-el-files/ek-magit.el")
 (load "~/.emacs.d/ek-el-files/ek-hydra.el")
 (load "~/.emacs.d/ek-el-files/ek-scratch.el")
-(if nil ; one or the other (ido v. ivy)
-    (load "~/.emacs.d/ek-el-files/ek-ido.el")
-  (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el"))
 (load "~/.emacs.d/ek-el-files/ek-projectile.el")
 (load "~/.emacs.d/ek-el-files/ek-misc.el")
 (load "~/.emacs.d/ek-el-files/ek-dired.el")
@@ -24,6 +25,11 @@
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-treemacs.el")
 (load "~/.emacs.d/ek-el-files/ek-tramp.el")
+(if ek/use-ivy ; one or the other (ido v. ivy)
+    (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el")
+  (load "~/.emacs.d/ek-el-files/ek-ido.el"))
+(if ek/use-mu4e ; 
+    (load "~/.emacs.d/ek-el-files/ek-mu4e.el"))
 (load "~/.emacs.d/ek-el-files/ek-pdf-tools.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
 (load "~/.emacs.d/ek-el-files/ek-iedit.el")
@@ -45,7 +51,6 @@
 (load "~/.emacs.d/ek-el-files/ek-mu4e.el")
 (load "~/.emacs.d/ek-el-files/ek-mingus.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
