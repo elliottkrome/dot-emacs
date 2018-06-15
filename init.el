@@ -25,11 +25,6 @@
 (load "~/.emacs.d/ek-el-files/ek-org.el")
 (load "~/.emacs.d/ek-el-files/ek-treemacs.el")
 (load "~/.emacs.d/ek-el-files/ek-tramp.el")
-(if ek/use-ivy ; one or the other (ido v. ivy)
-    (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el")
-  (load "~/.emacs.d/ek-el-files/ek-ido.el"))
-(if ek/use-mu4e ; 
-    (load "~/.emacs.d/ek-el-files/ek-mu4e.el"))
 (load "~/.emacs.d/ek-el-files/ek-pdf-tools.el")
 (load "~/.emacs.d/ek-el-files/ek-git-gutter.el")
 (load "~/.emacs.d/ek-el-files/ek-iedit.el")
@@ -50,6 +45,11 @@
 (load "~/.emacs.d/ek-el-files/ek-idle-highlight-mode.el")
 (load "~/.emacs.d/ek-el-files/ek-mu4e.el")
 (load "~/.emacs.d/ek-el-files/ek-mingus.el")
+(if ek/use-ivy ; one or the other (ido v. ivy)
+    (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el")
+  (load "~/.emacs.d/ek-el-files/ek-ido.el"))
+(if ek/use-mu4e ; 
+    (load "~/.emacs.d/ek-el-files/ek-mu4e.el"))
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
