@@ -43,13 +43,13 @@
 (load "~/.emacs.d/ek-el-files/ek-undo-tree.el")
 (load "~/.emacs.d/ek-el-files/ek-desktop.el")
 (load "~/.emacs.d/ek-el-files/ek-idle-highlight-mode.el")
-(load "~/.emacs.d/ek-el-files/ek-mu4e.el")
 (load "~/.emacs.d/ek-el-files/ek-mingus.el")
 (if ek/use-ivy ; one or the other (ido v. ivy)
     (load "~/.emacs.d/ek-el-files/ek-ivy-etc.el")
   (load "~/.emacs.d/ek-el-files/ek-ido.el"))
-(if ek/use-mu4e ; 
+(if ek/use-mu4e 
     (load "~/.emacs.d/ek-el-files/ek-mu4e.el"))
+(load "~/.emacs.d/ek-el-files/ek-mu4e.el")
 (load "~/.emacs.d/ek-el-files/ek-keybindings.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

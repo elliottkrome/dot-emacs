@@ -5,6 +5,7 @@
 ;; fonts / ligatures
 ;;
 (when (and (window-system)
+	   ek/use-ligatures
 	   (font-exists-p "Fira Code"))
   (progn
     (when (eq system-type 'darwin)

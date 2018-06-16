@@ -27,7 +27,10 @@
   (progn
     (ivy-mode 1)
     (setq ivy-use-virtual-buffers t
-	  ivy-wrap                t)
+	  ivy-wrap                t
+	  ivy-re-builders-alist
+	  '((t . ivy--regex-plus)))
+
     (define-key read-expression-map (kbd "C-r") #'counsel-expression-history)
 
     (ivy-set-actions

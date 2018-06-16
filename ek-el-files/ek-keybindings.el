@@ -119,7 +119,8 @@
 (define-key ctl-l-map "k"    'kill-whole-line)
 (define-key ctl-l-map "L"    'ediff-regions-linewise)
 (define-key ctl-l-map "\C-l" 'goto-line)
-(define-key ctl-l-map "m"    'not-modified)   ;; already at M-~
+(define-key ctl-l-map "M"    'not-modified)   ;; already at M-~
+(define-key ctl-l-map "m"    'mu4e)   ;; already at M-~
 (define-key ctl-l-map "n"    'windmove-down)
 (define-key ctl-l-map "\C-n" 'linum-mode)
 (define-key ctl-l-map "o"    'ido-occur)
