@@ -22,7 +22,7 @@
 ;;; other
 ;;
 (defvar ek/mail-dir
-  (expand-file-name "~/mail")
-  "If mu4e is configured on this machine, then we should use it.")
+  (expand-file-name "~/ddrop/mail"
+  "If mu4e is configured on this machine, then we should use it."))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
