@@ -3,9 +3,12 @@
 ;;
 
 (defvar ek/use-ivy
+  t
   "Use `ivy' or `ido' as my completing-read-function.")
 (defvar ek/use-mu4e
+  t
+  "If mu4e is configured on this machine, then we should use it.")
+(defvar ek/mail-dir
+  (expand-file-name "~/mail")
   "If mu4e is configured on this machine, then we should use it.")
 
-(setq ek/use-ivy t
-      ek/use-mu4e nil)
