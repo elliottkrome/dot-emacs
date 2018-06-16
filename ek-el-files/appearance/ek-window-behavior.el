@@ -7,6 +7,7 @@
 (blink-cursor-mode 0)            ;; no blinky cursor
 (show-paren-mode t)              ;; tell (message "message" format-args)e about partners
 (fringe-mode '(0 . 0))           ;; 0 pixels on the left, 0 pixels on the right
+(menu-bar-mode 0)
 
 (setq frame-title-format '("%b")  ;; display buffer name in title-bar
       echo-keystrokes 0.05        ;; show unfinished keystrokes early.

@@ -137,7 +137,7 @@
 ;; (define-key ctl-l-map "S"    'ek/switch-to-scratch)
 (define-key ctl-l-map "\C-s" 'isearch-forward-regexp)
 (define-key ctl-l-map "t"    'ek/org-babel-tangle-file)
-(define-key ctl-l-map "T"    'delete-trailing-whitespace)
+(define-key ctl-l-map "T"    'toggle-truncate-lines)
 (define-key ctl-l-map "U"    'browse-url)
 (define-key ctl-l-map "\C-u" 'undo-only)
 (define-key ctl-l-map "v"    'visual-line-mode)

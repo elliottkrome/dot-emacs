@@ -29,7 +29,7 @@
     (setq ivy-use-virtual-buffers t
 	  ivy-wrap                t
 	  ivy-re-builders-alist
-	  '((t . ivy--regex-plus)))
+	  '((t . ivy--regex-plus))) ; TODO: it would be nice to set this to fuzzy for find-file and kin
 
     (define-key read-expression-map (kbd "C-r") #'counsel-expression-history)
 
