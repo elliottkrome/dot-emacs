@@ -27,9 +27,18 @@
   (progn
     (ivy-mode 1)
     (setq ivy-use-virtual-buffers t
-	  ivy-wrap                t
-	  ivy-re-builders-alist
-	  '((t . ivy--regex-plus))) ; TODO: it would be nice to set this to fuzzy for find-file and kin
+	  ivy-wrap                t)
+
+    ;; this allows to decide which "read-*" (completing read stuff)
+    ;; should use which regex functions.
+    ;; for example, `occur' and `isearch' should not be fuzzy
+    ;;
+    (setq ivy-re-builders-alist
+	  '(
+	    (swiper . ivy--regex-plus)
+	    (occur  . uvy--regex-plus)
+	    (t      . ivy--regex-fuzzy))  ; sets the defualt case
+	  ) 
 
     (define-key read-expression-map (kbd "C-r") #'counsel-expression-history)
 
