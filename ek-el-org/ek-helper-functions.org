@@ -1,5 +1,9 @@
 #+PROPERTY: header-args :tangle (expand-file-name "~/.emacs.d/ek-el-files/ek-helper-functions.el")
+
+_MOVE MORE HELPERS IN HERE_!
+
 * ~add-to-list-multiple~
+** definition
 #+BEGIN_SRC elisp 
 (defun add-to-list-multiple (list to-add)
   "Adds multiple items to LIST.
@@ -9,6 +13,24 @@ than having to call `add-to-list' multiple times."
   (dolist (item to-add)
     (add-to-list list item)))
 #+END_SRC
+** COMMENT usage
+*** local binding
+#+BEGIN_SRC elisp 
+(let ((local-test-list '()))
+  (add-to-list-multiple
+   'local-test-list
+   '("asdf" "asfdvsfv" "adbe"))
+  (print-strings-in-a-list local-test-list))
+#+END_SRC
+*** global-binding
+#+BEGIN_SRC elisp 
+(setq global-test-list '())
+
+(add-to-list-multiple
+ 'global-test-list
+ '("blueberries cranberries"))
+(print-strings-in-a-list '("blueberries cranberries"))
+#+END_SRC
 * ~remove-nth-element~
 #+BEGIN_SRC elisp 
 (defun remove-nth-element (nth list)
@@ -17,4 +39,20 @@ than having to call `add-to-list' multiple times."
     (let ((last (nthcdr (1- nth) list)))
       (setcdr last (cddr last))
       list)))
+#+END_SRC
+* ~print-strings-in-a-list~
+not really useful, but i want it for demonstration's sake
+** definition
+#+BEGIN_SRC elisp 
+(defun print-strings-in-a-list (list)
+  "Print each element of LIST on a line of its own."
+  (while list
+    (prin1 (concat (car list)))
+    (setq list (cdr list))))
+#+END_SRC
+** COMMENT usage
+#+BEGIN_SRC elisp 
+(setq animals '("gazelle" "giraffe" "lion" "tiger"))
+(print-strings-in-a-list animals)
+
 #+END_SRC
