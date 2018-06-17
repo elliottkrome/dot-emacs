@@ -12,6 +12,7 @@
 ;; everything that is portable (except for server stuff, which goes last)
 ;;
 (load "~/.emacs.d/ek-el-files/ek-organization.el")
+(load "~/.emacs.d/ek-el-files/ek-helper-functions.el")
 (load "~/.emacs.d/ek-el-files/ek-backup.el")
 (load "~/.emacs.d/ek-el-files/ek-magit.el")
 (load "~/.emacs.d/ek-el-files/ek-hydra.el")
