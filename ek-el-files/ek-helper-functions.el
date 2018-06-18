@@ -18,3 +18,9 @@ than having to call `add-to-list' multiple times."
   (while list
     (prin1 (concat (car list)))
     (setq list (cdr list))))
+
+(defun ek/prefix-all-lines (pre body)
+  (with-temp-buffer
+    (insert body)
+    (string-insert-rectangle (point-min) (point-max) pre)
+    (buffer-string)))

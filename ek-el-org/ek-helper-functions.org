@@ -1,7 +1,5 @@
 #+PROPERTY: header-args :tangle (expand-file-name "~/.emacs.d/ek-el-files/ek-helper-functions.el")
 
-_MOVE MORE HELPERS IN HERE_!
-
 * ~add-to-list-multiple~
 ** definition
 #+BEGIN_SRC elisp 
@@ -55,4 +53,12 @@ not really useful, but i want it for demonstration's sake
 (setq animals '("gazelle" "giraffe" "lion" "tiger"))
 (print-strings-in-a-list animals)
 
+#+END_SRC
+* ~ek/prefix-all-lines~
+#+BEGIN_SRC elisp 
+(defun ek/prefix-all-lines (pre body)
+  (with-temp-buffer
+    (insert body)
+    (string-insert-rectangle (point-min) (point-max) pre)
+    (buffer-string)))
 #+END_SRC

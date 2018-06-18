@@ -36,17 +36,11 @@
   '((:results . "raw")
     (:exports . "results")))
 
-(defun prefix-all-lines (pre body)
-  (with-temp-buffer
-    (insert body)
-    (string-insert-rectangle (point-min) (point-max) pre)
-    (buffer-string)))
-
 (defun org-babel-execute:latex-macros (body _params)
   (concat
-   (prefix-all-lines "#+LATEX_HEADER: " body)
+   (ek/prefix-all-lines "#+LATEX_HEADER: " body)
    "\n#+HTML_HEAD_EXTRA: <div style=\"display: none\"> \\(\n"
-   (prefix-all-lines "#+HTML_HEAD_EXTRA: " body)
+   (ek/prefix-all-lines "#+HTML_HEAD_EXTRA: " body)
    "\n#+HTML_HEAD_EXTRA: \\)</div>\n"))
 
 ;; https://emacs.stackexchange.com/questions/20839/exporting-code-blocks-to-pdf-via-latex
