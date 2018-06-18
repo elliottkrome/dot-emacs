@@ -12,7 +12,8 @@
   :diminish ivy-mode
   :ensure t
   :bind
-  (("C-s" . swiper)
+  (
+   ; ("C-s" . swiper)
    ("C-c C-r" . ivy-resume)
    ("C-x C-f" . counsel-find-file)
    ("C-c h f" . counsel-describe-function)
