@@ -19,6 +19,7 @@
    (dot        . true)
    (latex      . true)
    (plantuml   . true)
+   (makefile   . true)
    ; (spice      . true)
    ; (R          . true)
    (ruby       . true)
@@ -63,6 +64,7 @@
 (add-hook 'org-babel-after-execute-hook 'display-inline-images 'append)
 
 (add-to-list 'org-babel-tangle-lang-exts '("octave" . "m"))
+(add-to-list 'org-src-lang-modes '("conf" . conf))
 
 (add-to-list 'org-babel-default-header-args:octave
              '(:session . "*Oct*"))
