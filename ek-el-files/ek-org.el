@@ -17,7 +17,7 @@
 		    org-w3m
 		    org-drill
 		    org-eww))
-
+(load "~/.emacs.d/ek-el-files/org/ek-org-man.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-todo-etc-tags.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-agenda.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-babel.el")
