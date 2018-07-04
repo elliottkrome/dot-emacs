@@ -24,3 +24,10 @@ than having to call `add-to-list' multiple times."
     (insert body)
     (string-insert-rectangle (point-min) (point-max) pre)
     (buffer-string)))
+
+(defun ek/which (bin-name-a)
+  "Convenience function to call `which' and replace trailing newline"
+  (let* ((sh-command (concat "which " bin-name-a))
+	 (bin-path-with-newline (shell-command-to-string sh-command))
+	 (regex-trailing-newline "\n$"))
+    (replace-regexp-in-string regex-trailing-newline "" bin-path-with-newline)))
