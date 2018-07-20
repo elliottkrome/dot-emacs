@@ -35,11 +35,11 @@
 (global-company-mode)
 
 
-;; I find company is annoying in org-mode
+;; I find company is annoying in org-mode, and renders gdb unusable
 ;;
-(defun org-mode-turn-off-company-hook ()
+(defun ek/turn-off-company-hook ()
   "Turn off company mode for org."
   (company-mode -1))
-(add-hook 'org-mode-hook 'org-mode-turn-off-company-hook)
+(add-hook 'org-mode-hook 'ek/turn-off-company-hook)
 
 

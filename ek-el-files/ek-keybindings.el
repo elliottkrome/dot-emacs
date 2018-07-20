@@ -14,11 +14,19 @@
 ;;
 (global-set-key (kbd "s-w") 'delete-frame)
 (global-set-key (kbd "s-<left>") 'other-frame)
-(global-set-key (kbd "s-<right>") (lambda () (interactive) (other-frame -1)))
+(global-set-key (kbd "s-<right>")
+		(lambda () (interactive)
+		  (other-frame -1)))
+(local-set-key  (kbd "<f5>")
+		(lambda () (interactive)
+		  (org-sbe run)))
 
 ;; if you want to bind a key to insert some text, do like this
 ;;
 (global-set-key (kbd "C-c 8") "some text")
+
+;; 
+(global-set-key (kbd "C-z") 'undo)
 
 ;; general editing preferences
 ;;

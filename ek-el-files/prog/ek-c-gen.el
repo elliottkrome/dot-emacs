@@ -1,26 +1,26 @@
-(add-hook 'c++-mode-hook 'irony-mode)
-(add-hook 'c-mode-hook 'irony-mode)
-(add-hook 'objc-mode-hook 'irony-mode)
-(delete 'company-backends 'company-clang)
+; (add-hook 'c++-mode-hook 'irony-mode)
+; (add-hook 'c-mode-hook 'irony-mode)
+; (add-hook 'objc-mode-hook 'irony-mode)
+; (delete 'company-backends 'company-clang)
 
-(setq irony-user-directory (concat ek/hidden-directory "irony/"))
+;; (setq irony-user-directory (concat ek/hidden-directory "irony/"))
 
-(use-package cmake-ide
-  :ensure t
-  :init
-  (use-package rtags
-    :ensure t)
-  (use-package semantic/bovine/gcc)
-  (setq cmake-ide-flags-c++
-	(append '("-std=c++11")
-		(mapcar
-		 (lambda (path) (concat "-I" path))
-		 (semantic-gcc-get-include-paths "c++"))))
-  (setq cmake-ide-flags-c
-	(append
-	 (mapcar (lambda (path) (concat "-I" path))
-		 (semantic-gcc-get-include-paths "c"))))
-  (cmake-ide-setup))
+;; (use-package cmake-ide
+;;   :ensure t
+;;   :init
+;;   (use-package rtags
+;;     :ensure t)
+;;   (use-package semantic/bovine/gcc)
+;;   (setq cmake-ide-flags-c++
+;; 	(append '("-std=c++11")
+;; 		(mapcar
+;; 		 (lambda (path) (concat "-I" path))
+;; 		 (semantic-gcc-get-include-paths "c++"))))
+;;   (setq cmake-ide-flags-c
+;; 	(append
+;; 	 (mapcar (lambda (path) (concat "-I" path))
+;; 		 (semantic-gcc-get-include-paths "c"))))
+;;   (cmake-ide-setup))
 
 (defun ek/occur-cpp-methods ()
   "This is for use in cc implementation files. It depends on the

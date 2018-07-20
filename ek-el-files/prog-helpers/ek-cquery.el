@@ -20,16 +20,19 @@
   :commands (lsp-cquery-enable)
   :hook (c-mode-common . lsp-cquery-enable)
   :custom
-  (cquery-executable  ; (shell-command-to-string "which cquery"))
-  (cquery-extra-init-params '(:completion (:detailedLabel t))))
+  (cquery-executable (ek/which "cquery"))
+  (cquery-extra-args '("--log-file=/tmp/cq.log")
+  (cquery-extra-init-params '(:completion (:detailedLabel t)))
+  :init 
+  ))
 
 (use-package company-lsp
+  :ensure t
   :after (cquery company lsp-mode)
   :custom (company-lsp-enable-recompletion t)
   :config (add-to-list 'company-backends 'company-lsp))
 
 (use-package ivy-xref
+  :ensure t
   :after ivy
   :custom (xref-show-xrefs-function #'ivy-xref-show-xrefs))
-
-which cquery
