@@ -38,8 +38,10 @@
 ;; I find company is annoying in org-mode, and renders gdb unusable
 ;;
 (defun ek/turn-off-company-hook ()
-  "Turn off company mode for org."
+  "Turn off company mode."
   (company-mode -1))
+
 (add-hook 'org-mode-hook 'ek/turn-off-company-hook)
+(add-hook 'debugger-mode 'ek/turn-off-company-hook)
 
 
