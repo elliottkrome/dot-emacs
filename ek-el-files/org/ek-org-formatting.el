@@ -23,7 +23,14 @@
       org-hide-emphasis-markers t    ; make *bold* look plain, like bold
       org-src-fontify-natively  t    ;
       org-image-actual-width    550  ; rescale pixel-width of inline images
-      org-bullets-bullet-list '(">") ; no bullets
+      org-bullets-bullet-list '("#") ; no bullets
+      org-pretty-entities        t
+      org-ellipsis " ↴"
+      org-entities-user '(("join" "\\Join" nil "&#9285;" "" "" "⋈")
+			   ("Reals" "\\mathbb{R}" t "&#8477;" "" "" "ℝ")
+			   ("Ints" "\\mathbb{Z}" t "&#8484;" "" "" "ℤ")
+			   ("Complex" "\\mathbb{C}" t "&#2102;" "" "" "ℂ")
+			   ("models" "\\models" nil "&#8872;" "" "" "⊧"))
       )
 
 ;; alternative org-bullets-bullet-list vals

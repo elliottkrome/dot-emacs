@@ -50,8 +50,7 @@
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
  (setq org-latex-minted-options
-       '(("frame" "lines")
-	 ("linenos=true")
+       '(("linenos=false")
 	 ("fontsize" "\\scriptsize")))
 
 (use-package htmlize
