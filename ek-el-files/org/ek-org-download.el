@@ -21,14 +21,6 @@
   ;;
   (advice-add 'org-download--dir-2 :filter-return #'ek/clean-org-directory)
 
-  ;; probably a better way of doing this.
-  ;; TODO: move someplace else
-  ;;
-  (defun ek/mkdir (dir_a)
-    (unless (file-exists-p dir_a)
-      (message (concat "ek/mkdir --> target dir:" dir_a))
-      (make-directory dir_a)))
-
   ;; one of my earliest successful non-trivial functions
   ;;
   (defun ek/setup-org-download-image-dir (&optional dir_a)

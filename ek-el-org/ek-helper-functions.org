@@ -72,4 +72,10 @@ not really useful, but i want it for demonstration's sake
     (replace-regexp-in-string regex-trailing-newline "" bin-path-with-newline)))
 #+END_SRC
 
-
+* ~ek/mkdir-p~
+#+BEGIN_SRC elisp 
+(defun ek/mkdir (dir-a)
+  (unless (file-exists-p dir-a)
+    (message (concat "ek/mkdir --> target dir:" dir-a))
+    (make-directory dir-a)))
+#+END_SRC

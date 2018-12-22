@@ -31,3 +31,8 @@ than having to call `add-to-list' multiple times."
 	 (bin-path-with-newline (shell-command-to-string sh-command))
 	 (regex-trailing-newline "\n$"))
     (replace-regexp-in-string regex-trailing-newline "" bin-path-with-newline)))
+
+(defun ek/mkdir (dir-a)
+  (unless (file-exists-p dir-a)
+    (message (concat "ek/mkdir --> target dir:" dir-a))
+    (make-directory dir-a)))
