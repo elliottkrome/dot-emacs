@@ -1,9 +1,7 @@
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; basic package stuff - allows all of the other package configuration to work
-;;
-(package-initialize)
-(load "~/.emacs.d/ek-el-files/ek-init-gnrl-package-stuff.el")
+(package-initialize) ; placed automatically by package.el
+(load "~/.emacs.d/ek-el-files/ek-package.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (load "~/.emacs.d/ek-el-files/ek-configuration.el")
