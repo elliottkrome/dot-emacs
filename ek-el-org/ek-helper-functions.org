@@ -52,7 +52,6 @@ not really useful, but i want it for demonstration's sake
 #+BEGIN_SRC elisp 
 (setq animals '("gazelle" "giraffe" "lion" "tiger"))
 (print-strings-in-a-list animals)
-
 #+END_SRC
 * ~ek/prefix-all-lines~
 #+BEGIN_SRC elisp 
@@ -78,4 +77,25 @@ not really useful, but i want it for demonstration's sake
   (unless (file-exists-p dir-a)
     (message (concat "ek/mkdir --> target dir:" dir-a))
     (make-directory dir-a)))
+#+END_SRC
+
+* ~ek/recurse-find-files-by-type~ (macro)
+Surely there is a better way of doing this on a number of levels. But it works, and does exactly what it says it does.
+
+Probably is not portable outside of unix-like systems.
+** definition
+#+BEGIN_SRC elisp 
+(defmacro ek/recurse-find-files-by-type (base-dir extension)
+  ;; the returned list has an empty string as an entry which must be removed. 
+  `(remove ""
+	   (mapcar 'abbreviate-file-name
+		   (split-string
+		    (shell-command-to-string
+		     (concat "find " ,base-dir " -name \"*." ,extension "\""))
+		    "\n"))))
+#+END_SRC
+
+** COMMENT usage
+#+BEGIN_SRC elisp 
+(ek/recurse-find-files-by-type (concat user-emacs-directory "elpa") "el")
 #+END_SRC

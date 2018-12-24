@@ -36,3 +36,12 @@ than having to call `add-to-list' multiple times."
   (unless (file-exists-p dir-a)
     (message (concat "ek/mkdir --> target dir:" dir-a))
     (make-directory dir-a)))
+
+(defmacro ek/recurse-find-files-by-type (base-dir extension)
+  ;; the returned list has an empty string as an entry which must be removed. 
+  `(remove ""
+	   (mapcar 'abbreviate-file-name
+		   (split-string
+		    (shell-command-to-string
+		     (concat "find " ,base-dir " -name \"*." ,extension "\""))
+		    "\n"))))
