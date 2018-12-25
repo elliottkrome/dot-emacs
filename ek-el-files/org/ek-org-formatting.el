@@ -61,8 +61,9 @@ Might not be worthy of being abstracted into a function, but it is nice to:
 			   new-height-arg)))
     (progn
       ; (set-face-attribute 'org-document-info-keyword nil :height new-height-safe)
-      (set-face-attribute 'org-meta-line nil :height new-height-safe))))
-
+      (set-face-attribute 'org-meta-line nil :height new-height-safe)
+      (set-face-attribute 'org-block-end-line nil :height new-height-safe)
+      (set-face-attribute 'org-block-begin-line nil :height new-height-safe))))
 
 (defun ek/org-mlh--change (arg)
   "Manipulate the height of face `org-meta-line'.
