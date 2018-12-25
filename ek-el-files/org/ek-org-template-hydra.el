@@ -184,10 +184,12 @@ be inserted verbatim."
     "
  _t_angle  tangle _&_ session _S_ession, silent results
  _s_ession _r_esults silent   _v_ar
+ _p_lain
 "
     ("t" (horg-template-expand "<s" '("python" ":tangle")))
     ("v" (horg-template-expand "<s" '("python" ":var")))
     ("s" (horg-template-expand "<s" '("python" ":session")))
+    ("p" (horg-template-expand "<s" '("python" "")))    
     ("r" (horg-template-expand "<s" '("python" ":results silent")))
     ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))
     ("&" (horg-template-expand "<s" '("python" ":tangle" ":session") '("some_string"))))
