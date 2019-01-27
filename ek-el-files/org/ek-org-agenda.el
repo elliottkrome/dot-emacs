@@ -69,6 +69,7 @@
   (save-excursion
     (color-org-header "class:" "black" "#cd950c")
     (color-org-header "appts:" "#162228" "green")
+    (color-org-header "rand_now:" "black" "#cd950c")
     (color-org-header "^refile:" "yellow" "red") ;;  ^ is to ignore
                                                  ;; 'notes_to_refile.org'
     ; (color-org-header "rand_now:" "OrangeRed4")

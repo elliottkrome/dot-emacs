@@ -13,8 +13,8 @@
   (mapc #'disable-theme custom-enabled-themes))
 
 ; (load "~/.emacs.d/ek-el-files/appearance/theme/leuven.el")
-; (load "~/.emacs.d/ek-el-files/appearance/theme/jazz.el")
+(load "~/.emacs.d/ek-el-files/appearance/theme/jazz.el")
 ; (load "~/.emacs.d/ek-el-files/appearance/ek-theme-custom.el")
-(load "~/.emacs.d/ek-el-files/appearance/theme/rebecca.el")
+; (load "~/.emacs.d/ek-el-files/appearance/theme/rebecca.el")
 ; (load "~/.emacs.d/ek-el-files/appearance/theme/material.el")
 ; (load "~/.emacs.d/ek-el-files/appearance/theme/ek-material.el")
