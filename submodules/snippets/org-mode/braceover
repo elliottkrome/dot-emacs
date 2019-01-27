@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: braceover
+# key: bo
+# --
+\overbrace{$1}^{$2}

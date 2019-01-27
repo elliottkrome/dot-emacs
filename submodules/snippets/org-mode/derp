@@ -2,4 +2,4 @@
 # name: partial derivative
 # key: derp
 # --
-\frac{\partial$1}{\partial $2}$0
+\frac{\partial $1}{\partial $2}$0

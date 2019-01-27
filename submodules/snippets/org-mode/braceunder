@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: braceunder
+# key: bu
+# --
+\underbrace{$1}_{$2}
