@@ -1,5 +1,5 @@
 ;; testing
-(global-set-key (kbd "M-y") 'kill-ring-ido)
+; (global-set-key (kbd "M-y") 'kill-ring-ido)
 
 
 ;; set some modifier keys on mac

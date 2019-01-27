@@ -18,7 +18,8 @@
 	    ))
 ;; gets rid of org-mode iedit shadowing
 (bind-keys :map org-mode-map
-	       ("C-c ;" . iedit-mode))
+	   ("C-c ;" . iedit-mode)
+	   ("s-y"   . ek/org-insert-clipboard-image))
 ;;;;;;;;;;;;;;;;;; end local keybindings ;;;;;;
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html#orgheadline54
