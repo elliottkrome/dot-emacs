@@ -1,0 +1,18 @@
+[[https://vxlabs.com/2018/11/19/configuring-emacs-lsp-mode-and-microsofts-visual-studio-code-python-language-server/][original tut]]
+
+* microsoft pls setup
+** download [[https://dotnet.microsoft.com/download][dotnet runtime]]
+** clone and build language server
+#+BEGIN_SRC sh
+cd ~/.emacs.d/submodules
+#+END_SRC
+
+#+BEGIN_SRC sh 
+git submodule add https://github.com/Microsoft/python-language-server
+#+END_SRC
+
+#+BEGIN_SRC sh 
+cd python-language-server/src/LanguageServer/Impl
+DOTNET='/usr/local/share/dotnet/dotnet'
+$DOTNET build -c Release 
+#+END_SRC

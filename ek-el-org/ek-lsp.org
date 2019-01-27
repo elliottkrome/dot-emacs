@@ -1,0 +1,62 @@
+#+PROPERTY: header-args :tangle (expand-file-name "~/.emacs.d/ek-el-files/prog-helpers/ek-lsp.el")
+* lsp stuff
+#+BEGIN_SRC elisp 
+;; options include irony, cquery, rtags, ggtags, and ycmd
+(use-package lsp-mode
+  :ensure t
+  :commands lsp
+  :config
+  (lsp-register-client
+   (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
+		    :major-modes '(python-mode)
+		    :server-id 'pyls))
+  (setq lsp-print-io t
+	)
+  )
+
+
+(use-package lsp-ui
+  :ensure t
+  :after lsp-mode
+  :hook (lsp-mode . lsp-ui-mode))
+
+
+(use-package company-lsp
+  :ensure t
+  :after (cquery company lsp-mode)
+  :custom (company-lsp-enable-recompletion t)
+  :config (add-to-list 'company-backends 'company-lsp))
+
+(use-package ivy-xref
+  :ensure t
+  :after ivy
+  :custom (xref-show-xrefs-function #'ivy-xref-show-xrefs))
+#+END_SRC
+
+#+RESULTS:
+
+* cquery
+:PROPERTIES:
+:header-args: :tangle  (expand-file-name "~/.emacs.d/ek-el-files/prog-helpers/ek-cquery.el")
+:END:
+
+#+BEGIN_SRC sh :tangle no
+brew install cquery
+#+END_SRC
+
+#+BEGIN_SRC shell :tangle no
+which cquery
+#+END_SRC
+
+
+#+BEGIN_SRC elisp 
+(use-package cquery
+  :ensure t
+  :commands (lsp-cquery-enable)
+  :hook (c-mode-common . lsp-cquery-enable)
+  :custom
+  (cquery-executable (ek/which "cquery"))
+  (cquery-extra-args '("--log-file=/tmp/cq.log")
+  (cquery-extra-init-params '(:completion (:detailedLabel t)))
+  ))
+#+END_SRC

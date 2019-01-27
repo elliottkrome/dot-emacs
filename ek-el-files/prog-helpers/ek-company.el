@@ -43,5 +43,6 @@
 
 (add-hook 'org-mode-hook 'ek/turn-off-company-hook)
 (add-hook 'debugger-mode 'ek/turn-off-company-hook)
+(add-hook 'python-mode-hook 'ek/turn-off-company-hook)
 
 

@@ -1,25 +1,33 @@
+(use-package conda
+  :ensure t
+  :init
+  (setq conda-anaconda-home (expand-file-name "~/anaconda2"))
+  :config
+  (conda-env-autoactivate-mode t)
+  ;; Activate the project/virtualenv you want to use.
+  ;; Via M-x conda-env-activate RET analyticd-pysystemtrade 
+  ;; or (conda-env-activate "analyticd-pysystemtrade")
+  )
 
 ;; allows pdb to work, but breaks pyflakes
 ;
 ; (setenv "PYTHONPATH" "/Users/elliottkrome/anaconda/lib/python2.7/site-packages:")
 
-(setq anaconda-mode-installation-directory "~/.emacs.d/hidden/anaconda-mode")
+;; (setq anaconda-mode-installation-directory "~/.emacs.d/hidden/anaconda-mode")
 
-(eval-after-load "company"
-  '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
+;; (eval-after-load "company"
+;;   '(add-to-list 'company-backends '(company-anaconda :with company-capf)))
 
-(defun run-python-once ()
-  (remove-hook 'python-mode-hook 'run-python-once)
-  (run-python (python-shell-parse-command)))
+;; (defun run-python-once ()
+;;   (remove-hook 'python-mode-hook 'run-python-once)
+;;   (run-python (python-shell-parse-command)))
 
-(add-hook 'python-mode-hook 'anaconda-mode)
-(add-hook 'python-mode-hook 'anaconda-mode-start)
+;; (add-hook 'python-mode-hook 'anaconda-mode)
+;; (add-hook 'python-mode-hook 'anaconda-mode-start)
 
-(use-package company-anaconda
-  :ensure t
-  :init (add-to-list 'company-backends 'company-anaconda))
-
-
+;; (use-package company-anaconda
+;;   :ensure t
+;;   :init (add-to-list 'company-backends 'company-anaconda))
 
 ; this gets PATH-vars (such as python path) from a shell.
 ; if it is not defined and called, python-path is usr/bin, rather than /Users...
