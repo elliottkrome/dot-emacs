@@ -26,9 +26,15 @@
       org-bullets-bullet-list '("#") ; no bullets
       org-pretty-entities        t
       org-ellipsis " ↴"
+      ;; TODO: get some more from here:
+      ;;  https://en.wikipedia.org/wiki/List_of_logic_symbols
       org-entities-user '(("join" "\\Join" nil "&#9285;" "" "" "⋈")
-			   ("Reals" "\\mathbb{R}" t "&#8477;" "" "" "ℝ")
+			   ("Real" "\\mathbb{R}" t "&#8477;" "" "" "ℝ")
 			   ("Ints" "\\mathbb{Z}" t "&#8484;" "" "" "ℤ")
+			   ("suchthat" "\\mathbf{:}" t ":;" "" "" ":")
+			   ("iff" "\\iff" t "&#8660;" "" "" "⇔")
+			   ("given" "\\Big|" t "|;" "" "" "|")
+			   ("backslash" "\\backslash" t "\;" "" "" "\\")
 			   ("Complex" "\\mathbb{C}" t "&#2102;" "" "" "ℂ")
 			   ("models" "\\models" nil "&#8872;" "" "" "⊧"))
       )
