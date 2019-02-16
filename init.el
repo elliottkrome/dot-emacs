@@ -72,3 +72,22 @@
 ;;
 (load "~/.emacs.d/ek-el-files/ek-server-stuff.el")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; https://emacs.stackexchange.com/questions/18499/mark-up-only-part-of-a-word
+(defun insert-zero-width-space ()
+  (interactive)
+  (insert-char #x200b))
+
+(define-key org-mode-map (kbd "C-*") 'insert-zero-width-space)
+
+(setq org-emphasis-regexp-components
+      '("   ('\"{\x200B" "-     .,:!?;'\")}\\[\x200B" "     
+,\"'" "." 1))
+
+
+(use-package docker
+  :ensure t
+  :bind ("C-c d" . docker))
+(use-package dockerfile-mode
+  :ensure t
+  :mode ("Dockerfile\\'" . dockerfile-mode))

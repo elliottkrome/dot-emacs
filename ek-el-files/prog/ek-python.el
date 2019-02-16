@@ -1,13 +1,13 @@
-(use-package conda
-  :ensure t
-  :init
-  (setq conda-anaconda-home (expand-file-name "~/anaconda2"))
-  :config
-  (conda-env-autoactivate-mode t)
-  ;; Activate the project/virtualenv you want to use.
-  ;; Via M-x conda-env-activate RET analyticd-pysystemtrade 
-  ;; or (conda-env-activate "analyticd-pysystemtrade")
-  )
+;; (use-package conda
+;;   :ensure t
+;;   :init
+;;   (setq conda-anaconda-home (expand-file-name "~/anaconda2"))
+;;   :config
+;;   (conda-env-autoactivate-mode t)
+;;   ;; Activate the project/virtualenv you want to use.
+;;   ;; Via M-x conda-env-activate RET analyticd-pysystemtrade 
+;;   ;; or (conda-env-activate "analyticd-pysystemtrade")
+;;   )
 
 ;; allows pdb to work, but breaks pyflakes
 ;

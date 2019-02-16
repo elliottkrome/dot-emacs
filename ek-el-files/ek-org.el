@@ -15,7 +15,7 @@
 		    org-mhe
 		    org-rmail
 		    org-w3m
-		    org-drill
+		    ;org-drill
 		    org-eww))
 (load "~/.emacs.d/ek-el-files/org/ek-org-man.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-todo-etc-tags.el")
@@ -26,7 +26,7 @@
 (load "~/.emacs.d/ek-el-files/org/ek-org-formatting.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-gnrl-ui.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-download.el")
-(load "~/.emacs.d/ek-el-files/org/ek-org-drill.el")
+;(load "~/.emacs.d/ek-el-files/org/ek-org-drill.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-pdfview.el")
 (load "~/.emacs.d/ek-el-files/org/ek-org-template-hydra.el")
 ; (load "~/.emacs.d/ek-el-files/org/ek-org-gcal.el")

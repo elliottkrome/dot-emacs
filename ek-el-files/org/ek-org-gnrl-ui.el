@@ -45,7 +45,6 @@
 (defun ek/open-ext (path-to-media)
   (shell-command (concat "open " path-to-media)))
 (org-add-link-type "open-ext" 'ek/open-ext)
-(add-hook 'org-store-link-functions 'org-ek/store-link)
 
 ;; Use IDO for both buffer and file completion and ido-everywhere to t
 ;;
@@ -74,8 +73,8 @@
 
 ;; org mode will fontify bad links with `org-warning' face (on refontify)
 ;;
-(org-link-set-parameters
- "file"
- :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
+;(org-link-set-parameters
+; "file"
+; :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
 
 ;;; ek/org-gnrl-ui.el ends here
