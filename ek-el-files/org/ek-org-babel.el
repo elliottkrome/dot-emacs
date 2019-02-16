@@ -1,3 +1,4 @@
+
 ;;; package -- summary
 ;;; Commentary:
 ;;; Code:
@@ -21,7 +22,7 @@
    (plantuml   . true)
    (makefile   . true)
    ; (spice      . true)
-   ; (R          . true)
+   (R          . true)
    (ruby       . true)
    ; (ledger     . true)
    ; (tcl        . true)
