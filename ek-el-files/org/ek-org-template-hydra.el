@@ -1,6 +1,12 @@
 ;; adapted from
 ;; https://github.com/abo-abo/hydra/wiki/Org-mode-block-templates
 
+;; Required from org 9 onwards for old template expansion
+(require 'org-tempo) 
+;; Reset the org-template expnsion system, this is need after upgrading to org 9 for some reason
+(setq org-structure-template-alist
+       (eval (car (get 'org-structure-template-alist 'standard-value))))
+
 ;; one of the nice things about this is if a region is active and `<'
 ;; is pressed, that region is killed, the template is inserted, and the
 ;; region is yanked inside of that template.
@@ -72,7 +78,7 @@ prepended to the element after the #+HEADER: tag."
       ;; insert the template to expand, then try to expand it
       ;;
       (insert str)
-      (org-try-structure-completion)
+      (org-tempo-complete-tag)
 
       ;; deal with mainline-list argument
       ;;
