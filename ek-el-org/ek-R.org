@@ -1,0 +1,193 @@
+#+PROPERTY: header-args :tangle (expand-file-name "~/.emacs.d/ek-el-files/prog/ek-R.el")
+
+* install
+Only works with emacs versions ge 24.
+#+BEGIN_SRC elisp 
+(use-package ess-site
+  :ensure ess
+  :commands (inferior-ess-mode ess-help-mode)
+  :init
+  (setq inferior-R-args "--quiet")
+
+  :config
+  (bind-key "C-c C-w" nil inferior-ess-mode-map))
+
+
+  :disabled t
+( use-package ess-site
+	:ensure ess
+	:init
+	(setq inferior-R-program-name "/usr/local/bin/R")
+	(setq ess-ask-for-ess-directory nil))
+#+END_SRC
+
+* tooltip
+#+BEGIN_SRC elisp 
+(setq ess-R-object-tooltip-alist
+      '((numeric    . "summary")
+        (factor     . "table")
+        (integer    . "summary")
+        (lm         . "summary")
+        (other      . "str")))
+
+(defun ess-R-object-tooltip ()
+  "Get info for object at point, and display it in a tooltip."
+  (interactive)
+  (let ((objname (current-word))
+        (curbuf (current-buffer))
+        (tmpbuf (get-buffer-create "**ess-R-object-tooltip**")))
+    (if objname
+        (progn
+          (ess-command (concat "class(" objname ")\n")  tmpbuf )
+          (set-buffer tmpbuf)
+          (let ((bs (buffer-string)))
+            (if (not(string-match "\(object .* not found\)\|unexpected" bs))
+                (let* ((objcls (buffer-substring
+                                (+ 2 (string-match "\".*\"" bs))
+                                (- (point-max) 2)))
+                       (myfun (cdr(assoc-string objcls
+                                                ess-R-object-tooltip-alist))))
+                  (progn
+                    (if (eq myfun nil)
+                        (setq myfun
+                              (cdr(assoc-string "other"
+                                                ess-R-object-tooltip-alist))))
+                    (ess-command (concat myfun "(" objname ")\n") tmpbuf)
+                    (let ((bs (buffer-string)))
+                      (progn
+                        (set-buffer curbuf)
+                        (tooltip-show-at-point bs 0 30)))))))))
+    (kill-buffer tmpbuf)))
+
+;; my default key map
+(define-key ess-mode-map "\C-c\C-g" 'ess-R-object-tooltip)
+#+END_SRC
+
+* keybindings
+
+** vanilla - [[http://ess.r-project.org/refcard.pdf][source]]
+
+*** Interacting with the process
+For use in a process buffers (inferior-ess-mode):
+~<RET>~ Send a command
+~C-c <ret>~ Copy old input
+~tab~ Complete object or file name. Also bound to M-htabi, M-C-i.
+~C-c C-c~ Break
+~C-g~ interrupt Emacs’ waiting for S
+~C-c C-u~ Delete this command
+~C-c C-r~ Top of last output
+~C-c C-o~ Delete last output
+
+**** Command history (part of Menu ‘In/Out’)
+~C-c C-l~ List command history (& choose!)
+~C-c M-r~ Previous similar command
+~C-c M-s~ Next similar command
+
+**** Others
+C-c C-v Help for object
+C-c M-l Load source file
+C-c C-x List objects
+C-c C-s Display search list
+C-c C-q Quit from S
+C-c C-z Switch to most recent script buffer
+
+*** Inside ESS Transcripts (I + O)
+
+**** Inside (~*.Rout~ files):
+~<RET>~ Send and Move
+~C-c C-n~ Next prompt
+~C-c C-p~ Previous prompt
+~C-c C-w~ Clean Region (→ input only)
+
+**** Sweave
+M-n s Sweave the file
+M-n l Run latex
+M-n p Postscript file
+M-n P PDF file
+Editing source files
+For use in ess-mode edit buffers, (*.R files):
+htabi Indent this line
+M-htabi Complete filename/object
+M-C-/ Indent region
+M-C-q Indent this expression (use at ‘{’)
+M-C-a Beginning of function
+M-C-e End of function
+M-C-h Mark this function
+C-u C-u C-y Yank striped commands
+Evaluation commands (Prefix C-u: in/visibly)
+M-C-x Evaluate region or function or para
+C-c C-c Evaluate region or para. or function & step
+C-hreti Evaluate region or line & step
+C-c C-l Load this buffer’s source file
+C-c C-j Evaluate this line
+C-c M-j Evaluate this line and go
+C-c C-f Evaluate this function
+C-c M-f Evaluate this function and go
+C-c C-p Evaluate this paragraph and step
+C-c C-r Evaluate this region
+C-c M-r Evaluate this region and go
+C-c C-b Evaluate this buffer
+C-c M-b Evaluate this buffer and go
+Others
+C-c C-v Help for object
+C-c C-z Switch to process buffer
+General Commands
+ess-doc-map (C-c C-d):
+C-a, a Apropos
+C-d, d Doc on object
+C-e, e Describe object at point (C-e or e to cycle)
+C-i, i Index
+C-v, v Vignettes
+C-o, o Demos
+C-w, w Web search (dialect dependent)
+ess-extra-map (C-c C-e):
+C-d, d Dump object into edit buffer
+C-e, e Evaluate expression (C-u in temp buf)
+C-i, i Install package (in R) or library
+C-l, l Load package (in R) or library
+C-s, s Set indentation style
+C-t, t Build tags for directory
+Reading help files
+For use in ‘*help[R](. . .)*’ help buffers:
+SPC Next page
+b, DEL Previous page (‘back’)
+n Next section
+p Previous section
+s Skip (‘jump’) to a named section
+s e e.g., skip to “Examples:”
+l Evaluate one ‘Example’ line
+r Evaluate current region
+q Quit window
+k Kill this buffer
+x Kill this buffer and return (‘exit)
+h Help on another object
+? Help for this mode
+a Display apropos
+i Display index
+v Display vignettes
+w Display this help in web browser
+ESS tracebug
+Commands in ess-dev-map (C-c C-t):
+? Show key help
+C-b, b Set BP (repeat to cycle)
+C-k, k Kill BP
+C-n, n Goto next BP
+C-p, p Goto previous BP
+‘ Show R Traceback (also on C-c ‘
+~ Show R call stack (also on C-c
+C-e, e Toggle error action (cycle)
+C-d, d Flag for debugging
+C-u, u Un-flag debugged objects
+C-w, w Watch window
+0..9, q Recover commands
+Commands in ess-debug-mode-map
+(active during debugging):
+M-C Continue
+M-N Next line
+M-Q Quit
+M-U Up frame
+C-M-S-c Continue Multiple
+C-M-S-n Next Multiple
+Others
+C-x ‘, M-g n ‘next-error’ (emacs)
+M-g p ‘previous-error’(emacs)

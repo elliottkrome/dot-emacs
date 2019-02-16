@@ -7,11 +7,11 @@
 
 (defhydra horg-template (:color blue :hint nil)
     "
- _c_lisp  _q_uote     _E_lisp    _L_aTeX:
- _l_atex   _e_xample   _P_ython   _i_ndex:
- _a_scii   _v_erse     _O_ctave   _I_NCLUDE:
- _s_rc     C_+_+       _S_hell    _H_TML:
- _h_tml    _d_ot       plant_U_ml _A_SCII:
+ _c_lisp   _q_uote     _E_lisp    _R_       _L_aTeX:   
+ _l_atex   _e_xample   _P_ython   _v_erilog _i_ndex:
+ _a_scii   _v_erse     _O_ctave             _I_NCLUDE:
+ _s_rc     C_+_+       _S_hell              _H_TML:
+ _h_tml    _d_ot       plant_U_ml           _A_SCII:
 "
     ("s" (horg-template-expand "<s"))
     ("e" (horg-template-expand "<e"))
@@ -33,6 +33,7 @@
     ("I" (horg-template-expand "<I"))
     ("H" (horg-template-expand "<H"))
     ("A" (horg-template-expand "<A"))
+    ("R" horg-template-R/body :exit t)
     ("<" self-insert-command "ins")
     ("0" nil "quit"))
 
@@ -193,3 +194,10 @@ be inserted verbatim."
     ("r" (horg-template-expand "<s" '("python" ":results silent")))
     ("S" (horg-template-expand "<s" '("python" ":session" ":results silent")))
     ("&" (horg-template-expand "<s" '("python" ":tangle" ":session") '("some_string"))))
+
+(defhydra horg-template-R  (:color blue :hint nil)
+    "
+ _p_lain   _r_esout
+"
+    ("p" (horg-template-expand "<s" '("R")))
+    ("r" (horg-template-expand "<s" '("R" ":results output"))))
