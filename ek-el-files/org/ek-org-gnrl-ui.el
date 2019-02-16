@@ -73,8 +73,8 @@
 
 ;; org mode will fontify bad links with `org-warning' face (on refontify)
 ;;
-;(org-link-set-parameters
-; "file"
-; :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
+(org-link-set-parameters
+ "file"
+ :face (lambda (path) (if (file-exists-p path) 'org-link 'org-warning)))
 
 ;;; ek/org-gnrl-ui.el ends here
