@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: properties-drawer
+# key: propd
+# --
+:PROPERTIES:
+:header-args: :${1:tangle} ${2:src/}
+:END:
