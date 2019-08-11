@@ -8,7 +8,7 @@
 ;;
 (setq org-export-preserve-breaks t)
 
-(setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil "minted")))
+; (setq org-latex-packages-alist '(("margin=2.5cm" "geometry" nil "minted")))
 
 ;; http://pages.sachachua.com/.emacs.d/Sacha.html
 (setq org-export-backends '(org latex icalendar html ascii))

@@ -28,14 +28,22 @@
       org-ellipsis " ↴"
       ;; TODO: get some more from here:
       ;;  https://en.wikipedia.org/wiki/List_of_logic_symbols
+      ;;
+      ;; note that the the following work out of the box:
+      ;;  \triangleq
+      ;;
       org-entities-user '(("join" "\\Join" nil "&#9285;" "" "" "⋈")
-			   ("Real" "\\mathbb{R}" t "&#8477;" "" "" "ℝ")
+			  ("Real" "\\mathbb{R}" t "&#8477;" "" "" "ℝ")
+			  ("Sym" "\\mathbb{Sym}" t "&#1D54A;" "" "" "𝕊")
 			   ("Ints" "\\mathbb{Z}" t "&#8484;" "" "" "ℤ")
 			   ("suchthat" "\\mathbf{:}" t ":;" "" "" ":")
+			   ("gradient" "\\nabla" t "&#2207" "" "" "∇")
 			   ("iff" "\\iff" t "&#8660;" "" "" "⇔")
 			   ("given" "\\Big|" t "|;" "" "" "|")
 			   ("backslash" "\\backslash" t "\;" "" "" "\\")
 			   ("Complex" "\\mathbb{C}" t "&#2102;" "" "" "ℂ")
+			   ("Code" "\\mathcal{C}" t "&#1D49;" "" "" "𝒞")
+			   ("subseteq" "\\subseteq" t "&#2286;" "" "" "⊆")
 			   ("models" "\\models" nil "&#8872;" "" "" "⊧"))
       )
 
@@ -43,6 +51,10 @@
 ; '(" ")
 ; '("•")
 ; '("◇" "►" "⚫" "✸" "✿" "◉" "○")
+
+
+;; not auto indentation for source blocks (super annoying, i think)
+(setq org-adapt-indentation nil)
 
 (defvar ek/org-mlh-change-factor
   1.1
