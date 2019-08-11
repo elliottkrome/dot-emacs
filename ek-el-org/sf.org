@@ -1,0 +1,253 @@
+
+Use by adding #+setupfile:~/.emacs.d/ek-el-org/sf.org
+to files as desired
+
+
+* latex stuff
+#+LaTeX_HEADER: \newcommand{\Real}{\mathbb{R}}
+#+LaTeX_HEADER: \newcommand{\Complex}{\mathbb{C}}
+#+LaTeX_HEADER: \newcommand{\Complox}{\mathbb{D}}
+
+#+LaTeX_HEADER: \newcommand{\I}{\text{Im}\,}
+#+LaTeX_HEADER: \newcommand{\R}{\text{Re}\,}
+#+LaTeX_HEADER: \newcommand{\Arg}{\text{Arg}\,}
+#+LaTeX_HEADER: \newcommand{\arg}{\text{arg}\,}
+#+LaTeX_HEADER: \newcommand{\Log}{\text{Log}\,}
+#+LaTeX_HEADER: \newcommand{\Arg}{\text{Arg}\,}
+#+LaTeX_HEADER: \newcommand{\arg}{\text{arg}\,}
+#+LaTeX_HEADER: \newcommand{\Res}{\text{Res}\,}
+
+#+LaTeX_HEADER: \newcommand{\given}{\,\big|\,}
+#+LaTeX_HEADER: \newcommand*\conj[1]{\overline{#1}}
+#+Latex_HEADER: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+Latex_HEADER: \newcommand{\for}{\,\, \text{for} \,\,}
+
+#+LATEX_HEADER:% \usepackage{euler}
+#+OPTIONS: \n:t
+#+OPTIONS: toc:nil
+
+https://emacs.stackexchange.com/questions/20983/disabling-section-numbering-causes-table-of-contents-to-disappear-in-org-mode-la
+#+LATEX_HEADER: \setcounter{secnumdepth}{0}
+
+#+LATEX_HEADER: \newcommand{\definedas}{\triangleq}
+#+Latex_HEADER: \newcommand{\gradient}{\nabla}
+#+LATEX_HEADER: \newcommand{\Sym}{\mathbb{S}}
+
+#+LATEX_HEADER: \newcommand{\gf}{\mathbf{GF}}
+#+LATEX_HEADER: \newcommand{\lcm}{\mathbf{lcm}}
+
+#+LATEX_HEADER: \newcommand{\argmin}{\text{argmin}}
+#+LATEX_HEADER: \newcommand{\argmax}{\text{argmax}}
+** latex macros
+add the following to anywhere you want the html to show up
+*** COMMENT usage 
+#+BEGIN_EXAMPLE
+ ** COMMENT latex / mathjax for export
+#+RESULTS: lat-mac
+#+END_EXAMPLE
+
+*** Code
+#+NAME: lat-mac
+#+BEGIN_SRC latex-macros :exports code
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Sym}{\mathbb{S}}
+\newcommand{\aff}{\mathbf{aff}\,}
+\newcommand{\dom}{\mathbf{dom}\,}
+\newcommand{\relint}{\mathbf{relint}\,}
+\newcommand{\interior}{\mathbf{int}\,}
+\newcommand{\conv}{\mathbf{conv}\,}
+\newcommand{\trace}{\mathbf{tr}\,}
+\newcommand{\dist}{\mathbf{dist}\,}
+\newcommand{\epi}{\mathbf{epi}\,}
+\newcommand{\T}{\mathrm{T}}
+
+\def\*#1{\mathbf{#1}}
+
+\newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\newcommand{\curlge}{\succeq}
+\newcommand{\curlg}{\succ}
+\newcommand{\curlle}{\preceq}
+\newcommand{\curll}{\prec}
+
+\newcommand{\given}{\,\big|\,}
+
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\var}{\mathrm{var}}
+#+END_SRC
+
+#+RESULTS: lat-mac
+#+LATEX_HEADER: \newcommand{\Real}{\mathbb{R}}
+#+LATEX_HEADER: \newcommand{\Sym}{\mathbb{S}}
+#+LATEX_HEADER: \newcommand{\aff}{\mathbf{aff}\,}
+#+LATEX_HEADER: \newcommand{\dom}{\mathbf{dom}\,}
+#+LATEX_HEADER: \newcommand{\relint}{\mathbf{relint}\,}
+#+LATEX_HEADER: \newcommand{\interior}{\mathbf{int}\,}
+#+LATEX_HEADER: \newcommand{\conv}{\mathbf{conv}\,}
+#+LATEX_HEADER: \newcommand{\trace}{\mathbf{tr}\,}
+#+LATEX_HEADER: \newcommand{\dist}{\mathbf{dist}\,}
+#+LATEX_HEADER: \newcommand{\epi}{\mathbf{epi}\,}
+#+LATEX_HEADER: \newcommand{\T}{\mathrm{T}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \def\*#1{\mathbf{#1}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+#+LATEX_HEADER: \newcommand{\innerprod}[1]{\left\lt #1 \right\gt}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\curlge}{\succeq}
+#+LATEX_HEADER: \newcommand{\curlg}{\succ}
+#+LATEX_HEADER: \newcommand{\curlle}{\preceq}
+#+LATEX_HEADER: \newcommand{\curll}{\prec}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\given}{\,\big|\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\E}{\mathrm{E}}
+#+LATEX_HEADER: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: <div style="display: none"> \(
+#+HTML_HEAD_EXTRA: \newcommand{\Real}{\mathbb{R}}
+#+HTML_HEAD_EXTRA: \newcommand{\Sym}{\mathbb{S}}
+#+HTML_HEAD_EXTRA: \newcommand{\aff}{\mathbf{aff}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dom}{\mathbf{dom}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\relint}{\mathbf{relint}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\interior}{\mathbf{int}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\conv}{\mathbf{conv}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\trace}{\mathbf{tr}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dist}{\mathbf{dist}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\epi}{\mathbf{epi}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\T}{\mathrm{T}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \def\*#1{\mathbf{#1}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\curlge}{\succeq}
+#+HTML_HEAD_EXTRA: \newcommand{\curlg}{\succ}
+#+HTML_HEAD_EXTRA: \newcommand{\curlle}{\preceq}
+#+HTML_HEAD_EXTRA: \newcommand{\curll}{\prec}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\given}{\,\big|\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\E}{\mathrm{E}}
+#+HTML_HEAD_EXTRA: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: \)</div>
+#+LATEX_HEADER: \newcommand{\Real}{\mathbb{R}}
+#+LATEX_HEADER: \newcommand{\Sym}{\mathbb{S}}
+#+LATEX_HEADER: \newcommand{\aff}{\mathbf{aff}\,}
+#+LATEX_HEADER: \newcommand{\dom}{\mathbf{dom}\,}
+#+LATEX_HEADER: \newcommand{\relint}{\mathbf{relint}\,}
+#+LATEX_HEADER: \newcommand{\interior}{\mathbf{int}\,}
+#+LATEX_HEADER: \newcommand{\conv}{\mathbf{conv}\,}
+#+LATEX_HEADER: \newcommand{\trace}{\mathbf{tr}\,}
+#+LATEX_HEADER: \newcommand{\dist}{\mathbf{dist}\,}
+#+LATEX_HEADER: \newcommand{\epi}{\mathbf{epi}\,}
+#+LATEX_HEADER: \newcommand{\T}{\mathrm{T}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \def\*#1{\mathbf{#1}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+#+LATEX_HEADER: \newcommand{\innerprod}[1]{\left< #1 \right>}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\curlge}{\succeq}
+#+LATEX_HEADER: \newcommand{\curlg}{\succ}
+#+LATEX_HEADER: \newcommand{\curlle}{\preceq}
+#+LATEX_HEADER: \newcommand{\curll}{\prec}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\given}{\,\big|\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\E}{\mathrm{E}}
+#+LATEX_HEADER: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: <div style="display: none"> \(
+#+HTML_HEAD_EXTRA: \newcommand{\Real}{\mathbb{R}}
+#+HTML_HEAD_EXTRA: \newcommand{\Sym}{\mathbb{S}}
+#+HTML_HEAD_EXTRA: \newcommand{\aff}{\mathbf{aff}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dom}{\mathbf{dom}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\relint}{\mathbf{relint}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\interior}{\mathbf{int}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\conv}{\mathbf{conv}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\trace}{\mathbf{tr}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dist}{\mathbf{dist}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\epi}{\mathbf{epi}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\T}{\mathrm{T}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \def\*#1{\mathbf{#1}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+#+HTML_HEAD_EXTRA: \newcommand{\innerprod}[1]{\left< #1 \right>}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\curlge}{\succeq}
+#+HTML_HEAD_EXTRA: \newcommand{\curlg}{\succ}
+#+HTML_HEAD_EXTRA: \newcommand{\curlle}{\preceq}
+#+HTML_HEAD_EXTRA: \newcommand{\curll}{\prec}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\given}{\,\big|\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\E}{\mathrm{E}}
+#+HTML_HEAD_EXTRA: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: \)</div>
+#+LATEX_HEADER: \newcommand{\Real}{\mathbb{R}}
+#+LATEX_HEADER: \newcommand{\Sym}{\mathbb{S}}
+#+LATEX_HEADER: \newcommand{\aff}{\mathbf{aff}\,}
+#+LATEX_HEADER: \newcommand{\dom}{\mathbf{dom}\,}
+#+LATEX_HEADER: \newcommand{\relint}{\mathbf{relint}\,}
+#+LATEX_HEADER: \newcommand{\interior}{\mathbf{int}\,}
+#+LATEX_HEADER: \newcommand{\conv}{\mathbf{conv}\,}
+#+LATEX_HEADER: \newcommand{\trace}{\mathbf{tr}\,}
+#+LATEX_HEADER: \newcommand{\dist}{\mathbf{dist}\,}
+#+LATEX_HEADER: \newcommand{\epi}{\mathbf{epi}\,}
+#+LATEX_HEADER: \newcommand{\T}{\mathrm{T}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \def\*#1{\mathbf{#1}}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\curlge}{\succeq}
+#+LATEX_HEADER: \newcommand{\curlg}{\succ}
+#+LATEX_HEADER: \newcommand{\curlle}{\preceq}
+#+LATEX_HEADER: \newcommand{\curll}{\prec}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\given}{\,\big|\,}
+#+LATEX_HEADER: 
+#+LATEX_HEADER: \newcommand{\E}{\mathrm{E}}
+#+LATEX_HEADER: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: <div style="display: none"> \(
+#+HTML_HEAD_EXTRA: \newcommand{\Real}{\mathbb{R}}
+#+HTML_HEAD_EXTRA: \newcommand{\Sym}{\mathbb{S}}
+#+HTML_HEAD_EXTRA: \newcommand{\aff}{\mathbf{aff}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dom}{\mathbf{dom}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\relint}{\mathbf{relint}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\interior}{\mathbf{int}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\conv}{\mathbf{conv}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\trace}{\mathbf{tr}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\dist}{\mathbf{dist}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\epi}{\mathbf{epi}\,}
+#+HTML_HEAD_EXTRA: \newcommand{\T}{\mathrm{T}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \def\*#1{\mathbf{#1}}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\suchthat}{\,\,\mathbf{:}\,\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\curlge}{\succeq}
+#+HTML_HEAD_EXTRA: \newcommand{\curlg}{\succ}
+#+HTML_HEAD_EXTRA: \newcommand{\curlle}{\preceq}
+#+HTML_HEAD_EXTRA: \newcommand{\curll}{\prec}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\given}{\,\big|\,}
+#+HTML_HEAD_EXTRA: 
+#+HTML_HEAD_EXTRA: \newcommand{\E}{\mathrm{E}}
+#+HTML_HEAD_EXTRA: \newcommand{\var}{\mathrm{var}}
+#+HTML_HEAD_EXTRA: \)</div>
